@@ -1,9 +1,9 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.concretes.StripeManager;
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.dataAccess.abstracts.ExpertRepository;
-import com.renovatipoint.entities.concretes.Expert;
+import com.buildbetter.business.concretes.StripeManager;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.dataAccess.abstracts.ExpertRepository;
+import com.buildbetter.entities.concretes.Expert;
 import com.stripe.exception.SignatureVerificationException;
 import com.stripe.exception.StripeException;
 import com.stripe.model.Event;

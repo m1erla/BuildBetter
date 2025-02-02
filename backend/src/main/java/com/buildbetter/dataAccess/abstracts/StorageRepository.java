@@ -1,7 +1,7 @@
-package com.renovatipoint.dataAccess.abstracts;
+package com.buildbetter.dataAccess.abstracts;
 
-import com.renovatipoint.entities.concretes.Storage;
-import com.renovatipoint.entities.concretes.User;
+import com.buildbetter.entities.concretes.Storage;
+import com.buildbetter.entities.concretes.User;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 

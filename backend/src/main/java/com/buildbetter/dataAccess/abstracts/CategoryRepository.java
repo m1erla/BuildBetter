@@ -1,6 +1,6 @@
-package com.renovatipoint.dataAccess.abstracts;
+package com.buildbetter.dataAccess.abstracts;
 
-import com.renovatipoint.entities.concretes.Category;
+import com.buildbetter.entities.concretes.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

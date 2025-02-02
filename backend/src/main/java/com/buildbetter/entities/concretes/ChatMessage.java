@@ -1,14 +1,14 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.renovatipoint.enums.MessageType;
+import com.buildbetter.enums.MessageType;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.lang.annotation.Documented;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Date;
 @Entity
 @Table(name = "chat_messages")
 @Data

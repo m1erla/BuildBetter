@@ -1,10 +1,9 @@
-package com.renovatipoint.dataAccess.abstracts;
+package com.buildbetter.dataAccess.abstracts;
 
-import com.renovatipoint.entities.concretes.ChatMessage;
-import com.renovatipoint.entities.concretes.ChatRoom;
-import com.renovatipoint.enums.MessageType;
+import com.buildbetter.entities.concretes.ChatMessage;
+import com.buildbetter.entities.concretes.ChatRoom;
+import com.buildbetter.enums.MessageType;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

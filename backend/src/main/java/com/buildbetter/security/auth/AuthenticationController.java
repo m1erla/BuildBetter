@@ -1,17 +1,20 @@
-package com.renovatipoint.security.auth;
+package com.buildbetter.security.auth;
 
-import com.renovatipoint.business.requests.CreateExpertRegisterRequest;
-import com.renovatipoint.business.requests.RegisterRequest;
-import com.renovatipoint.business.responses.ExpertRegisterResponse;
-import com.renovatipoint.business.responses.RegisterResponse;
-import com.renovatipoint.business.rules.UserBusinessRules;
+import com.buildbetter.business.requests.CreateExpertRegisterRequest;
+import com.buildbetter.business.requests.RegisterRequest;
+import com.buildbetter.business.responses.ExpertRegisterResponse;
+import com.buildbetter.business.responses.RegisterResponse;
+import com.buildbetter.business.rules.UserBusinessRules;
 import com.stripe.exception.StripeException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 

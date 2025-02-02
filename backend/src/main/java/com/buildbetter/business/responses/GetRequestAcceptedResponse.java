@@ -1,6 +1,6 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
-import com.renovatipoint.enums.RequestStatus;
+import com.buildbetter.enums.RequestStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

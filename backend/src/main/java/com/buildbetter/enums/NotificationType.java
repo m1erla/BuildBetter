@@ -1,4 +1,4 @@
-package com.renovatipoint.enums;
+package com.buildbetter.enums;
 
 import lombok.Getter;
 

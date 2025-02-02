@@ -1,15 +1,13 @@
-package com.renovatipoint.dataAccess.abstracts;
+package com.buildbetter.dataAccess.abstracts;
 
-import com.renovatipoint.business.responses.GetRequestsResponse;
-import com.renovatipoint.entities.concretes.Ads;
-import com.renovatipoint.entities.concretes.Request;
-import com.renovatipoint.enums.RequestStatus;
+import com.buildbetter.entities.concretes.Ads;
+import com.buildbetter.entities.concretes.Request;
+import com.buildbetter.enums.RequestStatus;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;

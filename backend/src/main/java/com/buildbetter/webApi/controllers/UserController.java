@@ -1,23 +1,21 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.*;
-import com.renovatipoint.business.concretes.StorageManager;
-import com.renovatipoint.business.concretes.UserManager;
-import com.renovatipoint.business.requests.*;
-import com.renovatipoint.business.responses.*;
-import com.renovatipoint.entities.concretes.User;
-import com.renovatipoint.security.auth.AuthenticationService;
-import com.renovatipoint.security.jwt.JwtService;
+import com.buildbetter.business.abstracts.*;
+import com.buildbetter.business.concretes.StorageManager;
+import com.buildbetter.business.concretes.UserManager;
+import com.buildbetter.business.requests.*;
+import com.buildbetter.business.responses.*;
+import com.buildbetter.entities.concretes.User;
+import com.buildbetter.security.auth.AuthenticationService;
+import com.buildbetter.security.jwt.JwtService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import spark.Response;
-import org.springframework.http.HttpStatus;
 
 import java.io.IOException;
 import java.security.Principal;

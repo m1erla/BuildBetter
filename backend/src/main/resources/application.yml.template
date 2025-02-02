@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_db_name
+    username: your_username
+    password: your_password
+  security:
+    jwt:
+      secret: your_jwt_secret
+  stripe:
+    api-key: your_stripe_api_key
+    webhook-secret: your_webhook_secret

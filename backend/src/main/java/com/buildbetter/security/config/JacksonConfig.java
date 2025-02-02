@@ -1,4 +1,4 @@
-package com.renovatipoint.security.config;
+package com.buildbetter.security.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;

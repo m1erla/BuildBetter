@@ -1,12 +1,9 @@
-package com.renovatipoint.dataAccess.abstracts;
+package com.buildbetter.dataAccess.abstracts;
 
-import com.renovatipoint.entities.concretes.Ads;
-import com.renovatipoint.entities.concretes.User;
+import com.buildbetter.entities.concretes.Ads;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.http.ResponseEntity;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface AdsRepository extends JpaRepository<Ads, String> {
     List<Ads> findByUserId(String userId);

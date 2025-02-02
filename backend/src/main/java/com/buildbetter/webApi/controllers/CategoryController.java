@@ -1,10 +1,10 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.CategoryService;
-import com.renovatipoint.business.requests.CreateCategoryRequest;
-import com.renovatipoint.business.requests.UpdateCategoryRequest;
-import com.renovatipoint.business.responses.GetAllCategoriesResponse;
-import com.renovatipoint.business.responses.GetAllJobTitlesResponse;
+import com.buildbetter.business.abstracts.CategoryService;
+import com.buildbetter.business.requests.CreateCategoryRequest;
+import com.buildbetter.business.requests.UpdateCategoryRequest;
+import com.buildbetter.business.responses.GetAllCategoriesResponse;
+import com.buildbetter.business.responses.GetAllJobTitlesResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

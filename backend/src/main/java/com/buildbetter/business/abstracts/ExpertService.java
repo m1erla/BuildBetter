@@ -1,9 +1,8 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.business.requests.UpdateExpertRequest;
-import com.renovatipoint.business.responses.GetExpertResponse;
-import com.renovatipoint.business.responses.GetUsersResponse;
-import com.renovatipoint.entities.concretes.Expert;
+import com.buildbetter.business.requests.UpdateExpertRequest;
+import com.buildbetter.business.responses.GetExpertResponse;
+import com.buildbetter.entities.concretes.Expert;
 import org.springframework.http.ResponseEntity;
 
 public interface ExpertService {

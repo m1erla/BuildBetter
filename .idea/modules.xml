@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MyKlus.iml" filepath="$PROJECT_DIR$/.idea/MyKlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/buildbetter.iml" filepath="$PROJECT_DIR$/.idea/buildbetter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/furkankarakus.iml" filepath="$PROJECT_DIR$/backend/furkankarakus.iml" />
     </modules>
   </component>
 </project>

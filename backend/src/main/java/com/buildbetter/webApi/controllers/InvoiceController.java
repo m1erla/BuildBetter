@@ -1,8 +1,8 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.InvoiceService;
-import com.renovatipoint.entities.concretes.Invoice;
-import com.renovatipoint.enums.PaymentType;
+import com.buildbetter.business.abstracts.InvoiceService;
+import com.buildbetter.entities.concretes.Invoice;
+import com.buildbetter.enums.PaymentType;
 import com.stripe.exception.StripeException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

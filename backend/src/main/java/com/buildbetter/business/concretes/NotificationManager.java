@@ -1,13 +1,13 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.responses.GetNotificationResponse;
-import com.renovatipoint.dataAccess.abstracts.ChatRoomRepository;
-import com.renovatipoint.dataAccess.abstracts.NotificationRepository;
-import com.renovatipoint.dataAccess.abstracts.UserRepository;
-import com.renovatipoint.entities.concretes.ChatRoom;
-import com.renovatipoint.entities.concretes.Notification;
-import com.renovatipoint.entities.concretes.User;
-import com.renovatipoint.enums.NotificationType;
+import com.buildbetter.business.responses.GetNotificationResponse;
+import com.buildbetter.dataAccess.abstracts.ChatRoomRepository;
+import com.buildbetter.dataAccess.abstracts.NotificationRepository;
+import com.buildbetter.dataAccess.abstracts.UserRepository;
+import com.buildbetter.entities.concretes.ChatRoom;
+import com.buildbetter.entities.concretes.Notification;
+import com.buildbetter.entities.concretes.User;
+import com.buildbetter.enums.NotificationType;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +18,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service

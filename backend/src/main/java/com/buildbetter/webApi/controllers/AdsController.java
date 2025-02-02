@@ -1,18 +1,17 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.AdsService;
-import com.renovatipoint.business.concretes.AdsManager;
-import com.renovatipoint.business.concretes.StorageManager;
-import com.renovatipoint.business.requests.CreateAdsRequest;
-import com.renovatipoint.business.requests.UpdateAdsRequest;
-import com.renovatipoint.business.responses.GetAllAdsResponse;
-import com.renovatipoint.dataAccess.abstracts.UserRepository;
-import com.renovatipoint.entities.concretes.User;
-import com.renovatipoint.security.jwt.JwtService;
+import com.buildbetter.business.abstracts.AdsService;
+import com.buildbetter.business.concretes.AdsManager;
+import com.buildbetter.business.concretes.StorageManager;
+import com.buildbetter.business.requests.CreateAdsRequest;
+import com.buildbetter.business.requests.UpdateAdsRequest;
+import com.buildbetter.business.responses.GetAllAdsResponse;
+import com.buildbetter.dataAccess.abstracts.UserRepository;
+import com.buildbetter.entities.concretes.User;
+import com.buildbetter.security.jwt.JwtService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -25,9 +24,6 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.security.Principal;
 import java.util.List;
 import java.util.Random;
 

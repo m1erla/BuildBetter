@@ -1,14 +1,14 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.ExpertService;
-import com.renovatipoint.business.requests.UpdateExpertRequest;
-import com.renovatipoint.business.responses.GetExpertResponse;
-import com.renovatipoint.core.utilities.mappers.ModelMapperService;
-import com.renovatipoint.dataAccess.abstracts.ExpertRepository;
-import com.renovatipoint.dataAccess.abstracts.StorageRepository;
-import com.renovatipoint.dataAccess.abstracts.UserRepository;
-import com.renovatipoint.entities.concretes.Expert;
-import com.renovatipoint.entities.concretes.Storage;
+import com.buildbetter.business.abstracts.ExpertService;
+import com.buildbetter.business.requests.UpdateExpertRequest;
+import com.buildbetter.business.responses.GetExpertResponse;
+import com.buildbetter.core.utilities.mappers.ModelMapperService;
+import com.buildbetter.dataAccess.abstracts.ExpertRepository;
+import com.buildbetter.dataAccess.abstracts.StorageRepository;
+import com.buildbetter.dataAccess.abstracts.UserRepository;
+import com.buildbetter.entities.concretes.Expert;
+import com.buildbetter.entities.concretes.Storage;
 import com.stripe.exception.StripeException;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;

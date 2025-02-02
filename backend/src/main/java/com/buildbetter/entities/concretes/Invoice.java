@@ -1,6 +1,6 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
-import com.renovatipoint.enums.PaymentType;
+import com.buildbetter.enums.PaymentType;
 import jakarta.persistence.*;
 import lombok.*;
 

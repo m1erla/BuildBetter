@@ -1,13 +1,12 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.concretes.SharedInformationManager;
-import com.renovatipoint.entities.concretes.SharedInformation;
+import com.buildbetter.business.concretes.SharedInformationManager;
+import com.buildbetter.entities.concretes.SharedInformation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.renovatipoint.core.utilities.exceptions;
+package com.buildbetter.core.utilities.exceptions;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;

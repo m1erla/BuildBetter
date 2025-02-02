@@ -1,7 +1,7 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.entities.concretes.Ads;
-import com.renovatipoint.entities.concretes.User;
+import com.buildbetter.entities.concretes.Ads;
+import com.buildbetter.entities.concretes.User;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;

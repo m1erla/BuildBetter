@@ -1,6 +1,9 @@
-package com.renovatipoint.business.requests;
+package com.buildbetter.business.requests;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder

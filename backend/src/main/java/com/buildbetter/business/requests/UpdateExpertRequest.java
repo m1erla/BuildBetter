@@ -1,7 +1,6 @@
-package com.renovatipoint.business.requests;
+package com.buildbetter.business.requests;
 
-import com.renovatipoint.entities.concretes.JobTitle;
-import com.renovatipoint.entities.concretes.PaymentInfo;
+import com.buildbetter.entities.concretes.PaymentInfo;
 import lombok.*;
 import org.springframework.web.multipart.MultipartFile;
 

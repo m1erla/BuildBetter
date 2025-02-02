@@ -1,14 +1,12 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.renovatipoint.enums.Status;
-import com.renovatipoint.security.token.Token;
+import com.buildbetter.enums.Status;
+import com.buildbetter.security.token.Token;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

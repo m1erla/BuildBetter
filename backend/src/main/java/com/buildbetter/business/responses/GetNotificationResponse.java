@@ -1,15 +1,13 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.renovatipoint.entities.concretes.Notification;
-import com.renovatipoint.enums.NotificationType;
+import com.buildbetter.entities.concretes.Notification;
+import com.buildbetter.enums.NotificationType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Data

@@ -1,11 +1,10 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.dataAccess.abstracts.SharedInformationRepository;
-import com.renovatipoint.entities.concretes.SharedInformation;
+import com.buildbetter.dataAccess.abstracts.SharedInformationRepository;
+import com.buildbetter.entities.concretes.SharedInformation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 

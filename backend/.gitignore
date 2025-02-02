@@ -40,3 +40,27 @@ docker-compose.yml
 application.yml
 application.properties
 /src/main/resources/springboot.p12
+
+# Java specific
+*.class
+*.jar
+*.war
+
+# Spring Boot
+!application.yml.template
+!application-test.yml
+
+# Environment variables
+*.env
+.env.*
+
+# IDE specific
+.idea/
+
+# Logs
+logs/
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db

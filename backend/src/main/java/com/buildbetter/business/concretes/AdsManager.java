@@ -1,14 +1,14 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.AdsService;
-import com.renovatipoint.business.requests.CreateAdsRequest;
-import com.renovatipoint.business.requests.UpdateAdsRequest;
-import com.renovatipoint.business.responses.GetAllAdsResponse;
-import com.renovatipoint.business.responses.GetAllImagesResponse;
-import com.renovatipoint.business.rules.AdsBusinessRules;
-import com.renovatipoint.core.utilities.mappers.ModelMapperService;
-import com.renovatipoint.dataAccess.abstracts.*;
-import com.renovatipoint.entities.concretes.*;
+import com.buildbetter.business.abstracts.AdsService;
+import com.buildbetter.business.requests.CreateAdsRequest;
+import com.buildbetter.business.requests.UpdateAdsRequest;
+import com.buildbetter.business.responses.GetAllAdsResponse;
+import com.buildbetter.business.responses.GetAllImagesResponse;
+import com.buildbetter.business.rules.AdsBusinessRules;
+import com.buildbetter.core.utilities.mappers.ModelMapperService;
+import com.buildbetter.dataAccess.abstracts.*;
+import com.buildbetter.entities.concretes.*;
 import jakarta.persistence.EntityNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,12 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.time.Instant;
 import java.time.LocalDateTime;
-import java.util.Collections;
-import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service

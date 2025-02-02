@@ -1,8 +1,8 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.business.requests.CreateAdsRequest;
-import com.renovatipoint.business.requests.UpdateAdsRequest;
-import com.renovatipoint.business.responses.GetAllAdsResponse;
+import com.buildbetter.business.requests.CreateAdsRequest;
+import com.buildbetter.business.requests.UpdateAdsRequest;
+import com.buildbetter.business.responses.GetAllAdsResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
 

@@ -1,6 +1,6 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
-import com.renovatipoint.entities.concretes.JobTitle;
+import com.buildbetter.entities.concretes.JobTitle;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

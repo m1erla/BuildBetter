@@ -1,12 +1,12 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.renovatipoint.entities.concretes.Request;
-import com.renovatipoint.enums.RequestStatus;
-import lombok.*;
+import com.buildbetter.entities.concretes.Request;
+import com.buildbetter.enums.RequestStatus;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Data

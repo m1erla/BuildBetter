@@ -1,17 +1,14 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.renovatipoint.entities.concretes.ChatMessage;
-import com.renovatipoint.entities.concretes.ChatRoom;
-import com.renovatipoint.entities.concretes.JobTitle;
-import com.renovatipoint.enums.ChatRoomStatus;
-import com.renovatipoint.enums.MessageType;
+import com.buildbetter.entities.concretes.ChatMessage;
+import com.buildbetter.entities.concretes.ChatRoom;
+import com.buildbetter.entities.concretes.JobTitle;
+import com.buildbetter.enums.ChatRoomStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;

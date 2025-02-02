@@ -1,4 +1,4 @@
-package com.renovatipoint.business.requests;
+package com.buildbetter.business.requests;
 
 import lombok.Data;
 import lombok.Getter;

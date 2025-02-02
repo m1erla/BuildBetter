@@ -1,4 +1,4 @@
-package com.renovatipoint.core.utilities.images;
+package com.buildbetter.core.utilities.images;
 
 import java.io.ByteArrayOutputStream;
 import java.util.zip.Deflater;

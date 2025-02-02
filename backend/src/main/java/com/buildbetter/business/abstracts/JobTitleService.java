@@ -1,8 +1,8 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.business.requests.CreateJobTitleRequest;
-import com.renovatipoint.business.requests.UpdateJobTitleRequest;
-import com.renovatipoint.business.responses.GetAllJobTitlesResponse;
+import com.buildbetter.business.requests.CreateJobTitleRequest;
+import com.buildbetter.business.requests.UpdateJobTitleRequest;
+import com.buildbetter.business.responses.GetAllJobTitlesResponse;
 
 import java.util.List;
 

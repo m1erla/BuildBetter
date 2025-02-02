@@ -1,4 +1,4 @@
-package com.renovatipoint.security.config;
+package com.buildbetter.security.config;
 
 import com.stripe.Stripe;
 import jakarta.annotation.PostConstruct;

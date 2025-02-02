@@ -1,7 +1,7 @@
-package com.renovatipoint.business.rules;
+package com.buildbetter.business.rules;
 
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.dataAccess.abstracts.ServiceRepository;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.dataAccess.abstracts.ServiceRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

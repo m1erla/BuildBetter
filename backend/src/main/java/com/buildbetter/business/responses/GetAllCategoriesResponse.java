@@ -1,6 +1,6 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
-import com.renovatipoint.entities.concretes.Category;
+import com.buildbetter.entities.concretes.Category;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

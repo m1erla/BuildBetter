@@ -1,4 +1,4 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static com.renovatipoint.entities.concretes.Permission.*;
+import static com.buildbetter.entities.concretes.Permission.*;
 
 
 @RequiredArgsConstructor

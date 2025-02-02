@@ -1,8 +1,7 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data

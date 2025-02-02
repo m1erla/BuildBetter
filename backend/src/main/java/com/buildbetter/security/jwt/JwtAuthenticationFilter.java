@@ -1,6 +1,6 @@
-package com.renovatipoint.security.jwt;
+package com.buildbetter.security.jwt;
 
-import com.renovatipoint.security.token.TokenRepository;
+import com.buildbetter.security.token.TokenRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

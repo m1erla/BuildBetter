@@ -1,4 +1,4 @@
-package com.renovatipoint.security.auth;
+package com.buildbetter.security.auth;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

@@ -1,18 +1,18 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.IService;
-import com.renovatipoint.business.requests.CreateServiceRequest;
-import com.renovatipoint.business.requests.UpdateServiceRequest;
-import com.renovatipoint.business.responses.GetAllServicesResponse;
-import com.renovatipoint.business.responses.GetServiceByIdResponse;
-import com.renovatipoint.business.rules.ServiceBusinessRules;
-import com.renovatipoint.core.utilities.mappers.ModelMapperService;
-import com.renovatipoint.dataAccess.abstracts.CategoryRepository;
-import com.renovatipoint.dataAccess.abstracts.JobTitleRepository;
-import com.renovatipoint.dataAccess.abstracts.ServiceRepository;
-import com.renovatipoint.entities.concretes.Category;
-import com.renovatipoint.entities.concretes.ServiceEntity;
-import com.renovatipoint.entities.concretes.JobTitle;
+import com.buildbetter.business.abstracts.IService;
+import com.buildbetter.business.requests.CreateServiceRequest;
+import com.buildbetter.business.requests.UpdateServiceRequest;
+import com.buildbetter.business.responses.GetAllServicesResponse;
+import com.buildbetter.business.responses.GetServiceByIdResponse;
+import com.buildbetter.business.rules.ServiceBusinessRules;
+import com.buildbetter.core.utilities.mappers.ModelMapperService;
+import com.buildbetter.dataAccess.abstracts.CategoryRepository;
+import com.buildbetter.dataAccess.abstracts.JobTitleRepository;
+import com.buildbetter.dataAccess.abstracts.ServiceRepository;
+import com.buildbetter.entities.concretes.Category;
+import com.buildbetter.entities.concretes.JobTitle;
+import com.buildbetter.entities.concretes.ServiceEntity;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 

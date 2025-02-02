@@ -1,16 +1,12 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.UserService;
-import com.renovatipoint.business.concretes.ChatManager;
-import com.renovatipoint.business.concretes.ChatValidationManager;
-import com.renovatipoint.business.requests.CreateChatMessageRequest;
-import com.renovatipoint.business.responses.ErrorResponse;
-import com.renovatipoint.business.responses.GetChatMessageResponse;
-import com.renovatipoint.business.responses.GetChatRoomResponse;
-import com.renovatipoint.business.responses.GetUnreadCountResponse;
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.business.responses.SuccessResponse;
-import com.renovatipoint.entities.concretes.*;
+import com.buildbetter.business.abstracts.UserService;
+import com.buildbetter.business.concretes.ChatManager;
+import com.buildbetter.business.concretes.ChatValidationManager;
+import com.buildbetter.business.requests.CreateChatMessageRequest;
+import com.buildbetter.business.responses.*;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.entities.concretes.*;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

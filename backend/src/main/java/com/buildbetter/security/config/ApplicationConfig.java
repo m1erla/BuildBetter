@@ -1,6 +1,6 @@
-package com.renovatipoint.security.config;
+package com.buildbetter.security.config;
 
-import com.renovatipoint.dataAccess.abstracts.UserRepository;
+import com.buildbetter.dataAccess.abstracts.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

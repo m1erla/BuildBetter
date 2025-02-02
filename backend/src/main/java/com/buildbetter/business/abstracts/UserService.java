@@ -1,12 +1,11 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.business.requests.UpdateUserRequest;
-import com.renovatipoint.business.responses.*;
-import com.renovatipoint.entities.concretes.Invoice;
-import com.renovatipoint.entities.concretes.User;
+import com.buildbetter.business.requests.UpdateUserRequest;
+import com.buildbetter.business.responses.*;
+import com.buildbetter.entities.concretes.Invoice;
+import com.buildbetter.entities.concretes.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;
-
 
 import java.io.IOException;
 import java.util.List;

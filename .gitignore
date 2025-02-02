@@ -22,3 +22,32 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Java specific
+target/
+build/
+
+# Spring Boot
+application.properties
+application.yml
+!application.yml.template
+!application-test.yml
+
+# Environment variables
+.env
+*.env
+.env.*
+
+# IDE specific
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+
+# Logs
+logs/
+
+# OS specific
+.DS_Store
+Thumbs.db

@@ -1,6 +1,6 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.entities.concretes.*;
+import com.buildbetter.entities.concretes.*;
 import com.stripe.exception.StripeException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

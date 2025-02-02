@@ -1,6 +1,6 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
-import com.renovatipoint.enums.NotificationType;
+import com.buildbetter.enums.NotificationType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,9 +1,9 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.business.requests.CreateServiceRequest;
-import com.renovatipoint.business.requests.UpdateServiceRequest;
-import com.renovatipoint.business.responses.GetAllServicesResponse;
-import com.renovatipoint.business.responses.GetServiceByIdResponse;
+import com.buildbetter.business.requests.CreateServiceRequest;
+import com.buildbetter.business.requests.UpdateServiceRequest;
+import com.buildbetter.business.responses.GetAllServicesResponse;
+import com.buildbetter.business.responses.GetServiceByIdResponse;
 
 import java.util.List;
 

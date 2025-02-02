@@ -1,27 +1,30 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.ChatService;
-import com.renovatipoint.core.utilities.detector.ContactInfoDetector;
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.dataAccess.abstracts.*;
-import com.renovatipoint.entities.concretes.*;
-import com.renovatipoint.enums.ChatRoomStatus;
-import com.renovatipoint.enums.MessageType;
+import com.buildbetter.business.abstracts.ChatService;
+import com.buildbetter.core.utilities.detector.ContactInfoDetector;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.dataAccess.abstracts.*;
+import com.buildbetter.entities.concretes.*;
+import com.buildbetter.enums.ChatRoomStatus;
+import com.buildbetter.enums.MessageType;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Slf4j

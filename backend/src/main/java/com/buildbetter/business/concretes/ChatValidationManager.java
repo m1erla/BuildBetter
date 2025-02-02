@@ -1,20 +1,19 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.requests.CreateChatMessageRequest;
-import com.renovatipoint.core.utilities.detector.ContactInfoDetector;
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.dataAccess.abstracts.ChatRoomRepository;
-import com.renovatipoint.dataAccess.abstracts.ContactSharingRecordRepository;
-import com.renovatipoint.dataAccess.abstracts.ExpertRepository;
-import com.renovatipoint.entities.concretes.ChatRoom;
-import com.renovatipoint.entities.concretes.Expert;
-import com.renovatipoint.entities.concretes.User;
-import com.renovatipoint.enums.ChatRoomStatus;
-import com.renovatipoint.enums.MessageType;
+import com.buildbetter.business.requests.CreateChatMessageRequest;
+import com.buildbetter.core.utilities.detector.ContactInfoDetector;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.dataAccess.abstracts.ChatRoomRepository;
+import com.buildbetter.dataAccess.abstracts.ContactSharingRecordRepository;
+import com.buildbetter.dataAccess.abstracts.ExpertRepository;
+import com.buildbetter.entities.concretes.ChatRoom;
+import com.buildbetter.entities.concretes.Expert;
+import com.buildbetter.entities.concretes.User;
+import com.buildbetter.enums.ChatRoomStatus;
+import com.buildbetter.enums.MessageType;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 

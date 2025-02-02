@@ -1,14 +1,14 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.JobTitleService;
-import com.renovatipoint.business.requests.CreateJobTitleRequest;
-import com.renovatipoint.business.requests.UpdateJobTitleRequest;
-import com.renovatipoint.business.responses.GetAllJobTitlesResponse;
-import com.renovatipoint.business.rules.JobTitleBusinessRules;
-import com.renovatipoint.core.utilities.mappers.ModelMapperService;
-import com.renovatipoint.dataAccess.abstracts.CategoryRepository;
-import com.renovatipoint.dataAccess.abstracts.JobTitleRepository;
-import com.renovatipoint.entities.concretes.JobTitle;
+import com.buildbetter.business.abstracts.JobTitleService;
+import com.buildbetter.business.requests.CreateJobTitleRequest;
+import com.buildbetter.business.requests.UpdateJobTitleRequest;
+import com.buildbetter.business.responses.GetAllJobTitlesResponse;
+import com.buildbetter.business.rules.JobTitleBusinessRules;
+import com.buildbetter.core.utilities.mappers.ModelMapperService;
+import com.buildbetter.dataAccess.abstracts.CategoryRepository;
+import com.buildbetter.dataAccess.abstracts.JobTitleRepository;
+import com.buildbetter.entities.concretes.JobTitle;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

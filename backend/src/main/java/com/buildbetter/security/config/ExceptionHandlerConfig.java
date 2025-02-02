@@ -1,8 +1,8 @@
-package com.renovatipoint.security.config;
+package com.buildbetter.security.config;
 
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.core.utilities.exceptions.ProblemDetails;
-import com.renovatipoint.core.utilities.exceptions.ValidationProblemDetails;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.core.utilities.exceptions.ProblemDetails;
+import com.buildbetter.core.utilities.exceptions.ValidationProblemDetails;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

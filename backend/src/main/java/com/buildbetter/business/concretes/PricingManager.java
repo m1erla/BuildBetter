@@ -1,4 +1,4 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
 import org.springframework.stereotype.Service;
 

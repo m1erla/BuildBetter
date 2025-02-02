@@ -1,4 +1,4 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

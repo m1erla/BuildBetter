@@ -1,4 +1,4 @@
-package com.renovatipoint.core.utilities.mappers;
+package com.buildbetter.core.utilities.mappers;
 
 import org.modelmapper.ModelMapper;
 

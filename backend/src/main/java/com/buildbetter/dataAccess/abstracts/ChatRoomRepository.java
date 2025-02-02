@@ -1,8 +1,8 @@
-package com.renovatipoint.dataAccess.abstracts;
+package com.buildbetter.dataAccess.abstracts;
 
-import com.renovatipoint.entities.concretes.ChatRoom;
-import com.renovatipoint.entities.concretes.Request;
-import com.renovatipoint.enums.ChatRoomStatus;
+import com.buildbetter.entities.concretes.ChatRoom;
+import com.buildbetter.entities.concretes.Request;
+import com.buildbetter.enums.ChatRoomStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

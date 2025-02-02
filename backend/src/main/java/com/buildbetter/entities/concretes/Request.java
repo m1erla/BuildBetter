@@ -1,14 +1,11 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.renovatipoint.enums.RequestStatus;
+import com.buildbetter.enums.RequestStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity

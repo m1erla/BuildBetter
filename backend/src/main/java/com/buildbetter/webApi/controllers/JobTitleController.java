@@ -1,9 +1,9 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.JobTitleService;
-import com.renovatipoint.business.requests.CreateJobTitleRequest;
-import com.renovatipoint.business.requests.UpdateJobTitleRequest;
-import com.renovatipoint.business.responses.GetAllJobTitlesResponse;
+import com.buildbetter.business.abstracts.JobTitleService;
+import com.buildbetter.business.requests.CreateJobTitleRequest;
+import com.buildbetter.business.requests.UpdateJobTitleRequest;
+import com.buildbetter.business.responses.GetAllJobTitlesResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

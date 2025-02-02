@@ -1,10 +1,10 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.abstracts.IService;
-import com.renovatipoint.business.requests.CreateServiceRequest;
-import com.renovatipoint.business.requests.UpdateServiceRequest;
-import com.renovatipoint.business.responses.GetAllServicesResponse;
-import com.renovatipoint.business.responses.GetServiceByIdResponse;
+import com.buildbetter.business.abstracts.IService;
+import com.buildbetter.business.requests.CreateServiceRequest;
+import com.buildbetter.business.requests.UpdateServiceRequest;
+import com.buildbetter.business.responses.GetAllServicesResponse;
+import com.buildbetter.business.responses.GetServiceByIdResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

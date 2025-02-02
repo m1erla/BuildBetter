@@ -1,6 +1,6 @@
-package com.renovatipoint.security.config;
+package com.buildbetter.security.config;
 
-import com.renovatipoint.security.token.TokenRepository;
+import com.buildbetter.security.token.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

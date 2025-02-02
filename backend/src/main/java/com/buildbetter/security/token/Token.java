@@ -1,6 +1,6 @@
-package com.renovatipoint.security.token;
+package com.buildbetter.security.token;
 
-import com.renovatipoint.entities.concretes.User;
+import com.buildbetter.entities.concretes.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

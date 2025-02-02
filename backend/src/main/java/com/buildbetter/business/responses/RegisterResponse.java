@@ -1,4 +1,4 @@
-package com.renovatipoint.business.responses;
+package com.buildbetter.business.responses;
 
 import lombok.*;
 

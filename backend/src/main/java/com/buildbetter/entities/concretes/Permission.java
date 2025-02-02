@@ -1,4 +1,4 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

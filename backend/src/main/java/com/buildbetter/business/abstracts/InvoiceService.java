@@ -1,7 +1,7 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.entities.concretes.Invoice;
-import com.renovatipoint.enums.PaymentType;
+import com.buildbetter.entities.concretes.Invoice;
+import com.buildbetter.enums.PaymentType;
 import com.stripe.exception.StripeException;
 
 import java.io.IOException;

@@ -1,7 +1,7 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.dataAccess.abstracts.ExpertRepository;
-import com.renovatipoint.entities.concretes.Expert;
+import com.buildbetter.dataAccess.abstracts.ExpertRepository;
+import com.buildbetter.entities.concretes.Expert;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Scheduled;

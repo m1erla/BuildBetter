@@ -1,14 +1,13 @@
-package com.renovatipoint.webApi.controllers;
+package com.buildbetter.webApi.controllers;
 
-import com.renovatipoint.business.concretes.StorageManager;
-import com.renovatipoint.business.responses.GetAllImagesResponse;
+import com.buildbetter.business.concretes.StorageManager;
+import com.buildbetter.business.responses.GetAllImagesResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.MalformedURLException;

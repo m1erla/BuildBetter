@@ -1,7 +1,6 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.renovatipoint.enums.JobStatus;
+import com.buildbetter.enums.JobStatus;
 import jakarta.persistence.*;
 import lombok.*;
 

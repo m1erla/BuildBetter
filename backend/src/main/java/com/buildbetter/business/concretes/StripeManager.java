@@ -1,14 +1,14 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.InvoiceService;
-import com.renovatipoint.business.abstracts.StripeService;
-import com.renovatipoint.business.abstracts.UserService;
-import com.renovatipoint.business.requests.SepaPaymentRequest;
-import com.renovatipoint.core.utilities.exceptions.BusinessException;
-import com.renovatipoint.dataAccess.abstracts.PaymentInfoRepository;
-import com.renovatipoint.entities.concretes.Expert;
-import com.renovatipoint.entities.concretes.Invoice;
-import com.renovatipoint.entities.concretes.PaymentInfo;
+import com.buildbetter.business.abstracts.InvoiceService;
+import com.buildbetter.business.abstracts.StripeService;
+import com.buildbetter.business.abstracts.UserService;
+import com.buildbetter.business.requests.SepaPaymentRequest;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
+import com.buildbetter.dataAccess.abstracts.PaymentInfoRepository;
+import com.buildbetter.entities.concretes.Expert;
+import com.buildbetter.entities.concretes.Invoice;
+import com.buildbetter.entities.concretes.PaymentInfo;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.*;

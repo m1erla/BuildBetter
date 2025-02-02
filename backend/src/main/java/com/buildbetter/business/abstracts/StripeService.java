@@ -1,7 +1,7 @@
-package com.renovatipoint.business.abstracts;
+package com.buildbetter.business.abstracts;
 
-import com.renovatipoint.business.requests.SepaPaymentRequest;
-import com.renovatipoint.entities.concretes.Expert;
+import com.buildbetter.business.requests.SepaPaymentRequest;
+import com.buildbetter.entities.concretes.Expert;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 import com.stripe.model.SetupIntent;

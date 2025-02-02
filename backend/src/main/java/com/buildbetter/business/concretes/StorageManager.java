@@ -1,15 +1,15 @@
-package com.renovatipoint.business.concretes;
+package com.buildbetter.business.concretes;
 
-import com.renovatipoint.business.abstracts.StorageService;
-import com.renovatipoint.business.responses.GetAllImagesResponse;
-import com.renovatipoint.core.utilities.images.ImageUtils;
-import com.renovatipoint.core.utilities.mappers.ModelMapperService;
-import com.renovatipoint.dataAccess.abstracts.AdsRepository;
-import com.renovatipoint.dataAccess.abstracts.StorageRepository;
-import com.renovatipoint.dataAccess.abstracts.UserRepository;
-import com.renovatipoint.entities.concretes.Ads;
-import com.renovatipoint.entities.concretes.Storage;
-import com.renovatipoint.entities.concretes.User;
+import com.buildbetter.business.abstracts.StorageService;
+import com.buildbetter.business.responses.GetAllImagesResponse;
+import com.buildbetter.core.utilities.images.ImageUtils;
+import com.buildbetter.core.utilities.mappers.ModelMapperService;
+import com.buildbetter.dataAccess.abstracts.AdsRepository;
+import com.buildbetter.dataAccess.abstracts.StorageRepository;
+import com.buildbetter.dataAccess.abstracts.UserRepository;
+import com.buildbetter.entities.concretes.Ads;
+import com.buildbetter.entities.concretes.Storage;
+import com.buildbetter.entities.concretes.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;

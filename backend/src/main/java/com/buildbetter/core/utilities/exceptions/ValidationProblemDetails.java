@@ -1,4 +1,4 @@
-package com.renovatipoint.core.utilities.exceptions;
+package com.buildbetter.core.utilities.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

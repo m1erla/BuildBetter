@@ -1,6 +1,6 @@
-package com.renovatipoint.business.requests;
+package com.buildbetter.business.requests;
 
-import com.renovatipoint.entities.concretes.Role;
+import com.buildbetter.entities.concretes.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

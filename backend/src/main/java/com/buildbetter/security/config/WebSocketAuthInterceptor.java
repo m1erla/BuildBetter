@@ -1,8 +1,7 @@
-package com.renovatipoint.security.config;
+package com.buildbetter.security.config;
 
-import com.renovatipoint.security.jwt.JwtService;
-import com.renovatipoint.security.token.TokenRepository;
-import jakarta.servlet.http.HttpServletRequest;
+import com.buildbetter.security.jwt.JwtService;
+import com.buildbetter.security.token.TokenRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.ServerHttpRequest;

@@ -1,10 +1,9 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity

@@ -1,4 +1,4 @@
-package com.renovatipoint.core.utilities.mappers;
+package com.buildbetter.core.utilities.mappers;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;

@@ -1,12 +1,15 @@
-package com.renovatipoint.business.requests;
+package com.buildbetter.business.requests;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.renovatipoint.enums.MessageType;
+import com.buildbetter.enums.MessageType;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 

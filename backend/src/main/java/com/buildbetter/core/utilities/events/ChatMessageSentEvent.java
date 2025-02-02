@@ -1,7 +1,6 @@
-package com.renovatipoint.core.utilities.events;
+package com.buildbetter.core.utilities.events;
 
-import com.renovatipoint.entities.concretes.ChatMessage;
-import lombok.AllArgsConstructor;
+import com.buildbetter.entities.concretes.ChatMessage;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 @Getter

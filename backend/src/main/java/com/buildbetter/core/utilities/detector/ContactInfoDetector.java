@@ -1,4 +1,4 @@
-package com.renovatipoint.core.utilities.detector;
+package com.buildbetter.core.utilities.detector;
 
 public class ContactInfoDetector {
     private static final String EMAIL_REGEX ="\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b";

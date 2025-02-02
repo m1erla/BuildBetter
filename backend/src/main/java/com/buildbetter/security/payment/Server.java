@@ -1,28 +1,21 @@
-package com.renovatipoint.security.payment;
-
-import java.util.HashMap;
-import java.nio.file.Paths;
-
-import static spark.Spark.get;
-import static spark.Spark.post;
-import static spark.Spark.staticFiles;
-import static spark.Spark.port;
+package com.buildbetter.security.payment;
 
 import com.google.gson.Gson;
-import com.google.gson.annotations.SerializedName;
-
 import com.stripe.Stripe;
-import com.stripe.model.Payout;
-import com.stripe.net.ApiResource;
+import com.stripe.exception.SignatureVerificationException;
+import com.stripe.exception.StripeException;
 import com.stripe.model.Event;
-import com.stripe.model.EventDataObjectDeserializer;
 import com.stripe.model.PaymentIntent;
-import com.stripe.exception.*;
+import com.stripe.model.Payout;
 import com.stripe.net.Webhook;
 import com.stripe.param.PaymentIntentCreateParams;
-
 import com.stripe.param.PayoutCreateParams;
 import io.github.cdimascio.dotenv.Dotenv;
+
+import java.nio.file.Paths;
+import java.util.HashMap;
+
+import static spark.Spark.*;
 
 public class Server {
     private static Gson gson = new Gson();

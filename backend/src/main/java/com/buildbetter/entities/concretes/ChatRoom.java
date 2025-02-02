@@ -1,6 +1,6 @@
-package com.renovatipoint.entities.concretes;
+package com.buildbetter.entities.concretes;
 
-import com.renovatipoint.enums.ChatRoomStatus;
+import com.buildbetter.enums.ChatRoomStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
