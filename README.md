@@ -1,13 +1,10 @@
-# renovatipoint
+# Build Better
 
 # Structures
 - Java 17
-- Spring Framework
-- Spring Boot
-- Spring MVC
-- Spring Data
-- Spring Rest (http status)
-- Spring Security
+- Spring Boot 3
+- Docker
+- MySQL
 - CRUD structures
 
 ---
