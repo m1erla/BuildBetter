@@ -85,7 +85,6 @@ public class AuthenticationService {
             experts.setAccountBlocked(false);
             experts.setPaymentIssuesCount(0);
 
-
             // Address null kontrolü ekleyelim
             if (request.getAddress() == null || request.getAddress().trim().isEmpty()) {
                 throw new IllegalArgumentException("Address cannot be null or empty");
@@ -155,6 +154,10 @@ public class AuthenticationService {
             throw new IllegalStateException(
                     "This phone number is already in use. Please try a different phone number!");
         }
+
+        // Varsayılan olarak USER rolü ata, eğer role belirtilmişse onu kullan
+        Role userRole = request.getRole() != null ? request.getRole() : Role.USER;
+
         var user = User.builder()
                 .name(request.getName())
                 .surname(request.getSurname())
@@ -162,7 +165,7 @@ public class AuthenticationService {
                 .phoneNumber(request.getPhoneNumber())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .postCode(request.getPostCode())
-                .role(Role.USER)
+                .role(userRole)
                 .accountBlocked(false)
                 .balance(BigDecimal.ZERO)
                 .status(Status.ONLINE)
