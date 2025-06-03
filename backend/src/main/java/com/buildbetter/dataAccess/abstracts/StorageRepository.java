@@ -20,8 +20,5 @@ public interface StorageRepository extends JpaRepository<Storage, String> {
     void deleteByName(String name);
 
 
-
-
-
-
+    Optional<Storage> findByNameAndUserId(String oldFileName, String id);
 }

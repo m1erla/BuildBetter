@@ -56,7 +56,4 @@ public class Invoice {
     @Enumerated(EnumType.STRING)
     private PaymentType paymentType;
 
-    // @OneToOne(mappedBy = "invoice", cascade = CascadeType.ALL)
-    // private Operation operation;
-
 }

@@ -22,5 +22,5 @@ public class UpdateExpertRequest {
     private String phoneNumber;
     private String postCode;
     private PaymentInfo paymentInfo;
-    private MultipartFile storages;
+    private MultipartFile profileImageFile;
 }

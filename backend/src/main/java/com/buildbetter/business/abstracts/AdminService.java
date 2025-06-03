@@ -1,7 +1,9 @@
 package com.buildbetter.business.abstracts;
 
 import com.buildbetter.business.responses.admin.DashboardStatsResponse;
+import com.stripe.exception.StripeException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 
 public interface AdminService {
     DashboardStatsResponse getDashboardStats();
@@ -9,6 +11,14 @@ public interface AdminService {
     Object getAllUsers();
 
     void deleteUser(String userId);
+
+    // Bu metot ExpertService arayüzüne eklenmeli
+    @Transactional
+    ResponseEntity<?> deleteExpertAndAssociatedData(String expertId) throws StripeException;
+
+    // Bu metot UserService arayüzüne eklenmeli
+    @Transactional
+    ResponseEntity<?> deleteUserAndAssociatedData(String id);
 
     Object getAllAds();
 

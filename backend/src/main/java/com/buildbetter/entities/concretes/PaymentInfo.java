@@ -41,6 +41,9 @@ public class PaymentInfo {
     @Column(name = "last_payment_intent_id")
     private String lastPaymentIntentId;
 
+    @Column(name = "stripe_payment_intent_id", nullable = true)
+    private String stripePaymentIntentId;
+
     @Column(name = "is_active", nullable = false)
     private Boolean isActive = true;
 

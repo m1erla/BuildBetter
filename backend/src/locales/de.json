@@ -1,0 +1,1323 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "experts": "Experten",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "expertRegister": "Als Experte registrieren",
+    "ads": "Anzeigen",
+    "profile": "Profil"
+  },
+  "admin": {
+    "panel": "Admin-Panel",
+    "dashboard": "Übersicht",
+    "analytics": "Analysen",
+    "users": "Benutzer",
+    "messages": {
+      "title": "Nachrichten",
+      "description": "Kommunikation zwischen Benutzern und Experten verwalten",
+      "searchPlaceholder": "Nachrichten suchen...",
+      "refreshButton": "Aktualisieren",
+      "filterButton": "Filtern",
+      "expertChip": "Experte",
+      "reportedChip": "Gemeldet",
+      "reportedChipShort": "Gemeldet",
+      "unreadIndicator": "Ungelesene Nachricht",
+      "noMessagesFoundTitle": "Keine Nachrichten gefunden",
+      "noMessagesFoundDescription": "Versuchen Sie, die Filter oder Suchkriterien zu ändern",
+      "selectMessagePromptTitle": "Nachricht auswählen",
+      "selectMessagePromptDescription": "Wählen Sie eine Nachricht aus der Liste aus, um Details anzuzeigen",
+      "confirmDelete": "Möchten Sie diese Nachricht wirklich löschen?",
+      "recipientLabel": "Empfänger: {{recipient}}",
+      "tabs": {
+        "all": "Alle Nachrichten",
+        "unread": "Ungelesen",
+        "reported": "Gemeldet"
+      },
+      "filterOptions": {
+        "allTime": "Gesamte Zeit",
+        "today": "Heute",
+        "thisWeek": "Diese Woche",
+        "thisMonth": "Dieser Monat"
+      },
+      "actions": {
+        "markAsRead": "Als gelesen markieren",
+        "report": "Melden",
+        "unreport": "Meldung aufheben",
+        "delete": "Löschen",
+        "moreActions": "Weitere Aktionen"
+      },
+      "errors": {
+        "fetch": "Nachrichten konnten nicht abgerufen werden",
+        "refresh": "Nachrichten konnten nicht aktualisiert werden"
+      }
+    },
+    "payments": {
+      "title": "Zahlungen verwalten",
+      "searchPlaceholder": "Nach ID, Benutzer oder Beschreibung suchen...",
+      "statusFilterLabel": "Nach Status filtern",
+      "allStatuses": "Alle Status",
+      "tabs": {
+        "all": "Alle Zahlungen",
+        "completed": "Abgeschlossen",
+        "pending": "Ausstehend",
+        "failed": "Fehlgeschlagen",
+        "refunded": "Zurückerstattet"
+      },
+      "table": {
+        "id": "Zahlungs-ID",
+        "user": "Benutzer",
+        "amount": "Betrag",
+        "status": "Status",
+        "date": "Datum",
+        "method": "Methode",
+        "actions": "Aktionen"
+      },
+      "status": {
+        "completed": "Abgeschlossen",
+        "pending": "Ausstehend",
+        "failed": "Fehlgeschlagen",
+        "refunded": "Zurückerstattet"
+      },
+      "paymentMethods": {
+        "credit_card": "Kreditkarte",
+        "bank_transfer": "Banküberweisung",
+        "paypal": "PayPal",
+        "unknown": "Unbekannt"
+      },
+      "dialog": {
+        "title": "Zahlungsdetails",
+        "paymentId": "Zahlungs-ID",
+        "userId": "Benutzer-ID",
+        "userName": "Benutzername",
+        "amount": "Betrag",
+        "currency": "Währung",
+        "description": "Beschreibung",
+        "status": "Status",
+        "paymentMethod": "Zahlungsmethode",
+        "createdAt": "Erstellt am",
+        "processedAt": "Verarbeitet am",
+        "refundedAt": "Zurückerstattet am",
+        "failReason": "Fehlergrund",
+        "closeButton": "Schließen"
+      },
+      "actions": {
+        "viewDetails": "Details anzeigen",
+        "downloadInvoice": "Rechnung herunterladen",
+        "deletePayment": "Zahlung löschen"
+      },
+      "toastFetchError": "Fehler beim Abrufen der Zahlungen.",
+      "toastDeleteSuccess": "Zahlung erfolgreich gelöscht!",
+      "toastDeleteError": "Fehler beim Löschen der Zahlung.",
+      "noPayments": "Keine Zahlungen gefunden.",
+      "noSearchResults": "Keine Zahlungen gefunden, die Ihrer Suche oder Ihren Filtern entsprechen."
+    },
+    "categories": {
+      "title": "Kategorien verwalten",
+      "searchPlaceholder": "Kategorien suchen...",
+      "addButton": "Neue Kategorie hinzufügen",
+      "filterButton": "Filtern",
+      "refreshButton": "Aktualisieren",
+      "editButton": "Bearbeiten",
+      "deleteButton": "Löschen",
+      "statusActive": "Aktiv",
+      "statusInactive": "Inaktiv",
+      "dialogAddTitle": "Neue Kategorie hinzufügen",
+      "dialogEditTitle": "Kategorie bearbeiten",
+      "dialogFieldName": "Kategoriename",
+      "dialogFieldSlug": "Slug",
+      "dialogFieldSlugHelp": "URL-freundlicher Bezeichner (wird automatisch generiert)",
+      "dialogFieldDescription": "Beschreibung",
+      "dialogFieldIcon": "Symbol",
+      "dialogFieldImage": "Bild-URL",
+      "dialogFieldImageHelp": "Optionale URL für das Kategoriebild",
+      "dialogFieldBgImage": "Hintergrundbild-URL",
+      "dialogFieldBgImageHelp": "Optionale URL für das Hintergrundbild",
+      "dialogFieldIsActive": "Ist aktiv",
+      "dialogCloseButton": "Schließen",
+      "dialogSaveButton": "Speichern",
+      "dialogUpdateButton": "Aktualisieren",
+      "deleteConfirmTitle": "Löschen bestätigen",
+      "deleteConfirmText": "Möchten Sie diese Kategorie wirklich löschen?",
+      "deleteConfirmButton": "Löschen",
+      "deleteCancelButton": "Abbrechen",
+      "noCategories": "Keine Kategorien gefunden.",
+      "noSearchResults": "Keine Kategorien gefunden, die Ihrer Suche entsprechen.",
+      "addFirstCategory": "Fügen Sie Ihre erste Kategorie hinzu, um zu beginnen.",
+      "card": {
+        "expertsCount": "{{count}} Experten",
+        "servicesCount": "{{count}} Dienstleistungen"
+      },
+      "icon": {
+        "CategoryIcon": "Standardkategorie",
+        "HomeIcon": "Haus",
+        "SwatchIcon": "Farbpalette",
+        "HomeModernIcon": "Modernes Haus",
+        "PencilIcon": "Stift",
+        "BoltIcon": "Blitz",
+        "BeakerIcon": "Becherglas",
+        "ComputerDesktopIcon": "Computer",
+        "ShieldCheckIcon": "Schild",
+        "SquaresPlusIcon": "Quadrate",
+        "TruckIcon": "LKW",
+        "FireIcon": "Feuer",
+        "DevicePhoneMobileIcon": "Mobilgerät"
+      },
+      "toastCreateSuccess": "Kategorie erfolgreich erstellt!",
+      "toastUpdateSuccess": "Kategorie erfolgreich aktualisiert!",
+      "toastDeleteSuccess": "Kategorie erfolgreich gelöscht!",
+      "toastFetchError": "Fehler beim Abrufen der Kategorien.",
+      "toastCreateError": "Fehler beim Erstellen der Kategorie.",
+      "toastUpdateError": "Fehler beim Aktualisieren der Kategorie.",
+      "toastDeleteError": "Fehler beim Löschen der Kategorie."
+    },
+    "services": {
+      "title": "Dienstleistungen verwalten",
+      "searchPlaceholder": "Dienstleistungen suchen...",
+      "addButton": "Neue Dienstleistung hinzufügen",
+      "filterButton": "Filtern",
+      "refreshButton": "Aktualisieren",
+      "editButton": "Bearbeiten",
+      "deleteButton": "Löschen",
+      "previewButton": "Vorschau",
+      "statusActive": "Aktiv",
+      "statusInactive": "Inaktiv",
+      "popularYes": "Ja",
+      "popularNo": "Nein",
+      "allCategories": "Alle Kategorien",
+      "table": {
+        "name": "Name",
+        "category": "Kategorie",
+        "price": "Preis",
+        "status": "Status",
+        "popular": "Beliebt",
+        "actions": "Aktionen",
+        "createdAt": "Erstellt am"
+      },
+      "dialogAddTitle": "Neue Dienstleistung hinzufügen",
+      "dialogEditTitle": "Dienstleistung bearbeiten",
+      "dialogFieldName": "Dienstleistungsname",
+      "dialogFieldSlug": "Slug",
+      "dialogFieldSlugHelp": "URL-freundlicher Bezeichner (wird automatisch generiert)",
+      "dialogFieldDescription": "Beschreibung",
+      "dialogFieldPrice": "Preis",
+      "dialogFieldCategory": "Kategorie",
+      "dialogFieldFeatures": "Funktionen",
+      "dialogFieldFeaturesHelp": "Komma getrennte Liste von Funktionen",
+      "dialogFieldImage": "Bild-URL",
+      "dialogFieldImageHelp": "Optionale URL für das Dienstleistungsbild",
+      "dialogFieldIsPopular": "Ist beliebt",
+      "dialogFieldIsActive": "Ist aktiv",
+      "dialogCloseButton": "Schließen",
+      "dialogSaveButton": "Speichern",
+      "dialogUpdateButton": "Aktualisieren",
+      "deleteConfirmTitle": "Löschen bestätigen",
+      "deleteConfirmText": "Möchten Sie diese Dienstleistung wirklich löschen?",
+      "deleteConfirmButton": "Löschen",
+      "deleteCancelButton": "Abbrechen",
+      "noServices": "Keine Dienstleistungen gefunden.",
+      "noSearchResults": "Keine Dienstleistungen gefunden, die Ihrer Suche oder Ihren Filtern entsprechen.",
+      "addFirstService": "Fügen Sie Ihre erste Dienstleistung hinzu, um zu beginnen.",
+      "toastCreateSuccess": "Dienstleistung erfolgreich erstellt!",
+      "toastUpdateSuccess": "Dienstleistung erfolgreich aktualisiert!",
+      "toastDeleteSuccess": "Dienstleistung erfolgreich gelöscht!",
+      "toastFetchError": "Fehler beim Abrufen der Dienstleistungen.",
+      "toastFetchCategoriesError": "Fehler beim Abrufen der Kategorien.",
+      "toastCreateError": "Fehler beim Erstellen der Dienstleistung.",
+      "toastUpdateError": "Fehler beim Aktualisieren der Dienstleistung.",
+      "toastDeleteError": "Fehler beim Löschen der Dienstleistung."
+    },
+    "settings": "Einstellungen"
+  },
+  "common": {
+    "logout": "Abmelden",
+    "backToHome": "Zurück zur Startseite",
+    "welcome": "Willkommen",
+    "profile": "Profil",
+    "search": "Suchen",
+    "loading": "Wird geladen...",
+    "notFound": "Seite nicht gefunden",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "submit": "Senden",
+    "language": "Sprache",
+    "theme": "Thema",
+    "darkMode": "Dunkelmodus",
+    "lightMode": "Heller Modus",
+    "changeTheme": "Hellen/Dunklen Modus umschalten",
+    "retry": "Erneut versuchen",
+    "close": "Schließen",
+    "changeLanguage": "Sprache ändern",
+    "openSettings": "Einstellungen öffnen",
+    "notifications": "Benachrichtigungen",
+    "formValidation": {
+      "requiredFields": "Bitte füllen Sie alle erforderlichen Felder aus."
+    },
+    "error": "Fehler",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen",
+    "closeDialog": "Dialog schließen",
+    "cancelButton": "Abbrechen",
+    "saveButton": "Speichern"
+  },
+  "categories": {
+    "elektrikIsleri": "Elektroarbeiten",
+    "tesisatIsleri": "Sanitärarbeiten",
+    "tadilatIsleri": "Renovierungsarbeiten",
+    "beyazEsyaTamiri": "Reparatur von Haushaltsgeräten",
+    "nakliyat": "Transport",
+    "temizlik": "Reinigung",
+    "bahcePeyzaj": "Garten & Landschaftsbau",
+    "guvenlikSistemleri": "Sicherheitssysteme",
+    "mobilya": "Möbel",
+    "dekorasyon": "Dekoration",
+    "evEsyasiTamiri": "Reparatur von Haushaltsgeräten",
+    "ilaclama": "Schädlingsbekämpfung",
+    "kilitCilingir": "Schloss & Schlüssel",
+    "boyama": "Malerarbeiten",
+    "montajKurulum": "Montage & Installation",
+    "tamirOnarim": "Reparatur & Instandhaltung",
+    "ykmVeTemizlik": "Abriss & Entsorgung",
+    "sonKontrollerVeTeslim": "Endkontrollen & Übergabe"
+  },
+  "jobTitles": {
+    "elektrikci": "Elektriker",
+    "tesisatci": "Installateur",
+    "tadilatUstasi": "Renovierungsmeister",
+    "beyazEsyaTamircisi": "Haushaltsgerätetechniker",
+    "nakliyeci": "Spediteur",
+    "temizlikci": "Reinigungskraft",
+    "bahcivan": "Gärtner",
+    "guvenlikUzmani": "Sicherheitsexperte",
+    "mobilyaci": "Möbelbauer",
+    "dekorator": "Dekorateur",
+    "icMimar": "Innenarchitekt"
+  },
+  "services": {
+    "elektrikArizaTespiti": "Fehlersuche Elektrik",
+    "sigortaDegisimi": "Sicherungswechsel",
+    "anahtarPrizMontaji": "Schalter-/Steckdosenmontage",
+    "suKacagiTespiti": "Lecksuche Wasser",
+    "muslukDegisimi": "Wasserhahnwechsel",
+    "fayansDoseme": "Fliesenverlegung",
+    "boyaBadana": "Malerarbeiten",
+    "buzdolabiTamiri": "Kühlschrankreparatur",
+    "camasirMakinesiTamiri": "Waschmaschinenreparatur",
+    "evdenEveNakliyat": "Umzug von Haus zu Haus",
+    "ofisTasima": "Büroumzug",
+    "esyaDepolama": "Möbellagerung",
+    "isYeriTemizligi": "Büroreinigung",
+    "evTemizligi": "Hausreinigung",
+    "haliYikama": "Teppichreinigung",
+    "koltukYikama": "Polsterreinigung",
+    "bahceDuzenleme": "Gartengestaltung",
+    "cimBicme": "Rasenmähen",
+    "agacBudama": "Baumschnitt",
+    "alarmSistemiKurulumu": "Installation von Alarmsystemen",
+    "kameraSistemiKurulumu": "Installation von Kamerasystemen",
+    "mobilyaMontaji": "Möbelmontage",
+    "dolapMontaji": "Schrankmontage",
+    "avizeMontaji": "Kronleuchtermontage",
+    "duvarKagidiKaplama": "Tapezieren",
+    "perdeMontaji": "Gardinenmontage",
+    "parkeDoseme": "Parkettverlegung",
+    "laminantDoseme": "Laminatverlegung",
+    "klimaMontaji": "Klimaanlagenmontage",
+    "klimaBakimi": "Klimaanlagenwartung",
+    "kombiBakimi": "Heizungswartung",
+    "catiTamiri": "Dachreparatur",
+    "yagmurOlukTamiri": "Regenrinnenreparatur",
+    "kapiTamiri": "Türreparatur",
+    "pencereTamiri": "Fensterreparatur",
+    "kilitDegisimi": "Schlosswechsel",
+    "kabloTasima": "Kabelverlegung",
+    "prizTasima": "Steckdosenverlegung",
+    "petekTemizligi": "Heizkörperreinigung",
+    "bocekIlaclama": "Insektenbekämpfung",
+    "fareIlaclama": "Nagerbekämpfung",
+    "mobilyaTamiri": "Möbelreparatur",
+    "koltukTamiri": "Polsterreparatur",
+    "camDegisimi": "Glaswechsel",
+    "aynaMontaji": "Spiegelmontage",
+    "dusakabinMontaji": "Duschkabinenmontage",
+    "tvMontaji": "TV-Montage",
+    "uyduKurulumu": "Satelliteninstallation",
+    "camasirMakinesiMontaji": "Waschmaschinenmontage",
+    "bulasikMakinesiMontaji": "Geschirrspülmaschinenmontage",
+    "ankastreMontaji": "Einbaugerätemontage",
+    "elektrikliSupurgeTamiri": "Staubsaugerreparatur",
+    "kurutmaMakinesiTamiri": "Wäschetrocknerreparatur",
+    "mikrodalgaFirinTamiri": "Mikrowellenreparatur",
+    "firinTamiri": "Backofenreparatur",
+    "davlumbazTamiri": "Dunstabzugshaubenreparatur",
+    "sesSistemiKurulumu": "Soundsysteminstallation",
+    "internetBaglantiKurulumu": "Internetanschlussinstallation",
+    "bilgisayarKurulumu": "Computerinstallation",
+    "yaziciKurulumu": "Druckerinstallation",
+    "ahsapBoyama": "Holzanstrich",
+    "metalBoyama": "Metallanstrich",
+    "asmaTavanYapimi": "Deckenabhängung",
+    "alcipanDuvarYapimi": "Trockenbau",
+    "tuvaletMontaji": "Toilettenmontage",
+    "lavaboMontaji": "Waschbeckenmontage",
+    "banyoDolabMontaji": "Badezimmerschrankmontage",
+    "mutfakDolabiMontaji": "Küchenschrankmontage",
+    "tezgahMontaji": "Arbeitsplattenmontage",
+    "aspiratorMontaji": "Dunstabzugshaubenmontage",
+    "duvarKirma": "Wanddurchbruch",
+    "duvarOrme": "Mauerwerk",
+    "tadilatDanismanligi": "Renovierungsberatung",
+    "evDekorasyonuDanismanligi": "Einrichtungsberatung",
+    "peyzajDanismanligi": "Landschaftsbauberatung",
+    "guvenlikDanismanligi": "Sicherheitsberatung",
+    "parcaDegisimi": "Teileaustausch",
+    "kapiGobegiDegisimi": "Schließzylinderwechsel",
+    "suTesisatiDegisimi": "Wasserinstallationswechsel",
+    "elektrikTesisatiDegisimi": "Elektroinstallationswechsel",
+    "spotLambaMontaji": "Spotlichtmontage",
+    "ledAydinlatmaMontaji": "LED-Beleuchtungsmontage",
+    "kabloDoseme": "Kabelverlegung",
+    "kanalAcma": "Kanalreinigung",
+    "giderAcma": "Abflussreinigung",
+    "lavaboAcma": "Waschbeckenreinigung",
+    "tuvaletAcma": "Toilettenreinigung",
+    "bacaTemizligi": "Schornsteinreinigung",
+    "tesisatYalitimi": "Rohrisolierung",
+    "catiYalitimi": "Dachdämmung",
+    "disCepheYalitimi": "Fassadendämmung",
+    "icDuvarYalitimi": "Innendämmung",
+    "sesYalitimi": "Schalldämmung",
+    "kirikCamTamiri": "Glasbruchreparatur",
+    "celikKapiMontaji": "Stahltürmontage",
+    "panjurTamiri": "Rollladenreparatur",
+    "panjurMontaji": "Rollladenmontage",
+    "otomatikKapiTamiri": "Automatiktürreparatur",
+    "otomatikKepenkTamiri": "Automatische Rollladenreparatur",
+    "citYapimi": "Zaunbau",
+    "havuzBakimi": "Poolwartung",
+    "havuzTemizligi": "Poolreinigung",
+    "eskiTesisatSokme": "Demontage alter Installationen",
+    "eskiKaplamaSokme": "Entfernung alter Beläge",
+    "duvarYikimi": "Wandabriss",
+    "zeminYikimi": "Bodenabriss",
+    "atikYikimi": "Entsorgung von Bauschutt",
+    "yapisalElemanlar": "Bauelemente",
+    "insaatAlaniTemizleme": "Baustellenreinigung",
+    "insaatAtigiTemizleme": "Bauschuttentsorgung",
+    "insaatSonrasiTemizlikDetayli": "Endreinigung nach Bauarbeiten: Bauschuttentsorgung, Grundreinigung, detaillierte Endreinigung",
+    "eksiklikGidermeVeRotuslar": "Mängelbeseitigung: Korrektur fehlerhafter Arbeiten, Fertigstellung fehlender Arbeiten, letzte Ausbesserungen",
+    "sonKontrollerVeDenetimler": "Endkontrollen: Bauinspektionen, Installationsprüfungen, Dekorationsprüfungen",
+    "insaatTeslimiVeBelgeler": "Bauübergabe: Schlüsselfertige Übergabe, Einholung der Nutzungsgenehmigung, Übergabe der Garantiedokumente"
+  },
+  "pages": {
+    "home": {
+      "title": "Verwandeln Sie Ihren Raum mit Renovatipoint",
+      "subtitle": "Gestalten Sie Ihr Zuhause oder Büro mit unseren professionellen Dienstleistungen neu"
+    },
+    "about": {
+      "title": "Über uns",
+      "history": "Unsere Geschichte",
+      "mission": "Unsere Mission",
+      "vision": "Unsere Vision",
+      "team": "Unser Team"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Haben Sie Fragen? Kontaktieren Sie uns.",
+      "form": {
+        "name": "Ihr Name",
+        "email": "Ihre E-Mail",
+        "subject": "Betreff",
+        "message": "Ihre Nachricht",
+        "send": "Nachricht senden"
+      },
+      "success": "Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns in Kürze bei Ihnen melden.",
+      "error": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+      "info": {
+        "address": "Adresse",
+        "phone": "Telefon",
+        "email": "E-Mail"
+      }
+    },
+    "categoryDetail": {
+      "cta": {
+        "title": "Fordern Sie jetzt einen {{name}}-Service an",
+        "description": "Maßgeschneiderte Lösungen für Ihre Bedürfnisse mit unseren professionellen Experten",
+        "button": "Ich möchte diesen Service anfordern"
+      },
+      "experts": "{{count}} Experten",
+      "services": "{{count}} Dienstleistungen",
+      "noServices": "In dieser Kategorie sind noch keine Dienstleistungen verfügbar.",
+      "notFound": {
+        "title": "Kategorie nicht gefunden",
+        "description": "Die gesuchte Kategorie wurde nicht gefunden oder möglicherweise entfernt."
+      },
+      "features": {
+        "title": "Kategoriemerkmale"
+      }
+    },
+    "serviceDetail": {
+      "notFound": {
+        "title": "Dienstleistung nicht gefunden",
+        "description": "Die gesuchte Dienstleistung wurde nicht gefunden oder möglicherweise entfernt."
+      },
+      "price": "Ab {{price}}€",
+      "duration": "{{duration}}",
+      "requestService": "Dienstleistung anfordern",
+      "overview": {
+        "title": "Dienstleistungsdetails",
+        "description": "Dienstleistungsbeschreibung",
+        "features": "Funktionen",
+        "requirements": "Anforderungen",
+        "notIncluded": "Nicht enthalten"
+      },
+      "included": {
+        "title": "Im Service enthalten"
+      },
+      "tabs": {
+        "overview": "Übersicht",
+        "packages": "Pakete",
+        "process": "Prozess",
+        "faqs": "Häufig gestellte Fragen",
+        "experts": "Experten",
+        "reviews": "Bewertungen",
+        "faq": "FAQ"
+      },
+      "process": {
+        "title": "Dienstleistungsprozess"
+      },
+      "faqs": {
+        "title": "Häufig gestellte Fragen"
+      },
+      "summary": {
+        "title": "Dienstleistungszusammenfassung",
+        "price": "Preis",
+        "duration": "Dauer",
+        "category": "Kategorie"
+      },
+      "similarServices": {
+        "title": "Ähnliche Dienstleistungen",
+        "viewDetails": "Details anzeigen",
+        "expertCount": "{{count}}+ Experten"
+      },
+      "testimonials": {
+        "title": "Kundenbewertungen"
+      },
+      "descriptionTitle": "Dienstleistungsbeschreibung",
+      "selectPackage": "Paket auswählen",
+      "contactExpert": "Experten kontaktieren",
+      "features": "Funktionen",
+      "requirements": "Anforderungen",
+      "location": "Serviceort: {{location}}",
+      "expertProfile": {
+        "title": "Expertenprofil",
+        "experience": "Jahre Erfahrung",
+        "completedJobs": "Abgeschlossene Aufträge",
+        "rating": "Bewertung",
+        "reviews": "Bewertungen"
+      }
+    },
+    "unauthorized": {
+      "title": "Unbefugter Zugriff",
+      "description": "Sie haben keine Berechtigung, diese Seite anzuzeigen.",
+      "button": "Zurück"
+    },
+    "requestList": {
+      "title": "Anfragen",
+      "description": "Verwalten Sie Ihre Anfragen und die Kommunikation mit Experten",
+      "noRequests": "Keine Anfragen gefunden",
+      "status": {
+        "pending": "Ausstehend",
+        "accepted": "Angenommen",
+        "rejected": "Abgelehnt",
+        "completed": "Abgeschlossen",
+        "cancelled": "Storniert"
+      },
+      "actions": {
+        "accept": "Annehmen",
+        "reject": "Ablehnen",
+        "complete": "Abschließen",
+        "cancel": "Stornieren",
+        "details": "Details anzeigen",
+        "goToChat": "Zum Chatraum gehen"
+      },
+      "dialog": {
+        "title": "Anfragedetails #{{id}}",
+        "status": "Status",
+        "createdAt": "Erstellt am"
+      },
+      "errors": {
+        "fetchFailed": "Anfragen konnten nicht abgerufen werden. Bitte versuchen Sie es erneut.",
+        "acceptFailed": "Anfrage konnte nicht angenommen werden. Bitte versuchen Sie es erneut.",
+        "rejectFailed": "Anfrage konnte nicht abgelehnt werden. Bitte versuchen Sie es erneut.",
+        "completeFailed": "Anfrage konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+        "cancelFailed": "Anfrage konnte nicht storniert werden. Bitte versuchen Sie es erneut.",
+        "chatRoomFailed": "Chatraum-ID konnte nicht abgerufen werden. Bitte versuchen Sie es erneut."
+      }
+    },
+    "pendingRequests": {
+      "title": "Ausstehende Anfragen",
+      "noRequests": "Keine ausstehenden Anfragen",
+      "accept": "Annehmen",
+      "reject": "Ablehnen"
+    },
+    "homeRenovation": {
+      "title": "Hausrenovierung",
+      "subtitle": "Wir erneuern Ihre Wohnräume und verwandeln sie in Ihr Traumhaus",
+      "description": "Mit unserem professionellen Team und hochwertigen Materialien steigern wir den Wert Ihres Hauses. Von der Innenraumrenovierung über Außenarbeiten bis hin zu strukturellen Verbesserungen und dekorativen Akzenten decken wir alle Bedürfnisse Ihres Hauses ab.",
+      "hero": {
+        "alt": "Hauptbild Hausrenovierung"
+      },
+      "services": {
+        "interior": {
+          "title": "Innenraumrenovierung",
+          "description": "Wir erneuern Ihre Innenräume modern und funktional.",
+          "image": "https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Küchenrenovierung",
+            "2": "Badezimmerrenovierung",
+            "3": "Bodenbelag",
+            "4": "Wandverkleidung"
+          }
+        },
+        "exterior": {
+          "title": "Außenrenovierung",
+          "description": "Wir erneuern das äußere Erscheinungsbild Ihrer Gebäude und steigern ihren Wert.",
+          "image": "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80",
+          "features": {
+            "1": "Fassadenverkleidung",
+            "2": "Wärmedämmung",
+            "3": "Malerarbeiten",
+            "4": "Dachreparatur"
+          }
+        },
+        "structural": {
+          "title": "Strukturelle Verbesserungen",
+          "description": "Wir beheben strukturelle Probleme Ihres Gebäudes und erhöhen seine Sicherheit.",
+          "image": "https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Erdbebensicherung",
+            "2": "Fundamentverstärkung",
+            "3": "Rissreparatur",
+            "4": "Wasserabdichtung"
+          }
+        }
+      },
+      "process": {
+        "title": "Unser Arbeitsprozess",
+        "discovery": {
+          "title": "Bestandsaufnahme und Planung",
+          "description": "Unser Expertenteam führt eine detaillierte Bestandsaufnahme vor Ort durch und ermittelt Ihre Bedürfnisse."
+        },
+        "design": {
+          "title": "Entwurf und Angebot",
+          "description": "Es wird ein auf Ihre Bedürfnisse zugeschnittener Entwurf und Budgetplan erstellt und ein detailliertes Angebot vorgelegt."
+        },
+        "implementation": {
+          "title": "Ausführung",
+          "description": "Unser professionelles Team führt die Renovierungsarbeiten gemäß dem festgelegten Plan durch."
+        },
+        "qualityControl": {
+          "title": "Qualitätskontrolle",
+          "description": "Nach Abschluss aller Arbeiten erfolgt eine detaillierte Qualitätskontrolle und die Übergabe an Sie."
+        }
+      },
+      "cta": {
+        "title": "Kontaktieren Sie uns für eine kostenlose Besichtigung",
+        "description": "Unser Expertenteam ist bereit, Ihr Projekt zu bewerten und Ihnen maßgeschneiderte Lösungen anzubieten.",
+        "button": "Kontaktieren Sie uns"
+      }
+    },
+    "gardenDesign": {
+      "title": "Gartengestaltung",
+      "subtitle": "Professionelle Landschaftsbaulösungen, die die Schönheit der Natur in Ihr Zuhause bringen",
+      "description": "Mit unseren erfahrenen Landschaftsarchitekten und Gärtnern bieten wir maßgeschneiderte Lösungen, um Ihren Garten in einen ganzjährig nutzbaren Lebensraum zu verwandeln.",
+      "hero": {
+        "alt": "Hauptbild Gartengestaltung"
+      },
+      "services": {
+        "landscaping": {
+          "title": "Landschaftsgestaltung",
+          "description": "Wir gestalten Ihren Garten professionell neu.",
+          "image": "https://images.unsplash.com/photo-1551410224-699683e15636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80",
+          "features": {
+            "1": "Gartenplanung",
+            "2": "Pflanzenauswahl und -platzierung",
+            "3": "Landschaftsbeleuchtung",
+            "4": "Dekorative Steinverlegung"
+          }
+        },
+        "irrigation": {
+          "title": "Bewässerungssysteme",
+          "description": "Mit automatischen Bewässerungssystemen halten wir Ihren Garten immer grün.",
+          "image": "https://images.unsplash.com/photo-1623510593430-2fb4c2da5881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Automatische Bewässerungssysteme",
+            "2": "Tröpfchenbewässerung",
+            "3": "Sprinklersysteme",
+            "4": "Wassersparende Lösungen"
+          }
+        },
+        "furniture": {
+          "title": "Gartenmöbel",
+          "description": "Wir statten Ihren Garten mit funktionalen und ästhetischen Möbeln aus.",
+          "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+          "features": {
+            "1": "Außenmöbel",
+            "2": "Veranda- und Terrassengestaltung",
+            "3": "Bau von Pavillons und Pergolen",
+            "4": "Garten-Sitzgruppen"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Warum uns wählen?",
+        "sustainable": {
+          "title": "Nachhaltiges Design",
+          "description": "Wir gestalten nachhaltige Gärten mit umweltfreundlichen Materialien und wassersparenden Systemen."
+        },
+        "allSeasons": {
+          "title": "Ganzjährige Nutzung",
+          "description": "Wir wählen spezielle Pflanzen für Gärten aus, die zu jeder Jahreszeit schön aussehen und nutzbar sind."
+        },
+        "easyMaintenance": {
+          "title": "Einfache Pflege",
+          "description": "Wir schaffen pflegeleichte Gärten mit intelligenten Systemen und der richtigen Pflanzenauswahl."
+        },
+        "valueIncrease": {
+          "title": "Wertsteigerung",
+          "description": "Wir steigern den Wert Ihrer Immobilie durch professionelle Landschaftsgestaltung."
+        }
+      },
+      "cta": {
+        "title": "Kostenlose Beratung für Ihren Garten",
+        "description": "Unsere Experten helfen Ihnen gerne dabei, das Potenzial Ihres Gartens zu entdecken.",
+        "button": "Termin vereinbaren"
+      }
+    },
+    "specialProjects": {
+      "title": "Sonderprojekte",
+      "subtitle": "Mit unserem professionellen Team verwirklichen wir Ihre Traumräume",
+      "description": "Wir bieten maßgeschneiderte Lösungen für Luxusimmobilien, individuell gestaltete Pools, Smart-Home-Systeme und einzigartige Renovierungsprojekte. Lassen Sie uns gemeinsam Ihren Traum-Wohnraum schaffen.",
+      "hero": {
+        "alt": "Hauptbild Sonderprojekte"
+      },
+      "services": {
+        "pool": {
+          "title": "Individueller Poolbau",
+          "description": "Wir werten Ihren Wohnraum mit luxuriösen und individuell gestalteten Pools auf.",
+          "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Maßgefertigte Pools",
+            "2": "Wasserfälle und Wasserspiele",
+            "3": "Sonnenterrassen",
+            "4": "Individuelle Beleuchtungssysteme"
+          }
+        },
+        "smartHome": {
+          "title": "Smart-Home-Systeme",
+          "description": "Integrierte Smart-Home-Systeme zur Steuerung aller Geräte in Ihrem Zuhause.",
+          "image": "https://images.unsplash.com/photo-1558002038-1055953ce55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Ton- und Lichtsteuerung",
+            "2": "Sicherheitssysteme",
+            "3": "Klimasteuerung",
+            "4": "Steuerung per mobiler App"
+          }
+        },
+        "attic": {
+          "title": "Individuelle Dachgeschossgestaltung",
+          "description": "Wir verwandeln ungenutzte Dachgeschosse in funktionale Wohnräume.",
+          "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Dachgeschossausbau",
+            "2": "Maßgefertigte Möbel",
+            "3": "Dachfenster",
+            "4": "Dachterrassengestaltung"
+          }
+        }
+      },
+      "expertise": {
+        "title": "Unsere Fachgebiete",
+        "projectManagement": {
+          "title": "Projektmanagement",
+          "description": "Mit unseren erfahrenen Projektmanagern steuern wir Prozesse professionell."
+        },
+        "customDesign": {
+          "title": "Individuelles Design",
+          "description": "Wir entwickeln einzigartige und funktionale Designs für jedes Projekt."
+        },
+        "qualityControl": {
+          "title": "Qualitätskontrolle",
+          "description": "Wir wenden Qualitätskontrollprozesse nach internationalen Standards an."
+        },
+        "sustainability": {
+          "title": "Nachhaltigkeit",
+          "description": "Wir bieten umweltfreundliche Materialien und energieeffiziente Lösungen."
+        }
+      },
+      "cta1": {
+        "title": "Teilen Sie Ihr Projekt mit uns",
+        "description": "Lassen Sie uns professionelle Lösungen für Ihre Sonderprojekte anbieten. Unser Expertenteam steht Ihnen gerne zur Verfügung.",
+        "button": "Projektangebot anfordern"
+      },
+      "completed": {
+        "title": "Abgeschlossene Projekte",
+        "bodrumVilla": {
+          "title": "Villa-Renovierung in Bodrum",
+          "description": "Individueller Pool, Landschafts- und Innenraumgestaltung für eine 450m² große Villa in Bodrum",
+          "image": "https://images.unsplash.com/photo-1600607687644-c7e47361a37d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        "istanbulPenthouse": {
+          "title": "Penthouse in Istanbul",
+          "description": "Individuelle Gestaltung und Smart-Home-Systeme für ein 300m² großes Penthouse in Nişantaşı",
+          "image": "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+        }
+      },
+      "cta2": {
+        "title": "Kontaktieren Sie uns für eine kostenlose Beratung",
+        "description": "Unser Expertenteam hilft Ihnen gerne bei Ihrem Sonderprojekt.",
+        "button": "Kontaktieren Sie uns"
+      }
+    },
+    "privacyPolicy": {
+      "title": "Datenschutzrichtlinie",
+      "commitment": "Bei Renovatipoint verpflichten wir uns, Ihre Privatsphäre zu schützen.",
+      "description": "Diese Datenschutzrichtlinie erläutert, wie Ihre personenbezogenen Daten erfasst, verwendet und geschützt werden, wenn Sie unsere Dienste nutzen.",
+      "hero": {
+        "alt": "Bild Datensicherheit"
+      },
+      "sections": {
+        "dataSecurity": {
+          "title": "Datensicherheit",
+          "content": "Ihre personenbezogenen Daten werden mithilfe von branchenüblichen Sicherheitsprotokollen und Verschlüsselungstechnologien geschützt. Die Sicherheit Ihrer Daten hat für uns höchste Priorität."
+        },
+        "privacyCommitment": {
+          "title": "Datenschutzverpflichtung",
+          "content": "Wir respektieren die Privatsphäre unserer Kunden und geben keine persönlichen Daten an Dritte weiter. Ihre Daten werden ausschließlich zur Verbesserung unserer Servicequalität verwendet."
+        },
+        "kvkkCompliance": {
+          "title": "KVKK-Konformität",
+          "content": "Wir erfüllen alle gesetzlichen Anforderungen des türkischen Datenschutzgesetzes (KVKK) und verarbeiten Ihre Daten entsprechend."
+        },
+        "dataUsage": {
+          "title": "Datennutzung",
+          "content": "Die erfassten Daten werden verwendet, um unsere Servicequalität zu verbessern, gesetzliche Verpflichtungen zu erfüllen und Ihnen ein besseres Erlebnis zu bieten."
+        }
+      },
+      "policies": {
+        "collectedInfo": {
+          "title": "1. Erfasste Informationen",
+          "items": {
+            "1": "Name, Nachname und Kontaktdaten",
+            "2": "Projektdetails und Präferenzen",
+            "3": "Zahlungsinformationen",
+            "4": "Daten zur Servicenutzung"
+          }
+        },
+        "infoUsage": {
+          "title": "2. Verwendung von Informationen",
+          "items": {
+            "1": "Bereitstellung und Verbesserung von Services",
+            "2": "Kommunikation und Information",
+            "3": "Gesetzliche Verpflichtungen",
+            "4": "Analyse der Servicequalität"
+          }
+        },
+        "infoSecurity": {
+          "title": "3. Informationssicherheit",
+          "items": {
+            "1": "SSL-Verschlüsselungstechnologie",
+            "2": "Sichere Datenspeicherung",
+            "3": "Regelmäßige Sicherheitsüberprüfungen",
+            "4": "Zugriffskontrolle und Autorisierung"
+          }
+        },
+        "yourRights": {
+          "title": "4. Ihre Rechte",
+          "items": {
+            "1": "Auskunftsrecht",
+            "2": "Antrag auf Berichtigung und Löschung",
+            "3": "Widerspruchsrecht gegen die Verarbeitung",
+            "4": "Recht auf Datenübertragbarkeit"
+          }
+        }
+      },
+      "lastUpdated": "Letzte Aktualisierung",
+      "updateNotice": "Diese Datenschutzrichtlinie kann gemäß gesetzlichen Anforderungen und Änderungen unserer Servicebedingungen aktualisiert werden. Bei wesentlichen Änderungen werden Sie benachrichtigt."
+    },
+    "termsOfService": {
+      "title": "Nutzungsbedingungen",
+      "description": "Bitte lesen Sie diese Nutzungsbedingungen sorgfältig durch, bevor Sie die Dienste von Renovatipoint nutzen. Durch die Nutzung unserer Plattform erklären Sie sich mit diesen Bedingungen einverstanden.",
+      "listItem1": "Alle Inhalte sind urheberrechtlich geschützt.",
+      "listItem2": "Der Benutzer ist für die Sicherheit seines Kontos verantwortlich.",
+      "hero": {
+        "alt": "Bild Rechtlicher Vertrag"
+      },
+      "sections": {
+        "legalFramework": {
+          "title": "Rechtlicher Rahmen",
+          "content": "Diese Nutzungsbedingungen regeln die Rechtsbeziehung zwischen Built Better und den Benutzern und legen die Rechte und Pflichten der Parteien fest."
+        },
+        "paymentTerms": {
+          "title": "Zahlungsbedingungen",
+          "content": "Servicegebühren, Zahlungspläne und Rückerstattungsrichtlinien werden transparent festgelegt und angewendet."
+        },
+        "privacySecurity": {
+          "title": "Datenschutz und Sicherheit",
+          "content": "Der Schutz Ihrer personenbezogenen Daten und die Sicherheitsmaßnahmen während des Serviceprozesses werden gemäß den gesetzlichen Bestimmungen gewährleistet."
+        },
+        "serviceCommitment": {
+          "title": "Serviceverpflichtung",
+          "content": "Wir machen klare Zusagen zur Qualität und den Standards der von uns angebotenen Dienstleistungen und halten diese ein."
+        }
+      },
+      "terms": {
+        "generalProvisions": {
+          "title": "1. Allgemeine Bestimmungen",
+          "items": {
+            "1": "1.1. Diese Bedingungen regeln die Nutzung der Built Better-Plattform.",
+            "2": "1.2. Alle über die Plattform angebotenen Dienste unterliegen diesen Bedingungen.",
+            "3": "1.3. Nutzer erklären sich durch die Nutzung des Dienstes mit diesen Bedingungen einverstanden.",
+            "4": "1.4. Built Better behält sich das Recht vor, diese Bedingungen nach Benachrichtigung zu ändern."
+          }
+        },
+        "serviceTerms": {
+          "title": "2. Servicebedingungen",
+          "items": {
+            "1": "2.1. Unsere Dienstleistungen werden nach professionellen Standards erbracht.",
+            "2": "2.2. Projektlaufzeiten und -kosten werden im Voraus festgelegt.",
+            "3": "2.3. Änderungsanfragen können zusätzliche Kosten verursachen.",
+            "4": "2.4. Unsere Qualitätsstandards sind garantiert."
+          }
+        },
+        "paymentPolicy": {
+          "title": "3. Zahlungs- und Rückerstattungsrichtlinie",
+          "items": {
+            "1": "3.1. Der Zahlungsplan wird zu Beginn des Projekts festgelegt.",
+            "2": "3.2. Bei Ratenzahlungen können Zinsen anfallen.",
+            "3": "3.3. Stornierungs- und Rückerstattungsbedingungen sind im Vertrag festgelegt.",
+            "4": "3.4. Bei verspäteten Zahlungen fallen gesetzliche Zinsen an."
+          }
+        },
+        "responsibilities": {
+          "title": "4. Verantwortlichkeiten",
+          "items": {
+            "1": "4.1. Die Verantwortlichkeiten beider Parteien während des Projektprozesses werden festgelegt.",
+            "2": "4.2. Im Falle höherer Gewalt kann die Frist verlängert werden.",
+            "3": "4.3. Material- und Verarbeitungsgarantie wird gewährt.",
+            "4": "4.4. Arbeitssicherheitsmaßnahmen werden von uns bereitgestellt."
+          }
+        },
+        "intellectualProperty": {
+          "title": "5. Geistiges Eigentum",
+          "items": {
+            "1": "5.1. Designs und Projekte sind Eigentum unseres Unternehmens.",
+            "2": "5.2. Änderungen an vom Kunden genehmigten Projekten sind nicht möglich.",
+            "3": "5.3. Das Recht zur Verwendung als Referenz bleibt vorbehalten.",
+            "4": "5.4. Projektbilder dürfen nicht ohne Genehmigung verwendet werden."
+          }
+        },
+        "disputeResolution": {
+          "title": "6. Streitbeilegung",
+          "items": {
+            "1": "6.1. Streitigkeiten werden zunächst durch Verhandlungen beigelegt.",
+            "2": "6.2. Ein Mediationsverfahren kann angewendet werden.",
+            "3": "6.3. Rechtliche Schritte werden als letztes Mittel eingeleitet.",
+            "4": "6.4. Zuständige Gerichte sind im Vertrag festgelegt."
+          }
+        }
+      },
+      "lastUpdated": "Letzte Aktualisierung",
+      "updateNotice": "Diese Nutzungsbedingungen können gemäß gesetzlichen Anforderungen und Änderungen unserer Servicebedingungen aktualisiert werden. Bei wesentlichen Änderungen werden Sie benachrichtigt."
+    }
+  },
+  "errors": {
+    "errorTitle": "Ein Fehler ist aufgetreten",
+    "fetchDataError": "Fehler beim Abrufen der Daten.",
+    "invalidCategoryId": "Ungültige Kategorie-ID",
+    "invalidServiceId": "Ungültige Dienstleistungs-ID",
+    "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung.",
+    "serverError": "Serverfehler. Bitte versuchen Sie es später erneut.",
+    "accessDenied": "Zugriff verweigert. Sie haben keine Berechtigung, auf diese Ressource zuzugreifen.",
+    "unknownCategory": "Unbekannte Kategorie",
+    "unknownService": "Unbekannte Dienstleistung",
+    "pageNotFound": "Seite nicht gefunden",
+    "somethingWentWrong": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "formValidation": "Bitte überprüfen Sie das Formular und versuchen Sie es erneut.",
+    "requiredField": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+  },
+  "home": {
+    "hero": {
+      "title": "Die richtige Adresse für professionelle Dienstleistungen",
+      "subtitle": "Wir bieten alle Dienstleistungen, die Sie für Ihr Zuhause, Büro und Garten benötigen, mit unseren Expertenteams.",
+      "cta": "Jetzt starten"
+    },
+    "categories": {
+      "title": "Unsere Servicekategorien",
+      "expertCount": "{{count}} Experten",
+      "viewDetails": "Details anzeigen"
+    },
+    "services": {
+      "featured": "Empfohlene Dienstleistungen"
+    },
+    "whyUs": {
+      "title": "Warum wir?",
+      "description": "Wir bieten maßgeschneiderte Lösungen für Ihre Bedürfnisse mit einem zuverlässigen, erschwinglichen und professionellen Serviceansatz.",
+      "stats": {
+        "title": "Wir in Zahlen",
+        "experts": "Experte",
+        "projects": "Projekt",
+        "clients": "Kunde",
+        "satisfaction": "Zufriedenheit"
+      },
+      "features": {
+        "title": "Unsere Merkmale",
+        "quality": "Qualitätsdienstleistung",
+        "qualityDesc": "Garantie für hochwertigen Service nach hohen Standards",
+        "support": "24/7 Support",
+        "supportDesc": "Unser Support-Team ist immer für Sie da",
+        "experience": "Erfahrenes Team",
+        "experienceDesc": "Experten und erfahrene Fachleute in ihrem Bereich",
+        "price": "Erschwinglicher Preis",
+        "priceDesc": "Erschwingliche Dienstleistungen für jedermann"
+      },
+      "joinCta": "Experte werden"
+    }
+  },
+  "profile": {
+    "personalInfo": "Persönliche Informationen",
+    "accountSettings": "Kontoeinstellungen",
+    "notifications": "Benachrichtigungen",
+    "payments": "Zahlungsmethoden",
+    "changePassword": "Passwort ändern",
+    "deleteAccount": "Konto löschen",
+    "uploadPhoto": "Foto hochladen",
+    "errors": {
+      "loadProfileFailed": "Profildaten konnten nicht geladen werden.",
+      "loadAdsFailed": "Anzeigen konnten nicht geladen werden.",
+      "loadChatsFailed": "Chats konnten nicht geladen werden.",
+      "loadRequestsFailed": "Anfragen konnten nicht geladen werden.",
+      "userNotFound": "Benutzer nicht gefunden.",
+      "unauthorized": "Sie sind nicht berechtigt, diese Aktion durchzuführen.",
+      "updateFailed": "Profil konnte nicht aktualisiert werden.",
+      "imageUpdateFailed": "Profilbild konnte nicht aktualisiert werden.",
+      "loadAdImagesFailed": "Anzeigenbilder konnten nicht geladen werden.",
+      "userNotFoundMessage": "Das angeforderte Benutzerprofil konnte nicht gefunden werden."
+    },
+    "edit": {
+      "success": "Profil erfolgreich aktualisiert.",
+      "imageUpdateSuccess": "Profilbild erfolgreich aktualisiert.",
+      "editButtonLabel": "Profil bearbeiten",
+      "dialogTitle": "Profil bearbeiten",
+      "firstNameLabel": "Vorname",
+      "lastNameLabel": "Nachname",
+      "phoneLabel": "Telefon",
+      "addressLabel": "Adresse",
+      "postCodeLabel": "Postleitzahl"
+    },
+    "tabs": {
+      "ads": "Meine Anzeigen",
+      "chats": "Chats",
+      "requests": "Anfragen"
+    },
+    "ads": {
+      "title": "Meine Anzeigen",
+      "createNewButton": "Neue Anzeige erstellen",
+      "emptyState": {
+        "title": "Keine Anzeigen gefunden",
+        "message": "Sie haben noch keine Anzeigen erstellt.",
+        "createFirstButton": "Erstellen Sie Ihre erste Anzeige"
+      },
+      "editButtonLabel": "Anzeige bearbeiten",
+      "invalidAd": "Ungültige Anzeige ausgewählt."
+    },
+    "adEdit": {
+      "validation": {
+        "categoryRequired": "Kategorie ist erforderlich.",
+        "serviceRequired": "Dienstleistung ist erforderlich."
+      },
+      "success": "Anzeige erfolgreich aktualisiert.",
+      "errors": {
+        "invalidData": "Ungültige Daten für die Anzeige bereitgestellt.",
+        "updateFailed": "Anzeige konnte nicht aktualisiert werden."
+      },
+      "dialogTitle": "Anzeige bearbeiten",
+      "titleLabel": "Titel",
+      "descriptionLabel": "Beschreibung",
+      "categoryLabel": "Kategorie",
+      "selectCategoryPlaceholder": "Wählen Sie eine Kategorie",
+      "serviceLabel": "Dienstleistung",
+      "selectServicePlaceholder": "Wählen Sie eine Dienstleistung",
+      "imagesTitle": "Anzeigenbilder"
+    },
+    "chats": {
+      "emptyState": {
+        "title": "Keine Chats gefunden",
+        "message": "Sie haben keine aktiven Chats."
+      },
+      "chatCardAriaLabel": "Chat über {{title}}",
+      "expertLabel": "Experte",
+      "lastActivityLabel": "Letzte Aktivität",
+      "lastMessageLabel": "Letzte Nachricht",
+      "goToChatButton": "Zum Chat gehen"
+    },
+    "requests": {
+      "acceptSuccess": "Anfrage erfolgreich akzeptiert.",
+      "errors": {
+        "acceptFailed": "Anfrage konnte nicht akzeptiert werden.",
+        "rejectFailed": "Anfrage konnte nicht abgelehnt werden."
+      },
+      "rejectSuccess": "Anfrage erfolgreich abgelehnt.",
+      "emptyState": {
+        "title": "Keine Anfragen gefunden",
+        "message": "Sie haben keine ausstehenden Anfragen."
+      },
+      "expertLabel": "Experte",
+      "goToChatButton": "Zum Chat gehen"
+    }
+  },
+  "ads": {
+    "createTitle": "Neue Anzeige erstellen",
+    "editTitle": "Anzeige bearbeiten",
+    "myAdsTitle": "Meine Anzeigen",
+    "categories": "Kategorien",
+    "filters": "Filter",
+    "sort": "Sortieren",
+    "search": "Anzeige suchen",
+    "form": {
+      "title": "Titel",
+      "category": "Kategorie",
+      "description": "Beschreibung",
+      "price": "Preis",
+      "location": "Standort",
+      "images": "Bilder",
+      "phone": "Telefon",
+      "contactInfo": "Kontaktinformationen",
+      "publish": "Veröffentlichen",
+      "update": "Aktualisieren"
+    },
+    "status": {
+      "active": "Aktiv",
+      "inactive": "Inaktiv",
+      "pending": "Ausstehend",
+      "rejected": "Abgelehnt"
+    },
+    "details": {
+      "contactSeller": "Verkäufer kontaktieren",
+      "postDate": "Veröffentlichungsdatum",
+      "views": "Ansichten",
+      "share": "Teilen",
+      "report": "Melden",
+      "similar": "Ähnliche Anzeigen"
+    }
+  },
+  "chat": {
+    "title": "Nachrichten",
+    "send": "Senden",
+    "newMessage": "Neue Nachricht",
+    "noMessages": "Noch keine Nachrichten",
+    "startConversation": "Beginnen Sie eine Konversation",
+    "typeMessage": "Schreiben Sie Ihre Nachricht...",
+    "chatRooms": "Chaträume",
+    "noChats": "Noch keine Chats",
+    "lastMessage": "Letzte Nachricht"
+  },
+  "auth": {
+    "expertRegister": "Als Experte registrieren"
+  },
+  "company": {
+    "about": {
+      "title": "Über Built Better",
+      "description": "Wir bauen seit 2020 Vertrauen durch Qualität und Innovation auf",
+      "team": {
+        "title": "Lernen Sie unser Team kennen",
+        "roles": {
+          "ceo": "CEO & Gründer",
+          "architect": "Chefarchitekt",
+          "projectManager": "Projektmanager"
+        }
+      },
+      "features": {
+        "expertTeam": {
+          "title": "Expertenteam",
+          "description": "Unser Team besteht aus hochqualifizierten Fachleuten mit jahrelanger Erfahrung"
+        },
+        "quality": {
+          "title": "Qualität zuerst",
+          "description": "Wir gehen keine Kompromisse bei der Qualität ein und liefern stets die besten Ergebnisse"
+        },
+        "innovative": {
+          "title": "Innovative Lösungen",
+          "description": "Wir setzen die neuesten Technologien und innovativen Ansätze zur Problemlösung ein"
+        }
+      },
+      "stats": {
+        "completedProjects": "Abgeschlossene Projekte",
+        "expertTeam": "Expertenteammitglied",
+        "yearsExperience": "Jahre Erfahrung",
+        "happyClients": "Zufriedene Kunden"
+      },
+      "cta": {
+        "title": "Bereit, Ihren Raum zu verwandeln?",
+        "description": "Lassen Sie uns zusammenarbeiten, um Ihre Vision zum Leben zu erwecken",
+        "button": "Jetzt starten"
+      }
+    },
+    "careers": {
+      "hero": {
+        "title": "Treten Sie unserem Team bei",
+        "description": "Werden Sie Teil von Built Better und tragen Sie zu unserer Erfolgsgeschichte bei",
+        "alt": "Karrieremöglichkeiten bei Built Better"
+      },
+      "description": "Wir suchen talentierte Fachleute, die unser wachsendes Team verstärken. Sehen Sie sich unsere offenen Stellen unten an.",
+      "positions": {
+        "seniorInterior": {
+          "title": "Senior Innenarchitekt",
+          "description": "Leiten und gestalten Sie innovative Innenraumprojekte",
+          "requirements": "5+ Jahre Erfahrung in der Innenarchitektur, Kenntnisse in Design-Software"
+        },
+        "projectManager": {
+          "title": "Projektmanager",
+          "description": "Verwalten und koordinieren Sie Renovierungsprojekte",
+          "requirements": "3+ Jahre Erfahrung im Bau-/Renovierungsprojektmanagement"
+        },
+        "landscapeArchitect": {
+          "title": "Landschaftsarchitekt",
+          "description": "Gestalten und verwalten Sie Außenbereiche",
+          "requirements": "3+ Jahre Erfahrung in der Landschaftsarchitektur"
+        }
+      },
+      "locations": {
+        "istanbul": "Istanbul",
+        "ankara": "Ankara",
+        "izmir": "Izmir"
+      },
+      "types": {
+        "fullTime": "Vollzeit"
+      },
+      "apply": "Jetzt bewerben",
+      "form": {
+        "title": "Bewerbungsformular",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "experience": "Jahre Erfahrung",
+        "message": "Anschreiben",
+        "submit": "Bewerbung absenden"
+      }
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Haben Sie Fragen? Kontaktieren Sie uns.",
+      "address": "Adresse",
+      "address.line1": "Maslak Mah. Büyükdere Cad. No:123",
+      "address.line2": "34485 Sarıyer/Istanbul",
+      "phone": "Telefon",
+      "phone.number1": "+90 (212) 123 45 67",
+      "phone.number2": "+90 (532) 123 45 67",
+      "email": "E-Mail",
+      "email.address1": "info@builtbetter.com",
+      "email.address2": "destek@builtbetter.com",
+      "form": {
+        "title": "Senden Sie uns eine Nachricht",
+        "name": "Ihr Name",
+        "email": "Ihre E-Mail",
+        "subject": "Betreff",
+        "message": "Ihre Nachricht",
+        "send": "Nachricht senden"
+      },
+      "map": {
+        "alt": "Kontaktkartenstandort"
+      }
+    }
+  },
+  "support": {
+    "helpCenter": {
+      "title": "Hilfecenter",
+      "description": "Wie können wir Ihnen heute helfen?",
+      "searchPlaceholder": "Nach Hilfe suchen...",
+      "categories": {
+        "general": "Allgemeine Fragen",
+        "services": "Unsere Dienstleistungen",
+        "payment": "Zahlung & Preise",
+        "security": "Sicherheit & Datenschutz"
+      },
+      "faqs": {
+        "title": "Häufig gestellte Fragen",
+        "description": "Finden Sie Antworten auf häufig gestellte Fragen.",
+        "general": {
+          "title": "Allgemeine Fragen",
+          "items": [
+            {
+              "question": "Wie funktioniert Built Better?",
+              "answer": "Built Better verbindet Sie mit qualifizierten Fachleuten..."
+            },
+            {
+              "question": "Ist Built Better in meiner Region verfügbar?",
+              "answer": "Wir sind derzeit in großen Städten tätig..."
+            }
+          ]
+        },
+        "services": {
+          "title": "Unsere Dienstleistungen",
+          "items": [
+            {
+              "question": "Welche Dienstleistungen bieten Sie an?",
+              "answer": "Wir bieten eine breite Palette von Heimwerkerdienstleistungen an..."
+            },
+            {
+              "question": "Wie werden Ihre Experten überprüft?",
+              "answer": "Alle Experten durchlaufen strenge Hintergrundprüfungen..."
+            }
+          ]
+        },
+        "payment": {
+          "title": "Zahlung & Preise",
+          "items": [
+            {
+              "question": "Was kosten die Dienstleistungen?",
+              "answer": "Die Preise variieren je nach Dienstleistung..."
+            },
+            {
+              "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+              "answer": "Wir akzeptieren alle gängigen Kreditkarten..."
+            }
+          ]
+        },
+        "security": {
+          "title": "Sicherheit & Datenschutz",
+          "items": [
+            {
+              "question": "Wie werden meine persönlichen Daten geschützt?",
+              "answer": "Wir verwenden branchenübliche Verschlüsselung..."
+            },
+            {
+              "question": "Sind Ihre Dienstleistungen garantiert?",
+              "answer": "Ja, alle Dienstleistungen werden mit einer Zufriedenheitsgarantie geliefert."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "toasts": {
+    "sessionExpired": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
+    "genericError": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+  },
+  "requestStatus": {
+    "pending": "Ausstehend",
+    "accepted": "Akzeptiert",
+    "rejected": "Abgelehnt"
+  },
+  "footer": {
+    "copyright": "© 2024 RenovatioPoint. Alle Rechte vorbehalten."
+  }
+} 

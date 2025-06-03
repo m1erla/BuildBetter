@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Data
-@Table(name = "image_data", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "name"})})
+@Table(name = "storage", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "name"})})
 @Entity
 @Builder
 @Getter
@@ -34,6 +34,4 @@ public class Storage {
     @JoinColumn(name = "ad_id", referencedColumnName = "id")
     private Ads ads;
 
-
 }
-

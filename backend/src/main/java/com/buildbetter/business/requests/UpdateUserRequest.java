@@ -4,7 +4,6 @@ import com.buildbetter.entities.concretes.Role;
 import lombok.Data;
 import org.springframework.web.multipart.MultipartFile;
 
-
 @Data
 public class UpdateUserRequest {
     private String id;
@@ -13,23 +12,25 @@ public class UpdateUserRequest {
     private String email;
     private String phoneNumber;
     private String address;
-    private MultipartFile storages;
+    private MultipartFile profileImageFile;
     private String postCode;
     private Role role;
 
-    public UpdateUserRequest(String id, String name, String surname, String email, String phoneNumber, String address, MultipartFile storages, String postCode, Role role) {
+    public UpdateUserRequest(String id, String name, String surname, String email, String phoneNumber, String address,
+            MultipartFile profileImageFile, String postCode, Role role) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.address = address;
-        this.storages = storages;
+        this.profileImageFile = profileImageFile;
         this.postCode = postCode;
         this.role = role;
     }
 
-    public UpdateUserRequest(){}
+    public UpdateUserRequest() {
+    }
 
     public String getAddress() {
         return address;
@@ -59,8 +60,8 @@ public class UpdateUserRequest {
         this.phoneNumber = phoneNumber;
     }
 
-    public void setStorages(MultipartFile storages) {
-        this.storages = storages;
+    public void setProfileImageFile(MultipartFile profileImageFile) {
+        this.profileImageFile = profileImageFile;
     }
 
     public void setPostCode(String postCode) {
@@ -91,14 +92,13 @@ public class UpdateUserRequest {
         return phoneNumber;
     }
 
-    public MultipartFile getStorages() {
-        return storages;
+    public MultipartFile getProfileImageFile() {
+        return profileImageFile;
     }
 
     public String getPostCode() {
         return postCode;
     }
-
 
     public Role getRole() {
         return role;

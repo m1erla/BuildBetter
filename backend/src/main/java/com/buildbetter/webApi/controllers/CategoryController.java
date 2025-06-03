@@ -5,6 +5,7 @@ import com.buildbetter.business.requests.CreateCategoryRequest;
 import com.buildbetter.business.requests.UpdateCategoryRequest;
 import com.buildbetter.business.responses.GetAllCategoriesResponse;
 import com.buildbetter.business.responses.GetAllJobTitlesResponse;
+import com.buildbetter.business.responses.GetCategoriesByIdResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -18,31 +19,33 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @GetMapping
-    public List<GetAllCategoriesResponse> getAllCategories(){
+    public List<GetAllCategoriesResponse> getAllCategories() {
         return categoryService.getAll();
     }
 
     @GetMapping("/{categoryName}/jobTitles")
-    public List<GetAllJobTitlesResponse> getJobTitlesByCategory(@PathVariable String categoryName){
+    public List<GetAllJobTitlesResponse> getJobTitlesByCategory(@PathVariable String categoryName) {
         return categoryService.getJobTitlesByCategory(categoryName);
     }
 
+    @GetMapping("/{id}")
+    public GetCategoriesByIdResponse getCategoryById(@PathVariable String id) {
+        return categoryService.getById(id);
+    }
 
     @PostMapping("/category")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public void add(@RequestBody CreateCategoryRequest createCategoryRequest){
+    public void add(@RequestBody CreateCategoryRequest createCategoryRequest) {
         this.categoryService.add(createCategoryRequest);
     }
 
-
-
     @PutMapping("/category_update/{id}")
-    public void update(@RequestBody UpdateCategoryRequest updateCategoryRequest){
+    public void update(@RequestBody UpdateCategoryRequest updateCategoryRequest) {
         this.categoryService.update(updateCategoryRequest);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id){
+    public void delete(@PathVariable String id) {
         this.categoryService.delete(id);
     }
 }
