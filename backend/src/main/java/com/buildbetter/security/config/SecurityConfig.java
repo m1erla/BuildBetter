@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -45,63 +46,15 @@ public class SecurityConfig implements WebMvcConfigurer {
                                 .exceptionHandling(c -> c.authenticationEntryPoint(
                                                 new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
                                 .cors(Customizer.withDefaults())
-                                .cors(c -> c.configurationSource(corsConfigurationSource()))
                                 .csrf(AbstractHttpConfigurer::disable)
-                                .csrf(csrf -> csrf
-                                                .ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/ws/**"))
-                                                .disable())
                                 .authorizeHttpRequests(auth -> auth
-                                                // WebSocket endpoints
+                                                // === Genel İzin Verilenler ===
                                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/ws/**")).permitAll()
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/ws")).permitAll()
-
-                                                // Auth endpoints
                                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/auth/**"))
-                                                .permitAll()
-
-                                                // Other public endpoints
-                                                .requestMatchers(
-                                                                AntPathRequestMatcher.antMatcher("/api/v1/payments/**"))
                                                 .permitAll()
                                                 .requestMatchers(AntPathRequestMatcher
                                                                 .antMatcher("/api/v1/payments/webhook/**"))
                                                 .permitAll()
-                                                .requestMatchers(
-                                                                AntPathRequestMatcher.antMatcher("/api/v1/invoices/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher
-                                                                .antMatcher("/api/v1/transactions/**"))
-                                                .permitAll()
-                                                .requestMatchers(
-                                                                AntPathRequestMatcher.antMatcher("/api/v1/requests/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/experts/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/users/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher
-                                                                .antMatcher("/api/v1/categories/**"))
-                                                .permitAll()
-                                                .requestMatchers(
-                                                                AntPathRequestMatcher.antMatcher("/api/v1/services/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher
-                                                                .antMatcher("/api/v1/job_titles/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/ads/**"))
-                                                .permitAll()
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/chat/**"))
-                                                .permitAll()
-
-                                                // Static resources
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/storage/**"))
-                                                .permitAll()
-
-                                                // Admin endpoints - Sadece ADMIN rolü erişebilir
-                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/admin/**"))
-                                                .hasRole("ADMIN")
-
-                                                // Swagger/OpenAPI endpoints
                                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/v3/api-docs/**"))
                                                 .permitAll()
                                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/v2/api-docs"))
@@ -117,8 +70,34 @@ public class SecurityConfig implements WebMvcConfigurer {
                                                 .permitAll()
                                                 .requestMatchers(AntPathRequestMatcher.antMatcher("/swagger-ui.html"))
                                                 .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/error")).permitAll()
+                                                .requestMatchers(AntPathRequestMatcher
+                                                                .antMatcher(HttpMethod.GET, "/api/v1/storage/**"))
+                                                .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher
+                                                                .antMatcher(HttpMethod.GET, "/api/v1/experts/**"))
+                                                .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher
+                                                                .antMatcher(HttpMethod.GET, "/api/v1/users/**"))
+                                                .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher
+                                                                .antMatcher(HttpMethod.GET, "/api/v1/categories/**"))
+                                                .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher
+                                                                .antMatcher(HttpMethod.GET, "/api/v1/services/**"))
+                                                .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher
+                                                                .antMatcher(HttpMethod.GET, "/api/v1/job_titles/**"))
+                                                .permitAll()
+                                                .requestMatchers(AntPathRequestMatcher.antMatcher(HttpMethod.GET,
+                                                                "/api/v1/ads/**"))
+                                                .permitAll()
 
-                                                // All other requests need authentication
+                                                // === Sadece Admin Yetkisi ===
+                                                .requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/admin/**"))
+                                                .hasRole("ADMIN")
+
+                                                // === Kimlik Doğrulaması Gerekenler (GENEL) ===
                                                 .anyRequest().authenticated())
                                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
                                 .authenticationProvider(authenticationProvider)
@@ -127,8 +106,7 @@ public class SecurityConfig implements WebMvcConfigurer {
                                                 .addLogoutHandler(logoutHandler)
                                                 .logoutSuccessHandler((request, response,
                                                                 authentication) -> SecurityContextHolder
-                                                                                .clearContext()))
-                                .formLogin(Customizer.withDefaults());
+                                                                                .clearContext()));
 
                 return http.build();
         }
@@ -165,7 +143,7 @@ public class SecurityConfig implements WebMvcConfigurer {
                                 "Access-Control-Request-Headers"));
 
                 configuration.setAllowedMethods(Arrays.asList(
-                                "GET", "POST", "PUT", "DELETE", "OPTIONS"));
+                                "GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
                 configuration.setExposedHeaders(Arrays.asList(
                                 "Access-Control-Allow-Origin",
                                 "Access-Control-Allow-Credentials"));

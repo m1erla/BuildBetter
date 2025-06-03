@@ -191,12 +191,17 @@ public class StripeManager implements StripeService {
 
         @Override
         public void savePaymentInfo(SepaPaymentRequest request, Expert expert) {
-                PaymentInfo paymentInfo = new PaymentInfo();
-                paymentInfo.setIban(request.getIban());
-                paymentInfo.setBic(request.getBic());
-                paymentInfo.setBankName(request.getBankName());
-                paymentInfo.setStripeCustomerId(expert.getStripeCustomerId());
-                paymentInfo.setPaymentMethodId(request.getPaymentMethodId());
+                PaymentInfo paymentInfo = PaymentInfo.builder()
+                                .iban(request.getIban())
+                                .bic(request.getBic())
+                                .bankName(request.getBankName())
+                                .stripeCustomerId(expert.getStripeCustomerId())
+                                .paymentMethodId(request.getPaymentMethodId())
+                                .isActive(true)
+                                .createdAt(LocalDateTime.now())
+                                .stripePaymentIntentId(null)
+                                .expert(expert)
+                                .build();
 
                 expert.setPaymentInfo(paymentInfo);
                 paymentInfoRepository.save(paymentInfo);

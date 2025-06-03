@@ -26,9 +26,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import com.buildbetter.core.utilities.exceptions.BusinessException;
 
 import java.io.IOException;
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -123,146 +128,328 @@ public class UserManager implements UserService {
     @Transactional
     public ResponseEntity<?> update(UpdateUserRequest updateUserRequest) {
         try {
-            User user = userRepository.findById(updateUserRequest.getId())
-                    .orElseThrow(() -> new EntityNotFoundException("User not found"));
+            // ID null veya boş olamaz
+            if (updateUserRequest.getId() == null || updateUserRequest.getId().isBlank()) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User ID must be provided for update.");
+            }
 
-            // Manuel olarak alanları güncelle
+            User user = userRepository.findById(updateUserRequest.getId())
+                    .orElseThrow(
+                            () -> new EntityNotFoundException("User not found with ID: " + updateUserRequest.getId()));
+
+            // --- YETKİ KONTROLÜ BAŞLANGICI ---
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication == null || !authentication.isAuthenticated()
+                    || "anonymousUser".equals(authentication.getPrincipal())) {
+                logger.warn("Attempt to update user {} without authentication.", updateUserRequest.getId());
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated.");
+            }
+
+            String currentPrincipalName = authentication.getName(); // Mevcut kullanıcının email'i
+
+            // Admin kontrolü
+            boolean isAdmin = authentication.getAuthorities().stream()
+                    .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("ROLE_ADMIN"));
+
+            // Sahip kontrolü (Email ile)
+            boolean isOwner = user.getEmail().equalsIgnoreCase(currentPrincipalName);
+
+            // Eğer kullanıcı admin değilse VE profilin sahibi değilse, erişimi engelle
+            if (!isAdmin && !isOwner) {
+                logger.warn("Access denied for user {} attempting to update user {} ({})", currentPrincipalName,
+                        user.getId(), user.getEmail());
+                return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                        .body("You do not have permission to update this user profile.");
+            }
+            logger.info("User {} authorized to update user {}", currentPrincipalName, user.getId());
+            // --- YETKİ KONTROLÜ SONU ---
+
+            // Manuel olarak alanları güncelle (Email güncellemesi genellikle yapılmaz veya
+            // çok dikkatli yapılır)
             if (updateUserRequest.getName() != null)
                 user.setName(updateUserRequest.getName());
             if (updateUserRequest.getSurname() != null)
                 user.setSurname(updateUserRequest.getSurname());
-            if (updateUserRequest.getEmail() != null)
-                user.setEmail(updateUserRequest.getEmail());
+            // Email güncellemesi gerekiyorsa, benzersizlik kontrolü ve güvenlik etkileri
+            // düşünülmeli.
+            // if (updateUserRequest.getEmail() != null &&
+            // !updateUserRequest.getEmail().equalsIgnoreCase(user.getEmail())) {
+            // logger.warn("Email update attempt for user {} by {}", user.getId(),
+            // currentPrincipalName);
+            // // Email güncelleme mantığı ve kontrolleri buraya...
+            // // user.setEmail(updateUserRequest.getEmail());
+            // }
             if (updateUserRequest.getPhoneNumber() != null)
                 user.setPhoneNumber(updateUserRequest.getPhoneNumber());
             if (updateUserRequest.getAddress() != null)
                 user.setAddress(updateUserRequest.getAddress());
             if (updateUserRequest.getPostCode() != null)
                 user.setPostCode(updateUserRequest.getPostCode());
-            if (updateUserRequest.getRole() != null)
-                user.setRole(updateUserRequest.getRole());
 
-            // Profil resmi güncelleme
-            if (updateUserRequest.getStorages() != null && !updateUserRequest.getStorages().isEmpty()) {
-                try {
-                    String oldFileName = user.getProfileImage();
-                    List<Storage> oldStorage = user.getStorages();
-                    if (oldFileName != null && !oldFileName.isEmpty() && oldStorage != null) {
-                        storageManager.deleteImage(oldFileName);
-                        storageRepository.deleteAll(oldStorage);
-                    }
-                    String newFileName = storageManager.uploadImage(updateUserRequest.getStorages(), user);
-                    user.setProfileImage(newFileName);
-                } catch (IOException ex) {
-                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                            .body("Failed to update user profile image");
+            // Rol güncellemesi sadece ADMIN tarafından yapılabilmeli
+            if (updateUserRequest.getRole() != null && !user.getRole().equals(updateUserRequest.getRole())) {
+                if (isAdmin) {
+                    logger.info("Admin {} updating role for user {} to {}", currentPrincipalName, user.getId(),
+                            updateUserRequest.getRole());
+                    user.setRole(updateUserRequest.getRole());
+                } else {
+                    logger.warn("User {} attempted to change role for user {} without ADMIN privileges.",
+                            currentPrincipalName, user.getId());
+                    // Hata döndür veya sadece logla
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                            .body("You do not have permission to change the user role.");
                 }
             }
 
-            // Kullanıcıyı kaydet
+            // Profil Resmi Güncelleme
+            MultipartFile newProfileImageFile = updateUserRequest.getProfileImageFile();
+            if (newProfileImageFile != null && !newProfileImageFile.isEmpty()) {
+                logger.info("Updating profile image for user {}", user.getId());
+                String oldFileName = user.getProfileImage();
+
+                // 1. Eski resmi sil (Yardımcı metodu kullan)
+                if (oldFileName != null && !oldFileName.isBlank()) {
+                    try {
+                        deleteUserProfileStorage(user, oldFileName);
+                    } catch (BusinessException e) {
+                        // deleteUserProfileStorage içinde loglama yapılıyor, burada tekrar loglamaya
+                        // gerek yok.
+                        // Ancak işlemi durdurmak isteyebiliriz.
+                        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                                .body("Failed to remove old profile image: " + e.getMessage());
+                    }
+                }
+
+                // 2. Yeni resmi yükle
+                try {
+                    Storage newStorage = storageManager.uploadImage(newProfileImageFile, user);
+                    user.setProfileImage(newStorage.getName());
+                    // İlişki yönetimi (Eğer User -> Storage @OneToMany(cascade = ..., orphanRemoval
+                    // = true) ise bu kısım gereksiz olabilir)
+                    if (user.getStorages() == null)
+                        user.setStorages(new ArrayList<>());
+                    // Eğer storageManager.uploadImage DB'ye kaydetmiyorsa veya cascade yoksa
+                    // eklemek gerekebilir:
+                    // storageRepository.save(newStorage); // Gerekli mi kontrol edilmeli.
+                    user.getStorages().add(newStorage); // Bu satır cascade varsa ve save yapılıyorsa gereksiz olabilir.
+                    logger.info("Successfully updated profile image for user {} to {}", user.getId(),
+                            newStorage.getName());
+                } catch (IOException ex) {
+                    logger.error("Failed to upload new profile image for user {}: {}", user.getId(), ex.getMessage());
+                    throw new BusinessException("Failed to update profile image file.");
+                }
+            }
+
             User updatedUser = userRepository.save(user);
-
-            // Güncellenmiş kullanıcı bilgilerini response olarak dön
-            GetUsersResponse response = modelMapperService.forResponse()
-                    .map(updatedUser, GetUsersResponse.class);
-
+            GetUsersResponse response = modelMapperService.forResponse().map(updatedUser, GetUsersResponse.class);
+            logger.info("User profile updated successfully for ID: {}", updatedUser.getId());
             return ResponseEntity.ok(response);
+
         } catch (EntityNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body("User not found with ID: " + updateUserRequest.getId());
+            logger.warn("User update failed - Not Found: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (AccessDeniedException e) { // Yetki kontrolü için eklendi
+            logger.warn("User update failed - Access Denied: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
+        } catch (BusinessException e) {
+            logger.warn("User update failed - Business Rule Violation: {}", e.getMessage());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         } catch (Exception e) {
+            logger.error("An unexpected error occurred during user update for ID {}: {}",
+                    updateUserRequest != null ? updateUserRequest.getId() : "unknown",
+                    e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("An error occurred while updating user: " + e.getMessage());
+                    .body("An unexpected error occurred while updating the user profile.");
         }
     }
 
     public ResponseEntity<?> changePassword(ChangePasswordRequest request, Principal connectedUser) {
         UsernamePasswordAuthenticationToken authenticationToken = (UsernamePasswordAuthenticationToken) connectedUser;
+        User user = (User) authenticationToken.getPrincipal(); // Get User object
 
-        User user = (User) authenticationToken.getPrincipal();
+        // Güvenlik loglaması
+        logger.info("Password change initiated by user: {}", user.getEmail());
 
-        logger.info("Initiating password change for user: {}", user.getUsername());
-
-        // check if the current password is correct
+        // Mevcut kontroller...
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-            logger.warn("Wrong current password for user: {}", user.getUsername());
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Wrong password");
+            logger.warn("Incorrect current password provided by user: {}", user.getEmail());
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Wrong password"); // UNAUTHORIZED daha uygun
         }
-
-        // check if the new password is the same as the current password
         if (request.getPassword().equals(request.getNewPassword())) {
-            logger.warn("New password is the same as the old password for user: {}", user.getUsername());
-            return ResponseEntity.status(HttpStatus.CONFLICT)
-                    .body("New password cannot be the same as the old password. Please try a different password.");
+            logger.warn("User {} attempted to set the same password.", user.getEmail());
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("New password cannot be the same as the old password."); // BAD_REQUEST daha uygun
         }
-
-        // check if the two new passwords match
         if (!request.getNewPassword().equals(request.getConfirmationPassword())) {
-            logger.warn("New password and confirmation password do not match for user: {}", user.getUsername());
+            logger.warn("Password confirmation mismatch for user: {}", user.getEmail());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Passwords do not match");
         }
 
-        // update the password
         user.setPassword(passwordEncoder.encode(request.getNewPassword()));
         userRepository.save(user);
 
-        logger.info("Password changed successfully for user: {}", user.getUsername());
-        return ResponseEntity.ok().body("Password changed successfully");
+        logger.info("Password successfully changed for user: {}", user.getEmail());
+        return ResponseEntity.ok("Password changed successfully"); // Body mesajı düzeltildi
     }
 
     @Override
     @Transactional
     public ResponseEntity<?> uploadUserProfileImage(MultipartFile file, String id) throws IOException {
-        User user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("User not found"));
-        String oldProfileImage = user.getProfileImage();
-        List<Storage> oldProfileStorages = storageRepository.findByUserAndName(user, oldProfileImage);
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found with ID: " + id));
 
-        // Delete old images from the file system and database
-        if (!oldProfileStorages.isEmpty() && oldProfileImage != null) {
-            for (Storage storage : oldProfileStorages) {
-                storageManager.deleteImage(storage.getName());
-                storageRepository.delete(storage);
+        // --- YETKİ KONTROLÜ BAŞLANGICI ---
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null || !authentication.isAuthenticated()
+                || "anonymousUser".equals(authentication.getPrincipal())) {
+            logger.warn("Attempt to upload profile image for user {} without authentication.", id);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated.");
+        }
+        String currentPrincipalName = authentication.getName();
+        boolean isAdmin = authentication.getAuthorities().stream()
+                .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("ROLE_ADMIN"));
+        boolean isOwner = user.getEmail().equalsIgnoreCase(currentPrincipalName);
+        if (!isAdmin && !isOwner) {
+            logger.warn("Access denied for user {} attempting to upload image for user {} ({})", currentPrincipalName,
+                    user.getId(), user.getEmail());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                    .body("You do not have permission to upload an image for this user.");
+        }
+        logger.info("User {} authorized to upload image for user {}", currentPrincipalName, user.getId());
+        // --- YETKİ KONTROLÜ SONU ---
+
+        String oldProfileImage = user.getProfileImage();
+        // Eski resim silme mantığı (deleteUserProfileStorage çağrılabilir)
+        if (oldProfileImage != null && !oldProfileImage.isBlank()) {
+            try {
+                deleteUserProfileStorage(user, oldProfileImage);
+                logger.info("Successfully deleted old profile image {} for user {}", oldProfileImage, id);
+            } catch (BusinessException e) {
+                logger.error("Could not delete old profile image {} for user {}: {}", oldProfileImage, id,
+                        e.getMessage());
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                        .body("Failed to remove old profile image before uploading new one.");
             }
         }
 
-        String newFileName = storageManager.uploadImage(file, user);
-        user.setProfileImage(newFileName);
-        userRepository.save(user);
-
-        return ResponseEntity.ok("Profile image uploaded successfully: " + newFileName);
+        // Yeni resmi yükle
+        try {
+            Storage newStorage = storageManager.uploadImage(file, user);
+            user.setProfileImage(newStorage.getName()); // Sadece ismi set ediyoruz.
+            // İlişki yönetimi (gerekliyse)
+            if (user.getStorages() == null)
+                user.setStorages(new ArrayList<>());
+            user.getStorages().add(newStorage); // Cascade ile yönetilmiyorsa veya save yapılmıyorsa
+            userRepository.save(user);
+            logger.info("Successfully uploaded new profile image {} for user {}", newStorage.getName(), id);
+            return ResponseEntity.ok("Profile image uploaded successfully: " + newStorage.getName());
+        } catch (IOException e) {
+            logger.error("Failed to upload profile image for user {}: {}", id, e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to upload profile image.");
+        }
     }
 
+    // deleteUserProfileStorage - Bu metot içeriden çağrılıyor, çağrıldığı yerde
+    // yetki kontrolü yapılıyor.
+    // Ancak doğrudan API endpoint'i varsa, buraya da kontrol eklemek GEREKİR.
+    // Şimdilik içeriden çağrıldığını varsayarak dokunmuyoruz ama endpoint varsa
+    // DİKKAT!
+    private void deleteUserProfileStorage(User user, String fileNameToDelete) throws BusinessException { // throws
+                                                                                                         // BusinessException
+                                                                                                         // eklendi
+        if (fileNameToDelete == null || fileNameToDelete.isBlank())
+            return;
+
+        Optional<Storage> storageOpt = storageRepository.findByNameAndUserId(fileNameToDelete, user.getId());
+        if (storageOpt.isPresent()) {
+            Storage storage = storageOpt.get();
+            try {
+                storageManager.deleteImage(storage.getName()); // Sadece isimle sil
+                logger.info("Deleted image file {} for user {}", storage.getName(), user.getId());
+            } catch (IOException e) {
+                logger.error("Error deleting image file {} for user {}: {}", storage.getName(), user.getId(),
+                        e.getMessage());
+                // Dosya silinemese bile DB kaydını silmeyi deneyebiliriz veya hatayı yukarı
+                // fırlatabiliriz.
+                throw new BusinessException("Could not delete image file: " + storage.getName());
+            }
+            try {
+                // İlişkiyi User tarafından yönetiyorsak (orphanRemoval=true) bu gereksiz.
+                // user.getStorages().remove(storage); // ConcurrentModification hatası
+                // verebilir
+                storageRepository.delete(storage);
+                logger.info("Deleted storage record {} for user {}", storage.getName(), user.getId());
+            } catch (Exception e) {
+                logger.error("Error deleting storage record {} for user {}: {}", storage.getName(), user.getId(), e);
+                throw new BusinessException("Could not delete image database record: " + storage.getName());
+            }
+        } else {
+            logger.warn("Storage record not found for file name {} and user {}. Attempting to delete file only.",
+                    fileNameToDelete, user.getId());
+            try {
+                storageManager.deleteImage(fileNameToDelete);
+                logger.info("Deleted orphan image file {} for user {}", fileNameToDelete, user.getId());
+            } catch (IOException e) {
+                logger.warn("Could not delete orphan image file {} for user {}: {}", fileNameToDelete, user.getId(),
+                        e.getMessage());
+                // Kayıt yoksa dosya silme hatası genellikle kritik değildir.
+            }
+        }
+        // Kullanıcının profil resmini null yap (eğer silinen resim o ise)
+        if (fileNameToDelete.equals(user.getProfileImage())) {
+            user.setProfileImage(null);
+            // user nesnesi transactional context'te olduğu için save'e gerek olmayabilir,
+            // ama emin olmak için save çağrılabilir (çağıran metot save yapıyor zaten)
+            // userRepository.save(user);
+        }
+    }
+
+    // deleteUserProfileImage - Bu public metot ve muhtemelen API endpoint'i var.
+    // Yetki kontrolü eklenmeli.
     @Override
     @Transactional
     public ResponseEntity<?> deleteUserProfileImage(String id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("User not found"));
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found with ID: " + id));
+        String fileNameToDelete = user.getProfileImage();
+
+        if (fileNameToDelete == null || fileNameToDelete.isBlank()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User does not have a profile image to delete.");
+        }
+
+        // --- YETKİ KONTROLÜ BAŞLANGICI ---
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null || !authentication.isAuthenticated()
+                || "anonymousUser".equals(authentication.getPrincipal())) {
+            logger.warn("Attempt to delete profile image for user {} without authentication.", id);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated.");
+        }
+        String currentPrincipalName = authentication.getName();
+        boolean isAdmin = authentication.getAuthorities().stream()
+                .anyMatch(grantedAuthority -> grantedAuthority.getAuthority().equals("ROLE_ADMIN"));
+        boolean isOwner = user.getEmail().equalsIgnoreCase(currentPrincipalName);
+        if (!isAdmin && !isOwner) {
+            logger.warn("Access denied for user {} attempting to delete image for user {} ({})", currentPrincipalName,
+                    user.getId(), user.getEmail());
+            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                    .body("You do not have permission to delete the profile image for this user.");
+        }
+        logger.info("User {} authorized to delete image for user {}", currentPrincipalName, user.getId());
+        // --- YETKİ KONTROLÜ SONU ---
 
         try {
-            if (user.getProfileImage() != null) {
-                storageManager.deleteImage(user.getProfileImage());
-            }
-
-            List<Storage> storages = user.getStorages();
-            if (storages != null) {
-                for (Storage storage : storages) {
-                    storageRepository.delete(storage);
-                }
-                storages.clear();
-            }
-
-            List<Token> tokens = user.getToken();
-            if (tokens != null) {
-                for (Token token : tokens) {
-                    tokenRepository.delete(token);
-                }
-                tokens.clear();
-            }
-
-            userRepository.delete(user);
-
-            return ResponseEntity.ok("User profile image and related entities deleted successfully.");
-        } catch (IOException ex) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to delete user profile image.");
+            deleteUserProfileStorage(user, fileNameToDelete);
+            // User'ı tekrar kaydetmeye gerek var mı? deleteUserProfileStorage içindeki
+            // save(user) kaldırıldı.
+            // Profil resmi null yapıldığı için kaydedilmeli.
+            user.setProfileImage(null); // Bu satır deleteUserProfileStorage'a taşınabilir veya burada kalabilir.
+            userRepository.save(user);
+            logger.info("Successfully deleted profile image {} for user {}", fileNameToDelete, id);
+            return ResponseEntity.ok("Profile image deleted successfully.");
+        } catch (BusinessException e) {
+            logger.error("Failed to delete profile image {} for user {}: {}", fileNameToDelete, id, e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Failed to delete profile image: " + e.getMessage());
         }
     }
 

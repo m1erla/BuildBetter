@@ -19,4 +19,5 @@ public interface IService {
 
     void delete(String id);
 
+    List<GetAllServicesResponse> getAll(String categoryId, String exclude, int limit);
 }

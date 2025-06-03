@@ -1,0 +1,1256 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "experts": "Experts",
+    "about": "About Us",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "expertRegister": "Register as Expert",
+    "ads": "Advertisements",
+    "profile": "Profile"
+  },
+  "home": {
+    "hero": {
+      "title": "The right address for professional services",
+      "subtitle": "We provide all the services for your home, office, and garden with our expert teams.",
+      "cta": "Get Started"
+    },
+    "categories": {
+      "title": "Our Service Categories",
+      "expertCount": "{{count}} Experts",
+      "viewDetails": "View Details"
+    },
+    "services": {
+      "featured": "Featured Services"
+    },
+    "whyUs": {
+      "title": "Why Us?",
+      "description": "We produce custom solutions with a reliable, affordable, and professional service approach.",
+      "stats": {
+        "title": "Our Stats",
+        "experts": "Expert",
+        "projects": "Project",
+        "clients": "Client",
+        "satisfaction": "Satisfaction"
+      },
+      "features": {
+        "title": "Our Features",
+        "quality": "Quality Service",
+        "qualityDesc": "Guaranteed quality service",
+        "support": "24/7 Support",
+        "supportDesc": "Our support team is always ready for you",
+        "experience": "Experienced Team",
+        "experienceDesc": "Experts and experienced professionals in their field",
+        "price": "Reasonable Price",
+        "priceDesc": "Accessible services for everyone"
+      },
+      "joinCta": "Become an Expert"
+    }
+  },
+  "admin": {
+    "panel": "Admin Panel",
+    "dashboard": "Dashboard",
+    "analytics": "Analytics",
+    "users": "Users",
+    "messages": {
+      "title": "Messages",
+      "description": "Manage communication between users and experts",
+      "searchPlaceholder": "Search messages...",
+      "refreshButton": "Refresh",
+      "filterButton": "Filter",
+      "expertChip": "Expert",
+      "reportedChip": "Reported",
+      "reportedChipShort": "Reported",
+      "unreadIndicator": "Unread message",
+      "noMessagesFoundTitle": "No Messages Found",
+      "noMessagesFoundDescription": "Try changing filters or search criteria",
+      "selectMessagePromptTitle": "Select a message",
+      "selectMessagePromptDescription": "Choose a message from the list to view details",
+      "confirmDelete": "Are you sure you want to delete this message?",
+      "recipientLabel": "To: {{recipient}}",
+      "tabs": {
+        "all": "All Messages",
+        "unread": "Unread",
+        "reported": "Reported"
+      },
+      "filterOptions": {
+        "allTime": "All Time",
+        "today": "Today",
+        "thisWeek": "This Week",
+        "thisMonth": "This Month"
+      },
+      "actions": {
+        "markAsRead": "Mark as read",
+        "report": "Report",
+        "unreport": "Unreport",
+        "delete": "Delete",
+        "moreActions": "More Actions"
+      },
+      "errors": {
+        "fetch": "Failed to fetch messages",
+        "refresh": "Failed to refresh messages"
+      }
+    },
+    "payments": {
+      "title": "Manage Payments",
+      "searchPlaceholder": "Search by ID, user or description...",
+      "statusFilterLabel": "Filter by Status",
+      "allStatuses": "All Statuses",
+      "tabs": {
+        "all": "All Payments",
+        "completed": "Completed",
+        "pending": "Pending",
+        "failed": "Failed",
+        "refunded": "Refunded"
+      },
+      "table": {
+        "id": "Payment ID",
+        "user": "User",
+        "amount": "Amount",
+        "status": "Status",
+        "date": "Date",
+        "method": "Method",
+        "actions": "Actions"
+      },
+      "status": {
+        "completed": "Completed",
+        "pending": "Pending",
+        "failed": "Failed",
+        "refunded": "Refunded"
+      },
+      "paymentMethods": {
+        "credit_card": "Credit Card",
+        "bank_transfer": "Bank Transfer",
+        "paypal": "PayPal",
+        "unknown": "Unknown"
+      },
+      "dialog": {
+        "title": "Payment Details",
+        "paymentId": "Payment ID",
+        "userId": "User ID",
+        "userName": "User Name",
+        "amount": "Amount",
+        "currency": "Currency",
+        "description": "Description",
+        "status": "Status",
+        "paymentMethod": "Payment Method",
+        "createdAt": "Created At",
+        "processedAt": "Processed At",
+        "refundedAt": "Refunded At",
+        "failReason": "Fail Reason",
+        "closeButton": "Close"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "downloadInvoice": "Download Invoice",
+        "deletePayment": "Delete Payment"
+      },
+      "toastFetchError": "Error fetching payments.",
+      "toastDeleteSuccess": "Payment deleted successfully!",
+      "toastDeleteError": "Error deleting payment.",
+      "noPayments": "No payments found.",
+      "noSearchResults": "No payments match your search or filters."
+    },
+    "categories": {
+      "title": "Manage Categories",
+      "searchPlaceholder": "Search categories...",
+      "addButton": "Add New Category",
+      "filterButton": "Filter",
+      "refreshButton": "Refresh",
+      "editButton": "Edit",
+      "deleteButton": "Delete",
+      "statusActive": "Active",
+      "statusInactive": "Inactive",
+      "dialogAddTitle": "Add New Category",
+      "dialogEditTitle": "Edit Category",
+      "dialogFieldName": "Category Name",
+      "dialogFieldSlug": "Slug",
+      "dialogFieldSlugHelp": "URL-friendly identifier (auto-generated)",
+      "dialogFieldDescription": "Description",
+      "dialogFieldIcon": "Icon",
+      "dialogFieldImage": "Image URL",
+      "dialogFieldImageHelp": "Optional URL for the category image",
+      "dialogFieldBgImage": "Background Image URL",
+      "dialogFieldBgImageHelp": "Optional URL for the background image",
+      "dialogFieldIsActive": "Is Active",
+      "dialogCloseButton": "Close",
+      "dialogSaveButton": "Save",
+      "dialogUpdateButton": "Update",
+      "deleteConfirmTitle": "Confirm Deletion",
+      "deleteConfirmText": "Are you sure you want to delete this category?",
+      "deleteConfirmButton": "Delete",
+      "deleteCancelButton": "Cancel",
+      "noCategories": "No categories found.",
+      "noSearchResults": "No categories match your search.",
+      "addFirstCategory": "Add your first category to get started.",
+      "card": {
+        "expertsCount": "{{count}} Experts",
+        "servicesCount": "{{count}} Services"
+      },
+      "icon": {
+        "CategoryIcon": "Default Category",
+        "HomeIcon": "Home",
+        "SwatchIcon": "Swatch",
+        "HomeModernIcon": "Modern Home",
+        "PencilIcon": "Pencil",
+        "BoltIcon": "Bolt",
+        "BeakerIcon": "Beaker",
+        "ComputerDesktopIcon": "Computer",
+        "ShieldCheckIcon": "Shield",
+        "SquaresPlusIcon": "Squares",
+        "TruckIcon": "Truck",
+        "FireIcon": "Fire",
+        "DevicePhoneMobileIcon": "Mobile"
+      },
+      "toastCreateSuccess": "Category created successfully!",
+      "toastUpdateSuccess": "Category updated successfully!",
+      "toastDeleteSuccess": "Category deleted successfully!",
+      "toastFetchError": "Error fetching categories.",
+      "toastCreateError": "Error creating category.",
+      "toastUpdateError": "Error updating category.",
+      "toastDeleteError": "Error deleting category.",
+      "elektrikIsleri": "Electrical Works",
+      "tamirOnarim": "Repair & Maintenance",
+      "ykmVeTemizlik": "Demolition & Cleanup",
+      "sonKontrollerVeTeslim": "Final Checks & Handover"
+    },
+    "services": {
+      "title": "Manage Services",
+      "searchPlaceholder": "Search services...",
+      "addButton": "Add New Service",
+      "filterButton": "Filter",
+      "refreshButton": "Refresh",
+      "editButton": "Edit",
+      "deleteButton": "Delete",
+      "previewButton": "Preview",
+      "statusActive": "Active",
+      "statusInactive": "Inactive",
+      "popularYes": "Yes",
+      "popularNo": "No",
+      "allCategories": "All Categories",
+      "table": {
+        "name": "Name",
+        "category": "Category",
+        "price": "Price",
+        "status": "Status",
+        "popular": "Popular",
+        "actions": "Actions",
+        "createdAt": "Created At"
+      },
+      "dialogAddTitle": "Add New Service",
+      "dialogEditTitle": "Edit Service",
+      "dialogFieldName": "Service Name",
+      "dialogFieldSlug": "Slug",
+      "dialogFieldSlugHelp": "URL-friendly identifier (auto-generated)",
+      "dialogFieldDescription": "Description",
+      "dialogFieldPrice": "Price",
+      "dialogFieldCategory": "Category",
+      "dialogFieldFeatures": "Features",
+      "dialogFieldFeaturesHelp": "Comma-separated list of features",
+      "dialogFieldImage": "Image URL",
+      "dialogFieldImageHelp": "Optional URL for the service image",
+      "dialogFieldIsPopular": "Is Popular",
+      "dialogFieldIsActive": "Is Active",
+      "dialogCloseButton": "Close",
+      "dialogSaveButton": "Save",
+      "dialogUpdateButton": "Update",
+      "deleteConfirmTitle": "Confirm Deletion",
+      "deleteConfirmText": "Are you sure you want to delete this service?",
+      "deleteConfirmButton": "Delete",
+      "deleteCancelButton": "Cancel",
+      "noServices": "No services found.",
+      "noSearchResults": "No services match your search or filters.",
+      "addFirstService": "Add your first service to get started.",
+      "toastCreateSuccess": "Service created successfully!",
+      "toastUpdateSuccess": "Service updated successfully!",
+      "toastDeleteSuccess": "Service deleted successfully!",
+      "toastFetchError": "Error fetching services.",
+      "toastFetchCategoriesError": "Error fetching categories.",
+      "toastCreateError": "Error creating service.",
+      "toastUpdateError": "Error updating service.",
+      "toastDeleteError": "Error deleting service.",
+      "elektrikArizaTespiti": "Electrical Fault Detection",
+      "insaatAlaniTemizleme": "Construction Site Cleaning",
+      "insaatAtigiTemizleme": "Construction Waste Removal",
+      "insaatSonrasiTemizlikDetayli": "Post-construction cleaning: Collection of construction waste, general cleaning, detailed post-construction cleaning",
+      "eksiklikGidermeVeRotuslar": "Correction of deficiencies: Fixing faulty work, completing missing tasks, final touches",
+      "sonKontrollerVeDenetimler": "Final checks: Building inspections, plumbing inspections, decoration inspections",
+      "insaatTeslimiVeBelgeler": "Construction handover: Turnkey delivery, obtaining occupancy permit, delivery of warranty documents"
+    },
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "analytics": "Analytics",
+    "storage": "Storage",
+    "settings": "Settings"
+  },
+  "common": {
+    "logout": "Logout",
+    "backToHome": "Back to Home",
+    "changeTheme": "Toggle Light/Dark Mode",
+    "welcome": "Welcome",
+    "profile": "Profile",
+    "search": "Search",
+    "loading": "Loading...",
+    "notFound": "Page not found",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "submit": "Submit",
+    "language": "Language",
+    "theme": "Theme",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "retry": "Retry",
+    "close": "Close",
+    "changeLanguage": "Change Language",
+    "openSettings": "Open Settings",
+    "notifications": "Notifications",
+    "formValidation": {
+      "requiredFields": "Please fill in all required fields."
+    },
+    "expertProfile": {
+      "title": "Expert Profile",
+      "experience": "Years of Experience",
+      "completedJobs": "Completed Jobs",
+      "rating": "Rating",
+      "reviews": "Reviews"
+    },
+    "error": "Error",
+    "accept": "Accept",
+    "reject": "Reject",
+    "closeDialog": "Close Dialog",
+    "cancelButton": "Cancel",
+    "saveButton": "Save"
+  },
+  "auth": {
+    "expertRegister": "Register as Expert"
+  },
+  "profile": {
+    "personalInfo": "Personal Information",
+    "accountSettings": "Account Settings",
+    "notifications": "Notifications",
+    "payments": "Payment Methods",
+    "changePassword": "Change Password",
+    "deleteAccount": "Delete Account",
+    "uploadPhoto": "Upload Photo",
+    "errors": {
+      "loadProfileFailed": "Failed to load profile data.",
+      "loadAdsFailed": "Failed to load advertisements.",
+      "loadChatsFailed": "Failed to load chats.",
+      "loadRequestsFailed": "Failed to load requests.",
+      "userNotFound": "User not found.",
+      "unauthorized": "You are not authorized to perform this action.",
+      "updateFailed": "Failed to update profile.",
+      "imageUpdateFailed": "Failed to update profile image.",
+      "loadAdImagesFailed": "Failed to load ad images.",
+      "userNotFoundMessage": "The requested user profile could not be found."
+    },
+    "edit": {
+      "success": "Profile updated successfully.",
+      "imageUpdateSuccess": "Profile image updated successfully.",
+      "editButtonLabel": "Edit Profile",
+      "dialogTitle": "Edit Profile",
+      "firstNameLabel": "First Name",
+      "lastNameLabel": "Last Name",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "postCodeLabel": "Post Code"
+    },
+    "tabs": {
+      "ads": "My Ads",
+      "chats": "Chats",
+      "requests": "Requests"
+    },
+    "ads": {
+      "title": "My Advertisements",
+      "createNewButton": "Create New Ad",
+      "emptyState": {
+        "title": "No Advertisements Found",
+        "message": "You haven't created any advertisements yet.",
+        "createFirstButton": "Create your first ad"
+      },
+      "editButtonLabel": "Edit Ad",
+      "invalidAd": "Invalid advertisement selected."
+    },
+    "chats": {
+      "emptyState": {
+        "title": "No Chats Found",
+        "message": "You have no active chats."
+      },
+      "chatCardAriaLabel": "Chat about {{title}}",
+      "expertLabel": "Expert",
+      "lastActivityLabel": "Last Activity",
+      "lastMessageLabel": "Last Message",
+      "goToChatButton": "Go to Chat"
+    },
+    "requests": {
+      "acceptSuccess": "Request accepted successfully.",
+      "errors": {
+        "acceptFailed": "Failed to accept the request.",
+        "rejectFailed": "Failed to reject the request."
+      },
+      "rejectSuccess": "Request rejected successfully.",
+      "emptyState": {
+        "title": "No Requests Found",
+        "message": "You have no pending requests."
+      },
+      "expertLabel": "Expert",
+      "goToChatButton": "Go to Chat"
+    },
+    "adEdit": {
+      "validation": {
+        "categoryRequired": "Category is required.",
+        "serviceRequired": "Service is required."
+      },
+      "success": "Advertisement updated successfully.",
+      "errors": {
+        "invalidData": "Invalid data provided for the advertisement.",
+        "updateFailed": "Failed to update advertisement."
+      },
+      "dialogTitle": "Edit Advertisement",
+      "titleLabel": "Title",
+      "descriptionLabel": "Description",
+      "categoryLabel": "Category",
+      "selectCategoryPlaceholder": "Select a category",
+      "serviceLabel": "Service",
+      "selectServicePlaceholder": "Select a service",
+      "imagesTitle": "Ad Images"
+    }
+  },
+  "navbar": {
+    "home": "Home",
+    "ads": "Advertisements"
+  },
+  "company": {
+    "about": {
+      "title": "About Built Better",
+      "description": "Building trust through quality and innovation since 2020",
+      "team": {
+        "title": "Meet Our Team",
+        "roles": {
+          "ceo": "CEO & Founder",
+          "architect": "Lead Architect",
+          "projectManager": "Project Manager"
+        }
+      },
+      "features": {
+        "expertTeam": {
+          "title": "Expert Team",
+          "description": "Our team consists of highly skilled professionals with years of experience"
+        },
+        "quality": {
+          "title": "Quality First",
+          "description": "We never compromise on quality, ensuring the best results every time"
+        },
+        "innovative": {
+          "title": "Innovative Solutions",
+          "description": "We use the latest technology and innovative approaches to solve problems"
+        }
+      },
+      "stats": {
+        "completedProjects": "Completed Projects",
+        "expertTeam": "Expert Team Members",
+        "yearsExperience": "Years of Experience",
+        "happyClients": "Happy Clients"
+      },
+      "cta": {
+        "title": "Ready to Transform Your Space?",
+        "description": "Let's work together to bring your vision to life",
+        "button": "Get Started Now"
+      }
+    },
+    "careers": {
+      "hero": {
+        "title": "Join Our Team",
+        "description": "Become a part of Built Better and contribute to our success story",
+        "alt": "Career opportunities at Built Better"
+      },
+      "description": "We are looking for talented professionals to join our growing team. Check out our open positions below.",
+      "positions": {
+        "seniorInterior": {
+          "title": "Senior Interior Architect",
+          "description": "Lead and design innovative interior projects",
+          "requirements": "5+ years experience in interior design, proficiency in design software"
+        },
+        "projectManager": {
+          "title": "Project Manager",
+          "description": "Manage and coordinate renovation projects",
+          "requirements": "3+ years experience in construction/renovation project management"
+        },
+        "landscapeArchitect": {
+          "title": "Landscape Architect",
+          "description": "Design and manage outdoor spaces",
+          "requirements": "3+ years experience in landscape architecture"
+        }
+      },
+      "locations": {
+        "istanbul": "Istanbul",
+        "ankara": "Ankara",
+        "izmir": "Izmir"
+      },
+      "types": {
+        "fullTime": "Full-Time"
+      },
+      "apply": "Apply Now",
+      "form": {
+        "title": "Application Form",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "phone": "Phone",
+        "experience": "Years of Experience",
+        "message": "Cover Letter",
+        "submit": "Submit Application"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Have questions? Get in touch with us.",
+      "address": "Address",
+      "address.line1": "123 Main Street",
+      "address.line2": "Anytown, USA 12345",
+      "phone": "Phone",
+      "phone.number1": "+1 (555) 123-4567",
+      "phone.number2": "+1 (555) 987-6543",
+      "email": "Email",
+      "email.address1": "info@builtbetter.com",
+      "email.address2": "support@builtbetter.com",
+      "form": {
+        "title": "Send us a message",
+        "name": "Your Name",
+        "email": "Your Email",
+        "subject": "Subject",
+        "message": "Your Message",
+        "send": "Send Message"
+      },
+      "map": {
+        "alt": "Contact Map Location"
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn more about our mission, vision, and values."
+    },
+    "careers": {
+      "title": "Careers",
+      "description": "Join our talented team and help shape the future."
+    }
+  },
+  "support": {
+    "helpCenter": {
+      "title": "Help Center",
+      "description": "How can we help you today?",
+      "searchPlaceholder": "Search for help...",
+      "categories": {
+        "general": "General Questions",
+        "services": "Our Services",
+        "payment": "Payment & Pricing",
+        "security": "Security & Privacy"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions",
+        "description": "Find answers to commonly asked questions.",
+        "general": {
+          "title": "General Questions",
+          "items": [
+            {
+              "question": "How does Built Better work?",
+              "answer": "Built Better connects you with qualified professionals..."
+            },
+            {
+              "question": "Is Built Better available in my area?",
+              "answer": "We currently operate in major cities..."
+            }
+          ]
+        },
+        "services": {
+          "title": "Our Services",
+          "items": [
+            {
+              "question": "What services do you offer?",
+              "answer": "We offer a wide range of home improvement services..."
+            },
+            {
+              "question": "How are your experts vetted?",
+              "answer": "All experts undergo rigorous background checks..."
+            }
+          ]
+        },
+        "payment": {
+          "title": "Payment & Pricing",
+          "items": [
+            {
+              "question": "How much do the services cost?",
+              "answer": "Pricing varies depending on the service..."
+            },
+            {
+              "question": "What payment methods do you accept?",
+              "answer": "We accept all major credit cards..."
+            }
+          ]
+        },
+        "security": {
+          "title": "Security & Privacy",
+          "items": [
+            {
+              "question": "How is my personal data protected?",
+              "answer": "We use industry-standard encryption..."
+            },
+            {
+              "question": "Are your services guaranteed?",
+              "answer": "Yes, all services come with a satisfaction guarantee."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "pages": {
+    "categoryDetail": {
+      "cta": {
+        "title": "Request a {{name}} service now",
+        "description": "Customized solutions with our professional experts",
+        "button": "I Want to Request This Service"
+      },
+      "experts": "{{count}} Experts",
+      "services": "{{count}} Services",
+      "noServices": "There are no services available in this category yet.",
+      "notFound": {
+        "title": "Category Not Found",
+        "description": "The category you are looking for was not found or may have been removed."
+      },
+      "features": {
+        "title": "Category Features"
+      }
+    },
+    "serviceDetail": {
+      "notFound": {
+        "title": "Service Not Found",
+        "description": "The service you are looking for was not found or may have been removed."
+      },
+      "price": "Starting from {{price}}€",
+      "duration": "{{duration}}",
+      "requestService": "Request Service",
+      "overview": {
+        "title": "Service Details",
+        "description": "Service Description",
+        "features": "Features",
+        "requirements": "Requirements",
+        "notIncluded": "What's Not Included"
+      },
+      "included": {
+        "title": "Included in the Service"
+      },
+      "tabs": {
+        "overview": "Overview",
+        "packages": "Packages",
+        "process": "Process",
+        "faqs": "FAQs",
+        "experts": "Experts",
+        "reviews": "Reviews",
+        "faq": "FAQ"
+      },
+      "process": {
+        "title": "Service Process"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions"
+      },
+      "summary": {
+        "title": "Service Summary",
+        "price": "Price",
+        "duration": "Duration",
+        "category": "Category"
+      },
+      "similarServices": {
+        "title": "Similar Services",
+        "viewDetails": "View Details",
+        "expertCount": "{{count}}+ Experts"
+      },
+      "testimonials": {
+        "title": "Customer Testimonials"
+      },
+      "descriptionTitle": "Service Description",
+      "selectPackage": "Select Package",
+      "contactExpert": "Contact Expert",
+      "features": "Features",
+      "requirements": "Requirements",
+      "location": "Service Location: {{location}}",
+      "expertProfile": {
+        "title": "Expert Profile",
+        "experience": "Years of Experience",
+        "completedJobs": "Completed Jobs",
+        "rating": "Rating",
+        "reviews": "Reviews"
+      }
+    },
+    "unauthorized": {
+      "title": "Unauthorized Access",
+      "description": "You do not have permission to view this page.",
+      "button": "Go Back"
+    },
+    "requestList": {
+      "title": "Requests",
+      "description": "Manage your requests and communication with experts",
+      "noRequests": "No requests found",
+      "status": {
+        "pending": "Pending",
+        "accepted": "Accepted",
+        "rejected": "Rejected",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "actions": {
+        "accept": "Accept",
+        "reject": "Reject",
+        "complete": "Complete",
+        "cancel": "Cancel",
+        "details": "View Details",
+        "goToChat": "Go to Chat Room"
+      },
+      "dialog": {
+        "title": "Request Details #{{id}}",
+        "status": "Status",
+        "createdAt": "Created At"
+      },
+      "errors": {
+        "fetchFailed": "Failed to fetch requests. Please try again.",
+        "acceptFailed": "Failed to accept request. Please try again.",
+        "rejectFailed": "Failed to reject request. Please try again.",
+        "completeFailed": "Failed to complete request. Please try again.",
+        "cancelFailed": "Failed to cancel request. Please try again.",
+        "chatRoomFailed": "Failed to get chat room ID. Please try again."
+      }
+    },
+    "pendingRequests": {
+      "title": "Pending Requests",
+      "noRequests": "No pending requests",
+      "accept": "Accept",
+      "reject": "Reject"
+    },
+    "home": {
+      "title": "Transform Your Space with Renovatipoint",
+      "subtitle": "Redesign your home or office with our professional services"
+    },
+    "homeRenovation": {
+      "title": "Home Renovation",
+      "subtitle": "We renovate your living spaces and turn them into your dream home",
+      "description": "We add value to your home with our professional team and quality materials. From interior renovation to exterior work, structural improvements, and decorative touches, we meet all your home needs.",
+      "hero": {
+        "alt": "Home Renovation Hero Image"
+      },
+      "services": {
+        "interior": {
+          "title": "Interior Renovation",
+          "description": "We renovate your interiors to be modern and functional.",
+          "image": "https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Kitchen Renovation",
+            "2": "Bathroom Renovation",
+            "3": "Flooring",
+            "4": "Wall Coverings"
+          }
+        },
+        "exterior": {
+          "title": "Exterior Renovation",
+          "description": "We renew your building's exterior appearance and increase its value.",
+          "image": "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80",
+          "features": {
+            "1": "Exterior Cladding",
+            "2": "Insulation",
+            "3": "Painting",
+            "4": "Roof Repair"
+          }
+        },
+        "structural": {
+          "title": "Structural Improvements",
+          "description": "We address your building's structural issues and enhance its safety.",
+          "image": "https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Earthquake Retrofitting",
+            "2": "Foundation Strengthening",
+            "3": "Crack Repair",
+            "4": "Waterproofing"
+          }
+        }
+      },
+      "process": {
+        "title": "Our Working Process",
+        "discovery": {
+          "title": "Discovery and Planning",
+          "description": "Our expert team visits your site, performs detailed inspections, and identifies your needs."
+        },
+        "design": {
+          "title": "Design and Proposal",
+          "description": "A custom design and budget plan is prepared, and a detailed proposal is presented to you."
+        },
+        "implementation": {
+          "title": "Implementation",
+          "description": "Our professional team carries out the renovation work according to the determined plan."
+        },
+        "qualityControl": {
+          "title": "Quality Control",
+          "description": "After all work is completed, detailed quality control is performed and handed over to you."
+        }
+      },
+      "cta": {
+        "title": "Contact Us for a Free Consultation",
+        "description": "Our expert team is ready to evaluate your project and offer custom solutions.",
+        "button": "Contact Us"
+      }
+    },
+    "gardenDesign": {
+      "title": "Garden Design",
+      "subtitle": "Professional landscaping solutions bringing the beauty of nature to your home",
+      "description": "We offer tailored solutions with our experienced landscape architects and skilled gardeners to transform your garden into a year-round usable living space.",
+      "hero": {
+        "alt": "Garden Design Hero Image"
+      },
+      "services": {
+        "landscaping": {
+          "title": "Landscaping",
+          "description": "We professionally redesign your garden.",
+          "image": "https://images.unsplash.com/photo-1551410224-699683e15636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80",
+          "features": {
+            "1": "Garden Planning",
+            "2": "Plant Selection and Placement",
+            "3": "Landscape Lighting",
+            "4": "Decorative Stone Paving"
+          }
+        },
+        "irrigation": {
+          "title": "Irrigation Systems",
+          "description": "We keep your garden always green with automatic irrigation systems.",
+          "image": "https://images.unsplash.com/photo-1623510593430-2fb4c2da5881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Automatic Irrigation Systems",
+            "2": "Drip Irrigation",
+            "3": "Sprinkler Systems",
+            "4": "Water-Saving Solutions"
+          }
+        },
+        "furniture": {
+          "title": "Garden Furniture",
+          "description": "We equip your garden with functional and aesthetic furniture.",
+          "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+          "features": {
+            "1": "Outdoor Furniture",
+            "2": "Veranda and Terrace Design",
+            "3": "Gazebo and Pergola Construction",
+            "4": "Garden Lounge Sets"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Why Choose Us?",
+        "sustainable": {
+          "title": "Sustainable Design",
+          "description": "We design sustainable gardens using eco-friendly materials and water-saving systems."
+        },
+        "allSeasons": {
+          "title": "Year-Round Use",
+          "description": "We select special plants for gardens that look beautiful and are usable in every season."
+        },
+        "easyMaintenance": {
+          "title": "Easy Maintenance",
+          "description": "We create low-maintenance gardens with smart systems and proper plant selection."
+        },
+        "valueIncrease": {
+          "title": "Value Increase",
+          "description": "We increase the value of your property with professional landscaping."
+        }
+      },
+      "cta": {
+        "title": "Free Consultation for Your Garden",
+        "description": "Our experts are ready to help you discover the potential of your garden.",
+        "button": "Make an Appointment"
+      }
+    },
+    "specialProjects": {
+      "title": "Special Projects",
+      "subtitle": "We bring your dream spaces to life with our professional team",
+      "description": "We offer custom solutions for luxury residences, specially designed pools, smart home systems, and unique renovation projects. Let's create your dream living space together.",
+      "hero": {
+        "alt": "Special Projects Hero Image"
+      },
+      "services": {
+        "pool": {
+          "title": "Custom Pool Construction",
+          "description": "We add value to your living space with luxury and custom-designed pools.",
+          "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Custom-Made Pools",
+            "2": "Waterfalls and Water Features",
+            "3": "Sundecks",
+            "4": "Custom Lighting Systems"
+          }
+        },
+        "smartHome": {
+          "title": "Smart Home Systems",
+          "description": "Integrated smart home systems allowing you to control all devices in your home.",
+          "image": "https://images.unsplash.com/photo-1558002038-1055953ce55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Sound and Light Control",
+            "2": "Security Systems",
+            "3": "Climate Control",
+            "4": "Mobile App Control"
+          }
+        },
+        "attic": {
+          "title": "Custom Attic Design",
+          "description": "We transform unused attics into functional living spaces.",
+          "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Attic Conversion",
+            "2": "Custom Furniture",
+            "3": "Skylights",
+            "4": "Rooftop Terrace Design"
+          }
+        }
+      },
+      "expertise": {
+        "title": "Our Areas of Expertise",
+        "projectManagement": {
+          "title": "Project Management",
+          "description": "We manage processes professionally with our experienced project managers."
+        },
+        "customDesign": {
+          "title": "Custom Design",
+          "description": "We develop unique and functional designs for each project."
+        },
+        "qualityControl": {
+          "title": "Quality Control",
+          "description": "We apply quality control processes according to international standards."
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "We offer eco-friendly materials and energy-efficient solutions."
+        }
+      },
+      "cta1": {
+        "title": "Share Your Project With Us",
+        "description": "Let us provide professional solutions for your special projects. Our expert team is ready to talk to you.",
+        "button": "Request Project Quote"
+      },
+      "completed": {
+        "title": "Completed Projects",
+        "bodrumVilla": {
+          "title": "Bodrum Villa Renovation",
+          "description": "Custom pool, landscaping, and interior design for a 450m² villa in Bodrum",
+          "image": "https://images.unsplash.com/photo-1600607687644-c7e47361a37d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        "istanbulPenthouse": {
+          "title": "Istanbul Penthouse",
+          "description": "Custom design and smart home systems for a 300m² penthouse apartment in Nişantaşı",
+          "image": "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+        }
+      },
+      "cta2": {
+        "title": "Contact Us for a Free Consultation",
+        "description": "Our expert team is ready to assist you with your special project.",
+        "button": "Contact Us"
+      }
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "commitment": "At Renovatipoint, we are committed to protecting your privacy.",
+      "description": "This privacy policy explains how your personal information is collected, used, and protected when you use our services.",
+      "hero": {
+        "alt": "Data Security Image"
+      },
+      "sections": {
+        "dataSecurity": {
+          "title": "Data Security",
+          "content": "Your personal data is protected using industry-standard security protocols and encryption technologies. Your data security is our top priority."
+        },
+        "privacyCommitment": {
+          "title": "Privacy Commitment",
+          "content": "We respect the privacy of our customers and do not share their personal information with third parties. Your data is used solely to improve our service quality."
+        },
+        "kvkkCompliance": {
+          "title": "GDPR Compliance",
+          "content": "We comply with all legal requirements under the General Data Protection Regulation (GDPR) and process your data accordingly."
+        },
+        "dataUsage": {
+          "title": "Data Usage",
+          "content": "Collected data is used to improve our service quality, fulfill our legal obligations, and provide you with a better experience."
+        }
+      },
+      "policies": {
+        "collectedInfo": {
+          "title": "1. Information Collected",
+          "items": {
+            "1": "Name, surname, and contact information",
+            "2": "Project details and preferences",
+            "3": "Payment information",
+            "4": "Service usage data"
+          }
+        },
+        "infoUsage": {
+          "title": "2. Use of Information",
+          "items": {
+            "1": "Service delivery and improvement",
+            "2": "Communication and information",
+            "3": "Legal obligations",
+            "4": "Service quality analysis"
+          }
+        },
+        "infoSecurity": {
+          "title": "3. Information Security",
+          "items": {
+            "1": "SSL encryption technology",
+            "2": "Secure data storage",
+            "3": "Regular security audits",
+            "4": "Access control and authorization"
+          }
+        },
+        "yourRights": {
+          "title": "4. Your Rights",
+          "items": {
+            "1": "Right to access information",
+            "2": "Request for correction and deletion",
+            "3": "Right to object to processing",
+            "4": "Right to data portability"
+          }
+        }
+      },
+      "lastUpdated": "Last Updated",
+      "updateNotice": "This privacy policy may be updated according to legal requirements and changes in our service conditions. You will be notified of significant changes."
+    },
+    "termsOfService": {
+      "title": "Terms of Service",
+      "description": "Please read these terms of service carefully before using Renovatipoint services. By using our platform, you agree to these terms.",
+      "listItem1": "All content is copyrighted.",
+      "listItem2": "The user is responsible for account security.",
+      "hero": {
+        "alt": "Legal Agreement Image"
+      },
+      "sections": {
+        "legalFramework": {
+          "title": "Legal Framework",
+          "content": "These terms of service regulate the legal relationship between Built Better and users, determining the rights and obligations of the parties."
+        },
+        "paymentTerms": {
+          "title": "Payment Terms",
+          "content": "Service fees, payment schedules, and our refund policy are determined and applied transparently."
+        },
+        "privacySecurity": {
+          "title": "Privacy and Security",
+          "content": "The protection of your personal data and security measures during the service process are guaranteed in accordance with legal regulations."
+        },
+        "serviceCommitment": {
+          "title": "Service Commitment",
+          "content": "We make clear commitments regarding the quality and standards of our services and adhere to them."
+        }
+      },
+      "terms": {
+        "generalProvisions": {
+          "title": "1. General Provisions",
+          "items": {
+            "1": "1.1. These terms govern the use of the Built Better platform.",
+            "2": "1.2. All services offered through the platform are subject to these terms.",
+            "3": "1.3. By using the service, users are deemed to have accepted these terms.",
+            "4": "1.4. Built Better reserves the right to change these terms with notification."
+          }
+        },
+        "serviceTerms": {
+          "title": "2. Service Terms",
+          "items": {
+            "1": "2.1. Our services are provided according to professional standards.",
+            "2": "2.2. Project duration and costs are determined in advance.",
+            "3": "2.3. Change requests may incur additional fees.",
+            "4": "2.4. Our quality standards are guaranteed."
+          }
+        },
+        "paymentPolicy": {
+          "title": "3. Payment and Refund Policy",
+          "items": {
+            "1": "3.1. Payment schedule is determined at the beginning of the project.",
+            "2": "3.2. Interest surcharges may apply for installment payments.",
+            "3": "3.3. Cancellation and refund conditions are stated in the contract.",
+            "4": "3.4. Legal interest is charged for late payments."
+          }
+        },
+        "responsibilities": {
+          "title": "4. Responsibilities",
+          "items": {
+            "1": "4.1. Responsibilities of both parties during the project process are specified.",
+            "2": "4.2. In case of force majeure, term extensions may be granted.",
+            "3": "4.3. Warranty for materials and workmanship is provided.",
+            "4": "4.4. Occupational safety measures are provided by us."
+          }
+        },
+        "intellectualProperty": {
+          "title": "5. Intellectual Property",
+          "items": {
+            "1": "5.1. Designs and projects belong to our company.",
+            "2": "5.2. No changes can be made to projects approved by the customer.",
+            "3": "5.3. Rights for reference use are reserved.",
+            "4": "5.4. Project images cannot be used without permission."
+          }
+        },
+        "disputeResolution": {
+          "title": "6. Dispute Resolution",
+          "items": {
+            "1": "6.1. Disputes are resolved primarily through negotiation.",
+            "2": "6.2. Mediation procedure can be applied.",
+            "3": "6.3. Legal action is used as a last resort.",
+            "4": "6.4. Competent courts are specified in the contract."
+          }
+        }
+      },
+      "lastUpdated": "Last Updated",
+      "updateNotice": "These terms of service may be updated according to legal requirements and changes in our service conditions. You will be notified of significant changes."
+    }
+  },
+  "errors": {
+    "errorTitle": "An Error Occurred",
+    "fetchDataError": "An error occurred while fetching the data.",
+    "invalidCategoryId": "Invalid category ID",
+    "invalidServiceId": "Invalid service ID",
+    "networkError": "Network error. Please check your connection.",
+    "serverError": "Server error. Please try again later.",
+    "accessDenied": "Access Denied. You do not have permission to access this resource.",
+    "unknownCategory": "Unknown Category",
+    "unknownService": "Unknown Service",
+    "pageNotFound": "Page Not Found",
+    "somethingWentWrong": "Something went wrong. Please try again.",
+    "formValidation": "Please check the form and try again.",
+    "requiredField": "This field is required",
+    "invalidEmail": "Please enter a valid email address"
+  },
+  "ads": {
+    "createTitle": "Create New Ad",
+    "editTitle": "Edit Ad",
+    "myAdsTitle": "My Ads",
+    "categories": "Categories",
+    "filters": "Filters",
+    "sort": "Sort",
+    "search": "Search Ads",
+    "form": {
+      "title": "Title",
+      "category": "Category",
+      "description": "Description",
+      "price": "Price",
+      "location": "Location",
+      "images": "Images",
+      "phone": "Phone",
+      "contactInfo": "Contact Information",
+      "publish": "Publish",
+      "update": "Update"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "pending": "Pending",
+      "rejected": "Rejected"
+    },
+    "details": {
+      "contactSeller": "Contact Seller",
+      "postDate": "Post Date",
+      "views": "Views",
+      "share": "Share",
+      "report": "Report",
+      "similar": "Similar Ads"
+    }
+  },
+  "chat": {
+    "title": "Messages",
+    "send": "Send",
+    "newMessage": "New Message",
+    "noMessages": "No messages yet",
+    "startConversation": "Start a conversation",
+    "typeMessage": "Type your message...",
+    "chatRooms": "Chat Rooms",
+    "noChats": "No chats yet",
+    "lastMessage": "Last message"
+  },
+  "support": {
+    "helpCenter": {
+      "title": "Help Center",
+      "description": "How can we help you today?",
+      "searchPlaceholder": "Search for help...",
+      "categories": {
+        "general": "General Questions",
+        "services": "Our Services",
+        "payment": "Payment & Pricing",
+        "security": "Security & Privacy"
+      },
+      "faqs": {
+        "title": "Frequently Asked Questions",
+        "description": "Find answers to commonly asked questions.",
+        "general": {
+          "title": "General Questions",
+          "items": [
+            {
+              "question": "How does Built Better work?",
+              "answer": "Built Better connects you with qualified professionals..."
+            },
+            {
+              "question": "Is Built Better available in my area?",
+              "answer": "We currently operate in major cities..."
+            }
+          ]
+        },
+        "services": {
+          "title": "Our Services",
+          "items": [
+            {
+              "question": "What services do you offer?",
+              "answer": "We offer a wide range of home improvement services..."
+            },
+            {
+              "question": "How are your experts vetted?",
+              "answer": "All experts undergo rigorous background checks..."
+            }
+          ]
+        },
+        "payment": {
+          "title": "Payment & Pricing",
+          "items": [
+            {
+              "question": "How much do the services cost?",
+              "answer": "Pricing varies depending on the service..."
+            },
+            {
+              "question": "What payment methods do you accept?",
+              "answer": "We accept all major credit cards..."
+            }
+          ]
+        },
+        "security": {
+          "title": "Security & Privacy",
+          "items": [
+            {
+              "question": "How is my personal data protected?",
+              "answer": "We use industry-standard encryption..."
+            },
+            {
+              "question": "Are your services guaranteed?",
+              "answer": "Yes, all services come with a satisfaction guarantee."
+            }
+          ]
+        }
+      }
+    }
+  },
+  "jobTitles": {
+    "elektrikci": "Electrician",
+    "icMimar": "Interior Architect"
+  },
+  "toasts": {
+    "sessionExpired": "Your session has expired. Please log in again.",
+    "genericError": "An unexpected error occurred. Please try again later."
+  },
+  "requestStatus": {
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "rejected": "Rejected"
+  },
+  "footer": {
+    "copyright": "© 2024 RenovatioPoint. All rights reserved."
+  }
+} 

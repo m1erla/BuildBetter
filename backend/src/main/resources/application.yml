@@ -19,47 +19,46 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
   datasource:
-    url: jdbc:mysql://localhost:3306/renovatipoint
-    username: root
-    password: mysql
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:postgresql://dpg-d0vkp5emcj7s73eo2gag-a.frankfurt-postgres.render.com/buildbetter
+    username: ${DB_USERNAME:buildbetter_user}
+    password: ${DB_PASSWORD:PQmMMwrhIHElQciXMZT1HNFERlt1HVx0}
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: ${JPA_DDL_AUTO:create}
+    show-sql: ${SHOW_SQL:true}
     properties:
       hibernate:
         format_sql: true
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   flyway:
     enabled: false
+  security:
+    jwt:
+      secret-key: ${JWT_SECRET_KEY}
+      expiration: ${JWT_EXPIRATION:86400000}
+      refresh-token:
+        expiration: ${JWT_REFRESH_EXPIRATION:604800000}
+stripe:
+  api-key: ${STRIPE_API_KEY}
+  webhook-secret: ${STRIPE_WEBHOOK_SECRET}
 
-#  ssl:
+invoice:
+  storage:
+    path: ${INVOICE_STORAGE_PATH:invoices}
+
+file:
+  upload-dir: ${FILE_UPLOAD_DIR:uploads}
+  ssl:
+    port: ${PORT:8080}
 #    enabled: true
 #    key-store: classpath:springboot.p12
 #    key-store-password: password
 #    key-store-type: pkcs12
 #    key-alias: latestcertificate
 #    key-password: password
-#  port: 8443
+
 #  http:
 #    port: 8080
-application:
-  security:
-    jwt:
-      secret-key: c8146b630205b8b3bc8c255b2eb2757f874e27ab40c478c0d2f93e8dbfb3418b
-      expiration: 86400000 # a day
-      refresh-token:
-        expiration: 604800000 # 7 day
-stripe:
-  api-key: sk_test_51PsSQ4IUuPTlpq50bwNCIfV0XIMk4CupeUeg03qh7rxkLUcqX9rDgZqrUAKfDslyHQ17TMbpt3X704rT0ewlh03400uZxXnDlb
-  webhook-secret: whsec_9b8e21ff582c60992878874aa9ccb4a88ad33d9a50f3cae2842b1e37bcfa6322
-
-# Fatura ve dosya yükleme ayarları
-invoice:
-  storage:
-    path: invoices
-
-file:
-  upload-dir: uploads

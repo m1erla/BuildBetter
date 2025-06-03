@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.security.Principal;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -136,14 +137,14 @@ public class ExpertController {
     @PostMapping("/setup-sepa")
     public ResponseEntity<?> setupSepaPaymentMethod(@RequestBody SepaPaymentRequest request, Principal principal)
             throws StripeException {
-        Expert expert = expertRepository.findByEmail(principal.getName())
-                .orElseThrow(() -> new IllegalStateException("Expert not found!"));
-
         try {
+            Expert expert = expertRepository.findByEmail(principal.getName())
+                    .orElseThrow(() -> new IllegalStateException("Expert not found!"));
+
             // Validate Stripe customer ID
             if (expert.getStripeCustomerId() == null) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                        .body(Map.of("error", "Expert's Stripe customer ID is missing. Please contact support."));
+                        .body(Map.of("error", "Expert's Stripe customer ID is missing"));
             }
 
             // Önce mevcut payment method'ları kontrol et ve varsa sil
@@ -157,64 +158,54 @@ public class ExpertController {
                 method.detach();
             }
 
-            // Create a SEPA Payment Method
+            // Create SEPA Payment Method
             PaymentMethodCreateParams createParams = PaymentMethodCreateParams.builder()
                     .setType(PaymentMethodCreateParams.Type.SEPA_DEBIT)
-                    .setSepaDebit(
-                            PaymentMethodCreateParams.SepaDebit.builder()
-                                    .setIban(request.getIban())
-                                    .build())
-                    .setBillingDetails(
-                            PaymentMethodCreateParams.BillingDetails.builder()
-                                    .setName(expert.getName())
-                                    .setEmail(expert.getEmail())
-                                    .build())
+                    .setSepaDebit(PaymentMethodCreateParams.SepaDebit.builder()
+                            .setIban(request.getIban())
+                            .build())
+                    .setBillingDetails(PaymentMethodCreateParams.BillingDetails.builder()
+                            .setName(expert.getName())
+                            .setEmail(expert.getEmail())
+                            .build())
                     .build();
 
             PaymentMethod paymentMethod = PaymentMethod.create(createParams);
 
-            // Attach the payment method to the Stripe customer
-            PaymentMethodAttachParams attachParams = PaymentMethodAttachParams.builder()
+            // Attach payment method to customer
+            paymentMethod.attach(PaymentMethodAttachParams.builder()
                     .setCustomer(expert.getStripeCustomerId())
-                    .build();
+                    .build());
 
-            paymentMethod = paymentMethod.attach(attachParams);
-
-            // Save payment info in the database
-            PaymentInfo paymentInfo = expert.getPaymentInfo();
-            if (paymentInfo == null) {
-                paymentInfo = new PaymentInfo();
-            }
-
+            // Save payment info
+            PaymentInfo paymentInfo = new PaymentInfo();
             paymentInfo.setIban(request.getIban());
             paymentInfo.setBic(request.getBic());
             paymentInfo.setBankName(request.getBankName());
             paymentInfo.setStripeCustomerId(expert.getStripeCustomerId());
             paymentInfo.setPaymentMethodId(paymentMethod.getId());
+            paymentInfo.setIsActive(true);
+            paymentInfo.setCreatedAt(LocalDateTime.now());
             paymentInfo.setExpert(expert);
 
             expert.setPaymentInfo(paymentInfo);
             paymentInfoRepository.save(paymentInfo);
             expertRepository.save(expert);
 
-            // Return customerId and paymentMethodId for frontend storage
-            Map<String, Object> response = new HashMap<>();
-            response.put("customerId", expert.getStripeCustomerId());
-            response.put("paymentMethodId", paymentMethod.getId());
-            response.put("success", true);
-            response.put("message", "SEPA payment method setup completed successfully");
+            return ResponseEntity.ok(Map.of(
+                    "success", true,
+                    "customerId", expert.getStripeCustomerId(),
+                    "paymentMethodId", paymentMethod.getId(),
+                    "message", "SEPA payment method setup completed successfully"));
 
-            return ResponseEntity.ok(response);
         } catch (StripeException e) {
+            log.error("Stripe error during SEPA setup: ", e);
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body(Map.of(
-                            "error", "Failed to setup payment method: " + e.getMessage(),
-                            "success", false));
+                    .body(Map.of("error", "Failed to setup payment method: " + e.getMessage()));
         } catch (Exception e) {
+            log.error("Error during SEPA setup: ", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(Map.of(
-                            "error", "Internal server error: " + e.getMessage(),
-                            "success", false));
+                    .body(Map.of("error", "Internal server error: " + e.getMessage()));
         }
     }
 

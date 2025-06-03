@@ -14,6 +14,9 @@ public interface AdsService {
     List<GetAllAdsResponse> getAll();
 
     List<GetAllAdsResponse> getUserAdById(String userId);
+
+
+    GetAllAdsResponse getAdById(String adId);
     ResponseEntity<?> add(CreateAdsRequest createAdsRequest);
 
     ResponseEntity<?> update(UpdateAdsRequest updateAdsRequest);
