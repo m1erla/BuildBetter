@@ -19,21 +19,33 @@ import io.github.cdimascio.dotenv.Dotenv;
 public class BackendApplication {
 
     public static void main(String[] args) {
-        // Load .env file
-        Dotenv dotenv = Dotenv.load();
-        dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+        // Only load .env in development environments
+        try {
+            // Check if we're in a production environment
+            String profile = System.getenv("SPRING_PROFILES_ACTIVE");
+            boolean isProduction = profile != null && profile.contains("prod");
+
+            if (!isProduction) {
+                // Only try to load .env in non-production environments
+                Dotenv dotenv = Dotenv.configure()
+                        .directory(".")
+                        .filename(".env")
+                        .ignoreIfMissing()
+                        .load();
+
+                dotenv.entries().forEach(entry -> {
+                    if (System.getenv(entry.getKey()) == null) {
+                        System.setProperty(entry.getKey(), entry.getValue());
+                    }
+                });
+                System.out.println("Loaded .env file for development");
+            } else {
+                System.out.println("Production environment detected, using system environment variables");
+            }
+        } catch (Exception e) {
+            System.out.println("Could not load .env file (this is normal in production): " + e.getMessage());
+        }
 
         SpringApplication.run(BackendApplication.class, args);
-    }
-
-    @Bean
-    public CommandLineRunner commandLineRunner(
-            AuthenticationService service) {
-        return args -> {
-            var admin = RegisterRequest.builder()
-                    .build();
-            var manager = RegisterRequest.builder()
-                    .build();
-        };
     }
 }
