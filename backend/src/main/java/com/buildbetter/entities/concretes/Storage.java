@@ -21,7 +21,7 @@ public class Storage {
     private String type;
 
     @Lob
-    @Column(name = "image_data", columnDefinition = "LONGBLOB")
+    @Column(name = "image_data", columnDefinition = "BYTEA")
     private byte[] imageData;
 
     private String url;
