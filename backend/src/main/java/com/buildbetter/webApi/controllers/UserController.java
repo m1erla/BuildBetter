@@ -6,7 +6,6 @@ import com.buildbetter.business.concretes.UserManager;
 import com.buildbetter.business.requests.*;
 import com.buildbetter.business.responses.*;
 import com.buildbetter.entities.concretes.User;
-import com.buildbetter.security.auth.AuthenticationService;
 import com.buildbetter.security.jwt.JwtService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -30,7 +29,7 @@ public class UserController {
     private final UserManager userManager;
 
     private final StorageManager storageManager;
-    private final AuthenticationService service;
+
     private final JwtService jwtService;
 
     @GetMapping
