@@ -20,8 +20,8 @@ spring:
       max-request-size: 10MB
   datasource:
     url: jdbc:postgresql://dpg-d0vkp5emcj7s73eo2gag-a.frankfurt-postgres.render.com/buildbetter
-    username: ${DB_USERNAME:buildbetter_user}
-    password: ${DB_PASSWORD:PQmMMwrhIHElQciXMZT1HNFERlt1HVx0}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
