@@ -1,10 +1,7 @@
 package com.buildbetter.business.requests;
 
 import com.buildbetter.entities.concretes.Role;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @Builder
@@ -13,8 +10,8 @@ import lombok.NoArgsConstructor;
 public class RegisterRequest {
     private String name;
     private String surname;
-    private String email;
     private String password;
+    private String email;
     private String phoneNumber;
     private String postCode;
     private Role role;

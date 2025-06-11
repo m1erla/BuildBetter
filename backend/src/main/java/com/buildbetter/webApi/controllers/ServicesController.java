@@ -17,30 +17,35 @@ import java.util.List;
 public class ServicesController {
     private IService iService;
 
-
     @GetMapping
-    public List<GetAllServicesResponse> getAllServices(){
-        return iService.getAll();
+    public List<GetAllServicesResponse> getAllServices(
+            @RequestParam(required = false) String categoryId,
+            @RequestParam(required = false) String exclude,
+            @RequestParam(required = false, defaultValue = "10") int limit // Örnek limit
+    // Gerekirse diğer parametreler
+    ) {
+        // iService.getAll() metodunu bu parametreleri alacak şekilde güncelleyin
+        return iService.getAll(categoryId, exclude, limit);
     }
 
     @GetMapping("/{id}")
-    public GetServiceByIdResponse getServiceById(@PathVariable String id){
+    public GetServiceByIdResponse getServiceById(@PathVariable String id) {
         return iService.getById(id);
     }
 
     @PostMapping("/service")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public void add(@RequestBody CreateServiceRequest createServiceRequest){
+    public void add(@RequestBody CreateServiceRequest createServiceRequest) {
         this.iService.add(createServiceRequest);
     }
 
     @PutMapping("/service_update/{id}")
-    public void update(@RequestBody UpdateServiceRequest updateServiceRequest){
+    public void update(@RequestBody UpdateServiceRequest updateServiceRequest) {
         this.iService.update(updateServiceRequest);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable String id){
+    public void delete(@PathVariable String id) {
         this.iService.delete(id);
     }
 }

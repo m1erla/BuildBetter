@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
+import io.github.cdimascio.dotenv.Dotenv;
 
 @RestControllerAdvice
 @OpenAPIDefinition
@@ -19,12 +19,16 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class BackendApplication {
 
     public static void main(String[] args) {
+        // Load .env file
+        Dotenv dotenv = Dotenv.load();
+        dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+
         SpringApplication.run(BackendApplication.class, args);
     }
+
     @Bean
     public CommandLineRunner commandLineRunner(
-            AuthenticationService service
-    ) {
+            AuthenticationService service) {
         return args -> {
             var admin = RegisterRequest.builder()
                     .build();

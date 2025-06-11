@@ -24,18 +24,17 @@ import java.util.function.Function;
 @Service
 @AllArgsConstructor
 @NoArgsConstructor
-@ConfigurationProperties(prefix = "application.security.jwt")
+@ConfigurationProperties(prefix = "spring.security.jwt")
 @Validated
 public class JwtService {
-    @Value("${application.security.jwt.secret-key}")
+    @Value("${spring.security.jwt.secret-key}")
     private String secretKey;
-    @Value("${application.security.jwt.expiration}")
+    @Value("${spring.security.jwt.expiration}")
     private long jwtExpiration;
-    @Value("${application.security.jwt.refresh-token.expiration}")
+    @Value("${spring.security.jwt.refresh-token.expiration}")
     private long refreshExpiration;
 
     private final static Logger logger = LoggerFactory.getLogger(JwtService.class);
-
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -57,7 +56,6 @@ public class JwtService {
         }
     }
 
-
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
@@ -69,33 +67,31 @@ public class JwtService {
 
     public String generateToken(
             Map<String, Object> extraClaims,
-            UserDetails userDetails
-    ) {
+            UserDetails userDetails) {
         return buildToken(extraClaims, userDetails, jwtExpiration);
     }
-//    public Claims decodeToken(String token){
-//        return Jwts.parserBuilder()
-//                .setSigningKey(secretKey)
-//                .build()
-//                .parseClaimsJws(token)
-//                .getBody();
-//
-//    }
-//
-//    public String extractUsernameByToken(String token){
-//        return decodeToken(token).getSubject();
-//    }
+
+    // public Claims decodeToken(String token){
+    // return Jwts.parserBuilder()
+    // .setSigningKey(secretKey)
+    // .build()
+    // .parseClaimsJws(token)
+    // .getBody();
+    //
+    // }
+    //
+    // public String extractUsernameByToken(String token){
+    // return decodeToken(token).getSubject();
+    // }
     public String generateRefreshToken(
-            UserDetails userDetails
-    ) {
+            UserDetails userDetails) {
         return buildToken(new HashMap<>(), userDetails, refreshExpiration);
     }
 
     private String buildToken(
             Map<String, Object> extraClaims,
             UserDetails userDetails,
-            long expiration
-    ) {
+            long expiration) {
         return Jwts
                 .builder()
                 .setClaims(extraClaims)
@@ -111,7 +107,7 @@ public class JwtService {
             final String username = extractUsername(token);
             return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             logger.error("Token validation failed: {}", e.getMessage());
             return false;
         }

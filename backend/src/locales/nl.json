@@ -1,0 +1,1308 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "experts": "Experts",
+    "about": "Over Ons",
+    "contact": "Contact",
+    "login": "Inloggen",
+    "register": "Registreren",
+    "expertRegister": "Registreren als Expert",
+    "ads": "Advertenties",
+    "profile": "Profiel"
+  },
+  "admin": {
+    "panel": "Admin Panel",
+    "dashboard": "Dashboard",
+    "analytics": "Analyses",
+    "users": "Gebruikers",
+    "messages": {
+        "title": "Berichten",
+        "description": "Beheer communicatie tussen gebruikers en experts",
+        "searchPlaceholder": "Zoek berichten...",
+        "refreshButton": "Vernieuwen",
+        "filterButton": "Filteren",
+        "expertChip": "Expert",
+        "reportedChip": "Gerapporteerd",
+        "reportedChipShort": "Gerapporteerd",
+        "unreadIndicator": "Ongelezen bericht",
+        "noMessagesFoundTitle": "Geen berichten gevonden",
+        "noMessagesFoundDescription": "Probeer filters of zoekcriteria te wijzigen",
+        "selectMessagePromptTitle": "Selecteer een bericht",
+        "selectMessagePromptDescription": "Kies een bericht uit de lijst om details te bekijken",
+        "confirmDelete": "Weet u zeker dat u dit bericht wilt verwijderen?",
+        "recipientLabel": "Aan: {{recipient}}",
+        "tabs": {
+          "all": "Alle Berichten",
+          "unread": "Ongelezen",
+          "reported": "Gerapporteerd"
+        },
+        "filterOptions": {
+          "allTime": "Alle Tijden",
+          "today": "Vandaag",
+          "thisWeek": "Deze Week",
+          "thisMonth": "Deze Maand"
+        },
+        "actions": {
+          "markAsRead": "Markeren als gelezen",
+          "report": "Rapporteren",
+          "unreport": "Rapportage verwijderen",
+          "delete": "Verwijderen",
+          "moreActions": "Meer Acties"
+        },
+        "errors": {
+          "fetch": "Kon berichten niet ophalen",
+          "refresh": "Kon berichten niet vernieuwen"
+        }
+      },
+    "payments": {
+        "title": "Betalingen Beheren",
+        "searchPlaceholder": "Zoek op ID, gebruiker of beschrijving...",
+        "statusFilterLabel": "Filter op Status",
+        "allStatuses": "Alle Statussen",
+        "tabs": {
+          "all": "Alle Betalingen",
+          "completed": "Voltooid",
+          "pending": "In Afwachting",
+          "failed": "Mislukt",
+          "refunded": "Terugbetaald"
+        },
+        "table": {
+          "id": "Betalings-ID",
+          "user": "Gebruiker",
+          "amount": "Bedrag",
+          "status": "Status",
+          "date": "Datum",
+          "method": "Methode",
+          "actions": "Acties"
+        },
+        "status": {
+          "completed": "Voltooid",
+          "pending": "In Afwachting",
+          "failed": "Mislukt",
+          "refunded": "Terugbetaald"
+        },
+        "paymentMethods": {
+          "credit_card": "Creditcard",
+          "bank_transfer": "Bankoverschrijving",
+          "paypal": "PayPal",
+          "unknown": "Onbekend"
+        },
+        "dialog": {
+          "title": "Betalingsdetails",
+          "paymentId": "Betalings-ID",
+          "userId": "Gebruikers-ID",
+          "userName": "Gebruikersnaam",
+          "amount": "Bedrag",
+          "currency": "Valuta",
+          "description": "Beschrijving",
+          "status": "Status",
+          "paymentMethod": "Betaalmethode",
+          "createdAt": "Aangemaakt op",
+          "processedAt": "Verwerkt op",
+          "refundedAt": "Terugbetaald op",
+          "failReason": "Reden van mislukking",
+          "closeButton": "Sluiten"
+        },
+        "actions": {
+          "viewDetails": "Details bekijken",
+          "downloadInvoice": "Factuur downloaden",
+          "deletePayment": "Betaling verwijderen"
+        },
+        "toastFetchError": "Fout bij het ophalen van betalingen.",
+        "toastDeleteSuccess": "Betaling succesvol verwijderd!",
+        "toastDeleteError": "Fout bij het verwijderen van betaling.",
+        "noPayments": "Geen betalingen gevonden.",
+        "noSearchResults": "Geen betalingen komen overeen met uw zoekopdracht of filters."
+      },
+    "ads": "Advertenties",
+    "storage": "Opslag",
+    "categories": {
+        "title": "Categorieën Beheren",
+        "searchPlaceholder": "Zoek categorieën...",
+        "addButton": "Nieuwe Categorie Toevoegen",
+        "filterButton": "Filteren",
+        "refreshButton": "Vernieuwen",
+        "editButton": "Bewerken",
+        "deleteButton": "Verwijderen",
+        "statusActive": "Actief",
+        "statusInactive": "Inactief",
+        "dialogAddTitle": "Nieuwe Categorie Toevoegen",
+        "dialogEditTitle": "Categorie Bewerken",
+        "dialogFieldName": "Categorienaam",
+        "dialogFieldSlug": "Slug",
+        "dialogFieldSlugHelp": "URL-vriendelijke identifier (automatisch gegenereerd)",
+        "dialogFieldDescription": "Beschrijving",
+        "dialogFieldIcon": "Icoon",
+        "dialogFieldImage": "Afbeelding URL",
+        "dialogFieldImageHelp": "Optionele URL voor de categorieafbeelding",
+        "dialogFieldBgImage": "Achtergrondafbeelding URL",
+        "dialogFieldBgImageHelp": "Optionele URL voor de achtergrondafbeelding",
+        "dialogFieldIsActive": "Is Actief",
+        "dialogCloseButton": "Sluiten",
+        "dialogSaveButton": "Opslaan",
+        "dialogUpdateButton": "Bijwerken",
+        "deleteConfirmTitle": "Verwijderen Bevestigen",
+        "deleteConfirmText": "Weet u zeker dat u deze categorie wilt verwijderen?",
+        "deleteConfirmButton": "Verwijderen",
+        "deleteCancelButton": "Annuleren",
+        "noCategories": "Geen categorieën gevonden.",
+        "noSearchResults": "Geen categorieën komen overeen met uw zoekopdracht.",
+        "addFirstCategory": "Voeg uw eerste categorie toe om te beginnen.",
+        "card": {
+          "expertsCount": "{{count}} Experts",
+          "servicesCount": "{{count}} Diensten"
+        },
+        "icon": {
+          "CategoryIcon": "Standaard Categorie",
+          "HomeIcon": "Home",
+          "SwatchIcon": "Staal",
+          "HomeModernIcon": "Modern Huis",
+          "PencilIcon": "Potlood",
+          "BoltIcon": "Bliksem",
+          "BeakerIcon": "Bekerglas",
+          "ComputerDesktopIcon": "Computer",
+          "ShieldCheckIcon": "Schild",
+          "SquaresPlusIcon": "Vierkanten",
+          "TruckIcon": "Vrachtwagen",
+          "FireIcon": "Vuur",
+          "DevicePhoneMobileIcon": "Mobiel"
+        },
+        "toastCreateSuccess": "Categorie succesvol aangemaakt!",
+        "toastUpdateSuccess": "Categorie succesvol bijgewerkt!",
+        "toastDeleteSuccess": "Categorie succesvol verwijderd!",
+        "toastFetchError": "Fout bij het ophalen van categorieën.",
+        "toastCreateError": "Fout bij het aanmaken van categorie.",
+        "toastUpdateError": "Fout bij het bijwerken van categorie.",
+        "toastDeleteError": "Fout bij het verwijderen van categorie."
+      },
+    "services": {
+        "title": "Diensten Beheren",
+        "searchPlaceholder": "Zoek diensten...",
+        "addButton": "Nieuwe Dienst Toevoegen",
+        "filterButton": "Filteren",
+        "refreshButton": "Vernieuwen",
+        "editButton": "Bewerken",
+        "deleteButton": "Verwijderen",
+        "previewButton": "Voorbeeld",
+        "statusActive": "Actief",
+        "statusInactive": "Inactief",
+        "popularYes": "Ja",
+        "popularNo": "Nee",
+        "allCategories": "Alle Categorieën",
+        "table": {
+          "name": "Naam",
+          "category": "Categorie",
+          "price": "Prijs",
+          "status": "Status",
+          "popular": "Populair",
+          "actions": "Acties",
+          "createdAt": "Aangemaakt op"
+        },
+        "dialogAddTitle": "Nieuwe Dienst Toevoegen",
+        "dialogEditTitle": "Dienst Bewerken",
+        "dialogFieldName": "Dienstnaam",
+        "dialogFieldSlug": "Slug",
+        "dialogFieldSlugHelp": "URL-vriendelijke identifier (automatisch gegenereerd)",
+        "dialogFieldDescription": "Beschrijving",
+        "dialogFieldPrice": "Prijs",
+        "dialogFieldCategory": "Categorie",
+        "dialogFieldFeatures": "Kenmerken",
+        "dialogFieldFeaturesHelp": "Komma-gescheiden lijst van kenmerken",
+        "dialogFieldImage": "Afbeelding URL",
+        "dialogFieldImageHelp": "Optionele URL voor de dienstafbeelding",
+        "dialogFieldIsPopular": "Is Populair",
+        "dialogFieldIsActive": "Is Actief",
+        "dialogCloseButton": "Sluiten",
+        "dialogSaveButton": "Opslaan",
+        "dialogUpdateButton": "Bijwerken",
+        "deleteConfirmTitle": "Verwijderen Bevestigen",
+        "deleteConfirmText": "Weet u zeker dat u deze dienst wilt verwijderen?",
+        "deleteConfirmButton": "Verwijderen",
+        "deleteCancelButton": "Annuleren",
+        "noServices": "Geen diensten gevonden.",
+        "noSearchResults": "Geen diensten komen overeen met uw zoekopdracht of filters.",
+        "addFirstService": "Voeg uw eerste dienst toe om te beginnen.",
+        "toastCreateSuccess": "Dienst succesvol aangemaakt!",
+        "toastUpdateSuccess": "Dienst succesvol bijgewerkt!",
+        "toastDeleteSuccess": "Dienst succesvol verwijderd!",
+        "toastFetchError": "Fout bij het ophalen van diensten.",
+        "toastFetchCategoriesError": "Fout bij het ophalen van categorieën.",
+        "toastCreateError": "Fout bij het aanmaken van dienst.",
+        "toastUpdateError": "Fout bij het bijwerken van dienst.",
+        "toastDeleteError": "Fout bij het verwijderen van dienst."
+      },
+    "settings": "Instellingen"
+  },
+  "common": {
+    "logout": "Uitloggen",
+    "backToHome": "Terug naar Home",
+    "welcome": "Welkom",
+    "profile": "Profiel",
+    "search": "Zoeken",
+    "loading": "Laden...",
+    "notFound": "Pagina niet gevonden",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "submit": "Verzenden",
+    "language": "Taal",
+    "theme": "Thema",
+    "darkMode": "Donkere Modus",
+    "lightMode": "Lichte Modus",
+    "changeTheme": "Lichte/Donkere Modus Wisselen",
+    "retry": "Opnieuw proberen",
+    "close": "Sluiten",
+    "changeLanguage": "Taal wijzigen",
+    "openSettings": "Instellingen openen",
+    "notifications": "Meldingen",
+    "formValidation": {
+        "requiredFields": "Vul alstublieft alle verplichte velden in."
+      },
+    "error": "Fout",
+    "accept": "Accepteren",
+    "reject": "Afwijzen",
+    "closeDialog": "Dialoog Sluiten",
+    "cancelButton": "Annuleren",
+    "saveButton": "Opslaan"
+  },
+  "categories": {
+    "elektrikIsleri": "Elektra",
+    "tesisatIsleri": "Loodgieterswerk",
+    "tadilatIsleri": "Renovatiewerkzaamheden",
+    "beyazEsyaTamiri": "Reparatie van witgoed",
+    "nakliyat": "Transport",
+    "temizlik": "Schoonmaak",
+    "bahcePeyzaj": "Tuin & Landschapsarchitectuur",
+    "guvenlikSistemleri": "Beveiligingssystemen",
+    "mobilya": "Meubels",
+    "dekorasyon": "Decoratie",
+    "evEsyasiTamiri": "Reparatie Huishoudelijke Apparaten",
+    "ilaclama": "Ongediertebestrijding",
+    "kilitCilingir": "Slot & Sleutel Service",
+    "boyama": "Schilderwerk",
+    "montajKurulum": "Montage & Installatie",
+    "tamirOnarim": "Reparatie & Onderhoud",
+    "ykmVeTemizlik": "Sloop & Opruiming",
+    "sonKontrollerVeTeslim": "Eindcontroles & Oplevering"
+  },
+  "jobTitles": {
+    "elektrikci": "Elektricien",
+    "tesisatci": "Loodgieter",
+    "tadilatUstasi": "Renovatievakman",
+    "beyazEsyaTamircisi": "Witgoedmonteur",
+    "nakliyeci": "Verhuizer",
+    "temizlikci": "Schoonmaker",
+    "bahcivan": "Tuinman",
+    "guvenlikUzmani": "Beveiligingsexpert",
+    "mobilyaci": "Meubelmaker",
+    "dekorator": "Decorateur",
+    "icMimar": "Interieurarchitect"
+  },
+  "services": {
+    "elektrikArizaTespiti": "Elektrische storing opsporen",
+    "sigortaDegisimi": "Vervanging van zekeringen",
+    "anahtarPrizMontaji": "Montage van schakelaars en stopcontacten",
+    "suKacagiTespiti": "Waterlekdetectie",
+    "muslukDegisimi": "Vervanging van kranen",
+    "fayansDoseme": "Tegelzetten",
+    "boyaBadana": "Schilderwerk",
+    "buzdolabiTamiri": "Reparatie van koelkasten",
+    "camasirMakinesiTamiri": "Reparatie van wasmachines",
+    "evdenEveNakliyat": "Verhuizing",
+    "ofisTasima": "Kantoorverhuizing",
+    "esyaDepolama": "Opslag van goederen",
+    "isYeriTemizligi": "Schoonmaak van bedrijfspanden",
+    "evTemizligi": "Huishoudelijke schoonmaak",
+    "haliYikama": "Tapijtreiniging",
+    "koltukYikama": "Meubelreiniging",
+    "bahceDuzenleme": "Tuinaanleg",
+    "cimBicme": "Grasmaaien",
+    "agacBudama": "Boom snoeien",
+    "alarmSistemiKurulumu": "Installatie van alarmsystemen",
+    "kameraSistemiKurulumu": "Installatie van camerasystemen",
+    "mobilyaMontaji": "Meubelmontage",
+    "dolapMontaji": "Kastmontage",
+    "avizeMontaji": "Montage van kroonluchters",
+    "duvarKagidiKaplama": "Behangen",
+    "perdeMontaji": "Montage van gordijnen",
+    "parkeDoseme": "Parket leggen",
+    "laminantDoseme": "Laminaat leggen",
+    "klimaMontaji": "Installatie van airconditioning",
+    "klimaBakimi": "Onderhoud van airconditioning",
+    "kombiBakimi": "Onderhoud van cv-ketels",
+    "catiTamiri": "Dakreparatie",
+    "yagmurOlukTamiri": "Reparatie van dakgoten",
+    "kapiTamiri": "Deurreparatie",
+    "pencereTamiri": "Raamreparatie",
+    "kilitDegisimi": "Vervanging van sloten",
+    "kabloTasima": "Kabelroutering",
+    "prizTasima": "Stopcontact verplaatsen",
+    "petekTemizligi": "Radiatorreiniging",
+    "bocekIlaclama": "Insectenbestrijding",
+    "fareIlaclama": "Knaagdierbestrijding",
+    "mobilyaTamiri": "Meubelreparatie",
+    "koltukTamiri": "Stoffeerreparatie",
+    "camDegisimi": "Glasvervanging",
+    "aynaMontaji": "Spiegelmontage",
+    "dusakabinMontaji": "Douchecabine-installatie",
+    "tvMontaji": "TV-montage",
+    "uyduKurulumu": "Satellietinstallatie",
+    "camasirMakinesiMontaji": "Wasmachine-installatie",
+    "bulasikMakinesiMontaji": "Vaatwasserinstallatie",
+    "ankastreMontaji": "Installatie inbouwapparatuur",
+    "elektrikliSupurgeTamiri": "Stofzuigerreparatie",
+    "kurutmaMakinesiTamiri": "Drogerreparatie",
+    "mikrodalgaFirinTamiri": "Magnetronreparatie",
+    "firinTamiri": "Ovenreparatie",
+    "davlumbazTamiri": "Afzuigkapreparatie",
+    "sesSistemiKurulumu": "Geluidsinstallatie",
+    "internetBaglantiKurulumu": "Internetverbinding instellen",
+    "bilgisayarKurulumu": "Computer instellen",
+    "yaziciKurulumu": "Printer instellen",
+    "ahsapBoyama": "Hout schilderen",
+    "metalBoyama": "Metaal schilderen",
+    "asmaTavanYapimi": "Verlaagd plafond installeren",
+    "alcipanDuvarYapimi": "Gipsplaat installeren",
+    "tuvaletMontaji": "Toilet installeren",
+    "lavaboMontaji": "Wastafel installeren",
+    "banyoDolabMontaji": "Badkamermeubel installeren",
+    "mutfakDolabiMontaji": "Keukenkast installeren",
+    "tezgahMontaji": "Aanrechtblad installeren",
+    "aspiratorMontaji": "Afzuigkap installeren",
+    "duvarKirma": "Muur slopen",
+    "duvarOrme": "Muur bouwen",
+    "tadilatDanismanligi": "Renovatieadvies",
+    "evDekorasyonuDanismanligi": "Huisdecoratieadvies",
+    "peyzajDanismanligi": "Landschapsadvies",
+    "guvenlikDanismanligi": "Beveiligingsadvies",
+    "parcaDegisimi": "Onderdeel vervangen",
+    "kapiGobegiDegisimi": "Deurslotcilinder vervangen",
+    "suTesisatiDegisimi": "Leidingsysteem vervangen",
+    "elektrikTesisatiDegisimi": "Elektrisch systeem vervangen",
+    "spotLambaMontaji": "Spotlicht installeren",
+    "ledAydinlatmaMontaji": "LED-verlichting installeren",
+    "kabloDoseme": "Kabel leggen",
+    "kanalAcma": "Leiding ontstoppen",
+    "giderAcma": "Afvoer ontstoppen",
+    "lavaboAcma": "Wastafel ontstoppen",
+    "tuvaletAcma": "Toilet ontstoppen",
+    "bacaTemizligi": "Schoorsteen vegen",
+    "tesisatYalitimi": "Leidingisolatie",
+    "catiYalitimi": "Dakisolatie",
+    "disCepheYalitimi": "Buitengevelisolatie",
+    "icDuvarYalitimi": "Binnenmuurisolatie",
+    "sesYalitimi": "Geluidsisolatie",
+    "kirikCamTamiri": "Gebroken glas repareren",
+    "celikKapiMontaji": "Stalen deur installeren",
+    "panjurTamiri": "Rolluik repareren",
+    "panjurMontaji": "Rolluik installeren",
+    "otomatikKapiTamiri": "Automatische deur repareren",
+    "otomatikKepenkTamiri": "Automatisch rolluik repareren",
+    "citYapimi": "Hekwerk bouwen",
+    "havuzBakimi": "Zwembadonderhoud",
+    "havuzTemizligi": "Zwembad schoonmaken",
+    "eskiTesisatSokme": "Oude leidingen verwijderen",
+    "eskiKaplamaSokme": "Oude bekleding verwijderen",
+    "duvarYikimi": "Muur slopen",
+    "zeminYikimi": "Vloer slopen",
+    "atikYikimi": "Afval slopen",
+    "yapisalElemanlar": "Structurele elementen",
+    "insaatAlaniTemizleme": "Bouwplaats schoonmaken",
+    "insaatAtigiTemizleme": "Bouwafval opruimen",
+    "insaatSonrasiTemizlikDetayli": "Schoonmaak na bouw: Verzamelen van bouwafval, algemene schoonmaak, gedetailleerde schoonmaak na bouw",
+    "eksiklikGidermeVeRotuslar": "Herstel van tekortkomingen: Herstellen van gebrekkig werk, voltooien van ontbrekende taken, laatste afwerkingen",
+    "sonKontrollerVeDenetimler": "Eindcontroles: Bouwinspecties, loodgietersinspecties, decoratie-inspecties",
+    "insaatTeslimiVeBelgeler": "Bouwoplevering: Sleutelklare oplevering, verkrijgen van gebruiksvergunning, overhandiging van garantiedocumenten"
+  },
+  "pages": {
+    "home": {
+      "title": "Transformeer uw ruimte met Renovatipoint",
+      "subtitle": "Herontwerp uw huis of kantoor met onze professionele diensten"
+    },
+    "about": {
+      "title": "Over Ons",
+      "history": "Onze Geschiedenis",
+      "mission": "Onze Missie",
+      "vision": "Onze Visie",
+      "team": "Ons Team"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Heeft u vragen? Neem contact met ons op.",
+      "form": {
+        "name": "Uw Naam",
+        "email": "Uw E-mailadres",
+        "subject": "Onderwerp",
+        "message": "Uw Bericht",
+        "send": "Bericht Verzenden"
+      },
+      "success": "Uw bericht is succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
+      "error": "Er is een fout opgetreden bij het verzenden van uw bericht. Probeer het later opnieuw.",
+      "info": {
+        "address": "Adres",
+        "phone": "Telefoon",
+        "email": "E-mail"
+      }
+    },
+    "categoryDetail": {
+      "cta": {
+        "title": "Vraag nu een {{name}} service aan",
+        "description": "Op maat gemaakte oplossingen met onze professionele experts",
+        "button": "Ik wil deze service aanvragen"
+      },
+      "experts": "{{count}} Experts",
+      "services": "{{count}} Diensten",
+      "noServices": "Er zijn nog geen diensten beschikbaar in deze categorie.",
+      "notFound": {
+        "title": "Categorie niet gevonden",
+        "description": "De categorie die u zoekt is niet gevonden of is mogelijk verwijderd."
+      },
+      "features": {
+        "title": "Categorie Kenmerken"
+      }
+    },
+    "serviceDetail": {
+        "notFound": {
+          "title": "Dienst niet gevonden",
+          "description": "De dienst die u zoekt is niet gevonden of is mogelijk verwijderd."
+        },
+        "price": "Vanaf {{price}}€",
+        "duration": "{{duration}}",
+        "requestService": "Dienst Aanvragen",
+        "overview": {
+          "title": "Servicedetails",
+          "description": "Servicebeschrijving",
+          "features": "Kenmerken",
+          "requirements": "Vereisten",
+          "notIncluded": "Wat is niet inbegrepen"
+        },
+        "included": {
+          "title": "Inbegrepen in de service"
+        },
+        "tabs": {
+          "overview": "Overzicht",
+          "packages": "Pakketten",
+          "process": "Proces",
+          "faqs": "FAQ's",
+          "experts": "Experts",
+          "reviews": "Recensies",
+          "faq": "FAQ"
+        },
+        "process": {
+          "title": "Serviceproces"
+        },
+        "faqs": {
+          "title": "Veelgestelde Vragen"
+        },
+        "summary": {
+          "title": "Serviceoverzicht",
+          "price": "Prijs",
+          "duration": "Duur",
+          "category": "Categorie"
+        },
+        "similarServices": {
+          "title": "Vergelijkbare Diensten",
+          "viewDetails": "Details bekijken",
+          "expertCount": "{{count}}+ Experts"
+        },
+        "testimonials": {
+          "title": "Klantbeoordelingen"
+        },
+        "descriptionTitle": "Servicebeschrijving",
+        "selectPackage": "Pakket Selecteren",
+        "contactExpert": "Expert contacteren",
+        "features": "Kenmerken",
+        "requirements": "Vereisten",
+        "location": "Servicelocatie: {{location}}",
+        "expertProfile": {
+          "title": "Expertprofiel",
+          "experience": "Jaren ervaring",
+          "completedJobs": "Voltooide klussen",
+          "rating": "Beoordeling",
+          "reviews": "Recensies"
+        }
+    },
+    "unauthorized": {
+      "title": "Ongeautoriseerde Toegang",
+      "description": "U heeft geen toestemming om deze pagina te bekijken.",
+      "button": "Ga Terug"
+    },
+    "requestList": {
+      "title": "Aanvragen",
+      "description": "Beheer uw aanvragen en communicatie met experts",
+      "noRequests": "Geen aanvragen gevonden",
+      "status": {
+        "pending": "In Afwachting",
+        "accepted": "Geaccepteerd",
+        "rejected": "Afgewezen",
+        "completed": "Voltooid",
+        "cancelled": "Geannuleerd"
+      },
+      "actions": {
+        "accept": "Accepteren",
+        "reject": "Afwijzen",
+        "complete": "Voltooien",
+        "cancel": "Annuleren",
+        "details": "Details bekijken",
+        "goToChat": "Ga naar Chatruimte"
+      },
+      "dialog": {
+        "title": "Aanvraagdetails #{{id}}",
+        "status": "Status",
+        "createdAt": "Aangemaakt op"
+      },
+      "errors": {
+        "fetchFailed": "Kon aanvragen niet ophalen. Probeer het opnieuw.",
+        "acceptFailed": "Kon aanvraag niet accepteren. Probeer het opnieuw.",
+        "rejectFailed": "Kon aanvraag niet afwijzen. Probeer het opnieuw.",
+        "completeFailed": "Kon aanvraag niet voltooien. Probeer het opnieuw.",
+        "cancelFailed": "Kon aanvraag niet annuleren. Probeer het opnieuw.",
+        "chatRoomFailed": "Kon chatruimte ID niet ophalen. Probeer het opnieuw."
+      }
+    },
+    "pendingRequests": {
+      "title": "Openstaande Aanvragen",
+      "noRequests": "Geen openstaande aanvragen",
+      "accept": "Accepteren",
+      "reject": "Afwijzen"
+    },
+    "homeRenovation": {
+      "title": "Huisrenovatie",
+      "subtitle": "Wij renoveren uw leefruimtes en maken er uw droomhuis van",
+      "description": "Wij voegen waarde toe aan uw huis met ons professionele team en hoogwaardige materialen. Van interieurrenovatie tot exterieurwerk, structurele verbeteringen en decoratieve accenten, wij voldoen aan al uw huisbehoeften.",
+      "hero": {
+        "alt": "Huisrenovatie Hero Afbeelding"
+      },
+      "services": {
+        "interior": {
+          "title": "Interieurrenovatie",
+          "description": "Wij renoveren uw interieurs modern en functioneel.",
+          "image": "https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Keukenrenovatie",
+            "2": "Badkamerrenovatie",
+            "3": "Vloer leggen",
+            "4": "Wandbekleding"
+          }
+        },
+        "exterior": {
+          "title": "Exterieurrenovatie",
+          "description": "Wij vernieuwen het uiterlijk van uw gebouw en verhogen de waarde ervan.",
+          "image": "https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2067&q=80",
+          "features": {
+            "1": "Gevelbekleding",
+            "2": "Isolatie",
+            "3": "Schilderwerk",
+            "4": "Dakreparatie"
+          }
+        },
+        "structural": {
+          "title": "Structurele Verbeteringen",
+          "description": "Wij lossen de structurele problemen van uw gebouw op en verhogen de veiligheid.",
+          "image": "https://images.unsplash.com/photo-1541855492-581f618f69a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Aardbevingsbestendig maken",
+            "2": "Funderingsversteviging",
+            "3": "Scheurreparatie",
+            "4": "Vochtisolatie"
+          }
+        }
+      },
+      "process": {
+        "title": "Ons Werkproces",
+        "discovery": {
+          "title": "Inspectie en Planning",
+          "description": "Ons deskundige team komt naar uw locatie, voert een gedetailleerde inspectie uit en identificeert uw behoeften."
+        },
+        "design": {
+          "title": "Ontwerp en Offerte",
+          "description": "Er wordt een op maat gemaakt ontwerp en budgetplan opgesteld en een gedetailleerde offerte aan u voorgelegd."
+        },
+        "implementation": {
+          "title": "Implementatie",
+          "description": "Ons professionele team voert de renovatiewerkzaamheden uit volgens het vastgestelde plan."
+        },
+        "qualityControl": {
+          "title": "Kwaliteitscontrole",
+          "description": "Nadat al het werk is voltooid, wordt een gedetailleerde kwaliteitscontrole uitgevoerd en aan u overhandigd."
+        }
+      },
+      "cta": {
+        "title": "Neem contact op voor een gratis inspectie",
+        "description": "Ons deskundige team staat klaar om uw project te evalueren en op maat gemaakte oplossingen te bieden.",
+        "button": "Neem contact op"
+      }
+    },
+    "gardenDesign": {
+      "title": "Tuinontwerp",
+      "subtitle": "Professionele landschapsarchitectuuroplossingen die de schoonheid van de natuur naar uw huis brengen",
+      "description": "Wij bieden op maat gemaakte oplossingen met onze ervaren landschapsarchitecten en bekwame tuinmannen om van uw tuin een leefruimte te maken die het hele jaar door bruikbaar is.",
+      "hero": {
+        "alt": "Tuinontwerp Hero Afbeelding"
+      },
+      "services": {
+        "landscaping": {
+          "title": "Landschapsarchitectuur",
+          "description": "Wij ontwerpen uw tuin professioneel opnieuw.",
+          "image": "https://images.unsplash.com/photo-1551410224-699683e15636?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80",
+          "features": {
+            "1": "Tuinplanning",
+            "2": "Plantselectie en -plaatsing",
+            "3": "Landschapsverlichting",
+            "4": "Decoratieve stenen leggen"
+          }
+        },
+        "irrigation": {
+          "title": "Irrigatiesystemen",
+          "description": "Wij houden uw tuin altijd groen met automatische irrigatiesystemen.",
+          "image": "https://images.unsplash.com/photo-1623510593430-2fb4c2da5881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Automatische Irrigatiesystemen",
+            "2": "Druppelirrigatie",
+            "3": "Sprinklersystemen",
+            "4": "Waterbesparende oplossingen"
+          }
+        },
+        "furniture": {
+          "title": "Tuinmeubilair",
+          "description": "Wij rusten uw tuin uit met functioneel en esthetisch meubilair.",
+          "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+          "features": {
+            "1": "Buitenmeubilair",
+            "2": "Veranda- en terrasontwerp",
+            "3": "Bouw van paviljoens en pergola's",
+            "4": "Tuinloungesets"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Waarom voor ons kiezen?",
+        "sustainable": {
+          "title": "Duurzaam Ontwerp",
+          "description": "Wij ontwerpen duurzame tuinen met milieuvriendelijke materialen en waterbesparende systemen."
+        },
+        "allSeasons": {
+          "title": "Het hele jaar door bruikbaar",
+          "description": "Wij selecteren speciale planten voor tuinen die er in elk seizoen mooi uitzien en bruikbaar zijn."
+        },
+        "easyMaintenance": {
+          "title": "Gemakkelijk Onderhoud",
+          "description": "Wij creëren onderhoudsarme tuinen met slimme systemen en de juiste plantselectie."
+        },
+        "valueIncrease": {
+          "title": "Waardevermeerdering",
+          "description": "Wij verhogen de waarde van uw eigendom met professionele landschapsarchitectuur."
+        }
+      },
+      "cta": {
+        "title": "Gratis inspectie voor uw tuin",
+        "description": "Onze experts staan ​​klaar om u te helpen het potentieel van uw tuin te ontdekken.",
+        "button": "Maak een afspraak"
+      }
+    },
+    "specialProjects": {
+      "title": "Speciale Projecten",
+      "subtitle": "Wij realiseren uw droomruimtes met ons professionele team",
+      "description": "Wij bieden op maat gemaakte oplossingen voor luxe woningen, zwembaden met een speciaal ontwerp, slimme thuissystemen en unieke renovatieprojecten. Laten we samen uw droomleefruimte creëren.",
+      "hero": {
+        "alt": "Speciale Projecten Hero Afbeelding"
+      },
+      "services": {
+        "pool": {
+          "title": "Aangepast Zwembadbouw",
+          "description": "Wij voegen waarde toe aan uw leefruimte met luxe en op maat gemaakte zwembadontwerpen.",
+          "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Op maat gemaakte zwembaden",
+            "2": "Watervallen en waterspelen",
+            "3": "Ligweides",
+            "4": "Aangepaste verlichtingssystemen"
+          }
+        },
+        "smartHome": {
+          "title": "Slimme Thuissystemen",
+          "description": "Geïntegreerde slimme thuissystemen waarmee u alle apparaten in uw huis kunt bedienen.",
+          "image": "https://images.unsplash.com/photo-1558002038-1055953ce55c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Geluids- en lichtregeling",
+            "2": "Beveiligingssystemen",
+            "3": "Klimaatregeling",
+            "4": "Bediening via mobiele app"
+          }
+        },
+        "attic": {
+          "title": "Aangepast Zolderontwerp",
+          "description": "Wij transformeren ongebruikte zolders tot functionele leefruimtes.",
+          "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "features": {
+            "1": "Zolderverbouwing",
+            "2": "Maatwerk meubilair",
+            "3": "Dakramen",
+            "4": "Dakterras ontwerp"
+          }
+        }
+      },
+      "expertise": {
+        "title": "Onze Expertisegebieden",
+        "projectManagement": {
+          "title": "Projectmanagement",
+          "description": "Met onze ervaren projectmanagers beheren wij processen professioneel."
+        },
+        "customDesign": {
+          "title": "Aangepast Ontwerp",
+          "description": "Wij ontwikkelen unieke en functionele ontwerpen voor elk project."
+        },
+        "qualityControl": {
+          "title": "Kwaliteitscontrole",
+          "description": "Wij passen kwaliteitscontroleprocessen toe volgens internationale normen."
+        },
+        "sustainability": {
+          "title": "Duurzaamheid",
+          "description": "Wij bieden milieuvriendelijke materialen en energiezuinige oplossingen."
+        }
+      },
+      "cta1": {
+        "title": "Deel Uw Project Met Ons",
+        "description": "Laat ons professionele oplossingen bieden voor uw speciale projecten. Ons deskundige team staat klaar om met u te praten.",
+        "button": "Projectofferte aanvragen"
+      },
+      "completed": {
+        "title": "Voltooide Projecten",
+        "bodrumVilla": {
+          "title": "Bodrum Villa Renovatie",
+          "description": "Aangepast zwembad, landschapsarchitectuur en interieurontwerp voor een villa van 450 m² in Bodrum",
+          "image": "https://images.unsplash.com/photo-1600607687644-c7e47361a37d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        },
+        "istanbulPenthouse": {
+          "title": "Istanbul Penthouse",
+          "description": "Aangepast ontwerp en slimme thuissystemen voor een penthouse appartement van 300 m² in Nişantaşı",
+          "image": "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+        }
+      },
+      "cta2": {
+        "title": "Neem contact op voor een gratis inspectie",
+        "description": "Ons deskundige team staat klaar om u te helpen met uw speciale project.",
+        "button": "Neem contact op"
+      }
+    },
+    "privacyPolicy": {
+      "title": "Privacybeleid",
+      "commitment": "Bij Renovatipoint zetten we ons in om uw privacy te beschermen.",
+      "description": "Dit privacybeleid legt uit hoe uw persoonlijke gegevens worden verzameld, gebruikt en beschermd wanneer u onze diensten gebruikt.",
+      "hero": {
+        "alt": "Gegevensbeveiliging Afbeelding"
+      },
+      "sections": {
+        "dataSecurity": {
+          "title": "Gegevensbeveiliging",
+          "content": "Uw persoonlijke gegevens worden beschermd met behulp van industriestandaard beveiligingsprotocollen en encryptietechnologieën. De veiligheid van uw gegevens is onze topprioriteit."
+        },
+        "privacyCommitment": {
+          "title": "Privacyverplichting",
+          "content": "Wij respecteren de privacy van onze klanten en delen hun persoonlijke gegevens niet met derden. Uw gegevens worden uitsluitend gebruikt om onze servicekwaliteit te verbeteren."
+        },
+        "kvkkCompliance": {
+          "title": "AVG-naleving",
+          "content": "Wij voldoen aan alle wettelijke vereisten onder de Algemene Verordening Gegevensbescherming (AVG) en verwerken uw gegevens dienovereenkomstig."
+        },
+        "dataUsage": {
+          "title": "Gegevensgebruik",
+          "content": "Verzamelde gegevens worden gebruikt om onze servicekwaliteit te verbeteren, onze wettelijke verplichtingen na te komen en u een betere ervaring te bieden."
+        }
+      },
+      "policies": {
+        "collectedInfo": {
+          "title": "1. Verzamelde Informatie",
+          "items": {
+            "1": "Naam, achternaam en contactgegevens",
+            "2": "Projectdetails en voorkeuren",
+            "3": "Betalingsinformatie",
+            "4": "Servicegebruiksgegevens"
+          }
+        },
+        "infoUsage": {
+          "title": "2. Gebruik van Informatie",
+          "items": {
+            "1": "Servicelevering en verbetering",
+            "2": "Communicatie en informatie",
+            "3": "Wettelijke verplichtingen",
+            "4": "Servicekwaliteitsanalyse"
+          }
+        },
+        "infoSecurity": {
+          "title": "3. Informatiebeveiliging",
+          "items": {
+            "1": "SSL-encryptietechnologie",
+            "2": "Veilige gegevensopslag",
+            "3": "Regelmatige beveiligingsaudits",
+            "4": "Toegangscontrole en autorisatie"
+          }
+        },
+        "yourRights": {
+          "title": "4. Uw Rechten",
+          "items": {
+            "1": "Toegangsrecht tot informatie",
+            "2": "Verzoek tot correctie en verwijdering",
+            "3": "Recht om bezwaar te maken tegen verwerking",
+            "4": "Recht op gegevensoverdraagbaarheid"
+          }
+        }
+      },
+      "lastUpdated": "Laatst bijgewerkt",
+      "updateNotice": "Dit privacybeleid kan worden bijgewerkt in overeenstemming met wettelijke vereisten en wijzigingen in onze servicevoorwaarden. U wordt op de hoogte gebracht van belangrijke wijzigingen."
+    },
+    "termsOfService": {
+      "title": "Servicevoorwaarden",
+      "description": "Lees deze servicevoorwaarden zorgvuldig door voordat u de Renovatipoint-services gebruikt. Door ons platform te gebruiken, gaat u akkoord met deze voorwaarden.",
+      "listItem1": "Alle inhoud is auteursrechtelijk beschermd.",
+      "listItem2": "De gebruiker is verantwoordelijk voor de beveiliging van zijn account.",
+      "hero": {
+        "alt": "Juridische Overeenkomst Afbeelding"
+      },
+      "sections": {
+        "legalFramework": {
+          "title": "Juridisch Kader",
+          "content": "Deze servicevoorwaarden regelen de juridische relatie tussen Built Better en gebruikers en bepalen de rechten en plichten van de partijen."
+        },
+        "paymentTerms": {
+          "title": "Betalingsvoorwaarden",
+          "content": "Servicekosten, betalingsschema's en ons restitutiebeleid worden transparant bepaald en toegepast."
+        },
+        "privacySecurity": {
+          "title": "Privacy en Beveiliging",
+          "content": "De bescherming van uw persoonlijke gegevens en de beveiligingsmaatregelen tijdens het serviceproces worden gegarandeerd in overeenstemming met de wettelijke voorschriften."
+        },
+        "serviceCommitment": {
+          "title": "Serviceverplichting",
+          "content": "We doen duidelijke toezeggingen met betrekking tot de kwaliteit en normen van onze diensten en komen deze na."
+        }
+      },
+      "terms": {
+        "generalProvisions": {
+          "title": "1. Algemene Bepalingen",
+          "items": {
+            "1": "1.1. Deze voorwaarden regelen het gebruik van het Built Better platform.",
+            "2": "1.2. Alle via het platform aangeboden diensten vallen onder deze voorwaarden.",
+            "3": "1.3. Door gebruik te maken van de dienst, worden gebruikers geacht akkoord te zijn gegaan met deze voorwaarden.",
+            "4": "1.4. Built Better behoudt zich het recht voor om deze voorwaarden na kennisgeving te wijzigen."
+          }
+        },
+        "serviceTerms": {
+          "title": "2. Servicevoorwaarden",
+          "items": {
+            "1": "2.1. Onze diensten worden geleverd volgens professionele normen.",
+            "2": "2.2. Projectduur en kosten worden vooraf bepaald.",
+            "3": "2.3. Wijzigingsverzoeken kunnen extra kosten met zich meebrengen.",
+            "4": "2.4. Onze kwaliteitsnormen zijn gegarandeerd."
+          }
+        },
+        "paymentPolicy": {
+          "title": "3. Betalings- en Restitutiebeleid",
+          "items": {
+            "1": "3.1. Het betalingsschema wordt aan het begin van het project bepaald.",
+            "2": "3.2. Rentetoeslagen kunnen van toepassing zijn op termijnbetalingen.",
+            "3": "3.3. Annulerings- en restitutievoorwaarden staan ​​in het contract vermeld.",
+            "4": "3.4. Wettelijke rente wordt in rekening gebracht voor te late betalingen."
+          }
+        },
+        "responsibilities": {
+          "title": "4. Verantwoordelijkheden",
+          "items": {
+            "1": "4.1. De verantwoordelijkheden van beide partijen tijdens het projectproces worden gespecificeerd.",
+            "2": "4.2. In geval van overmacht kan termijnverlenging worden verleend.",
+            "3": "4.3. Garantie op materiaal en vakmanschap wordt verstrekt.",
+            "4": "4.4. Arbeidsveiligheidsmaatregelen worden door ons verzorgd."
+          }
+        },
+        "intellectualProperty": {
+          "title": "5. Intellectueel Eigendom",
+          "items": {
+            "1": "5.1. Ontwerpen en projecten behoren toe aan ons bedrijf.",
+            "2": "5.2. Er kunnen geen wijzigingen worden aangebracht in projecten die door de klant zijn goedgekeurd.",
+            "3": "5.3. Rechten op referentiegebruik zijn voorbehouden.",
+            "4": "5.4. Projectafbeeldingen mogen niet zonder toestemming worden gebruikt."
+          }
+        },
+        "disputeResolution": {
+          "title": "6. Geschillenbeslechting",
+          "items": {
+            "1": "6.1. Geschillen worden in eerste instantie door onderhandeling opgelost.",
+            "2": "6.2. Bemiddelingsprocedure kan worden toegepast.",
+            "3": "6.3. Juridische stappen worden als laatste redmiddel gebruikt.",
+            "4": "6.4. Bevoegde rechtbanken worden in het contract gespecificeerd."
+          }
+        }
+      },
+      "lastUpdated": "Laatst bijgewerkt",
+      "updateNotice": "Deze servicevoorwaarden kunnen worden bijgewerkt in overeenstemming met wettelijke vereisten en wijzigingen in onze servicevoorwaarden. U wordt op de hoogte gebracht van belangrijke wijzigingen."
+    }
+  },
+  "errors": {
+    "errorTitle": "Er is een fout opgetreden",
+    "fetchDataError": "Er is een fout opgetreden bij het ophalen van de gegevens.",
+    "invalidCategoryId": "Ongeldige categorie-ID",
+    "invalidServiceId": "Ongeldige service-ID",
+    "networkError": "Netwerkfout. Controleer uw verbinding.",
+    "serverError": "Serverfout. Probeer het later opnieuw.",
+    "accessDenied": "Toegang geweigerd. U heeft geen toestemming om deze bron te bekijken.",
+    "unknownCategory": "Onbekende Categorie",
+    "unknownService": "Onbekende Dienst",
+    "pageNotFound": "Pagina Niet Gevonden",
+    "somethingWentWrong": "Er is iets misgegaan. Probeer het opnieuw.",
+    "formValidation": "Controleer het formulier en probeer het opnieuw.",
+    "requiredField": "Dit veld is verplicht",
+    "invalidEmail": "Voer alstublieft een geldig e-mailadres in"
+  },
+  "home": {
+    "hero": {
+      "title": "Het juiste adres voor professionele diensten",
+      "subtitle": "Wij bieden alle diensten voor uw huis, kantoor en tuin met onze deskundige teams.",
+      "cta": "Aan de slag"
+    },
+    "categories": {
+      "title": "Onze Service Categorieën",
+      "expertCount": "{{count}} Experts",
+      "viewDetails": "Bekijk Details"
+    },
+    "services": {
+      "featured": "Uitgelichte Diensten"
+    },
+    "whyUs": {
+      "title": "Waarom Wij?",
+      "description": "Wij produceren op maat gemaakte oplossingen met een betrouwbare, betaalbare en professioneel servicebegrip.",
+      "stats": {
+          "title": "Onze Statistieken",
+          "experts": "Expert",
+          "projects": "Project",
+          "clients": "Klant",
+          "satisfaction": "Tevredenheid"
+        },
+      "features": {
+        "title": "Onze Kenmerken",
+        "quality": "Kwaliteitsservice",
+        "qualityDesc": "Gegarandeerde kwaliteitsservice",
+        "support": "24/7 Ondersteuning",
+        "supportDesc": "Ons ondersteuningsteam staat altijd voor u klaar",
+        "experience": "Ervaren Team",
+        "experienceDesc": "Experts en ervaren professionals in hun vakgebied",
+        "price": "Redelijke Prijs",
+        "priceDesc": "Toegankelijke diensten voor iedereen"
+      },
+      "joinCta": "Word Expert"
+    }
+  },
+  "profile": {
+    "personalInfo": "Persoonlijke Informatie",
+    "accountSettings": "Accountinstellingen",
+    "notifications": "Meldingen",
+    "payments": "Betaalmethoden",
+    "changePassword": "Wachtwoord Wijzigen",
+    "deleteAccount": "Account Verwijderen",
+    "uploadPhoto": "Foto Uploaden",
+    "errors": {
+      "loadProfileFailed": "Profielgegevens konden niet worden geladen.",
+      "loadAdsFailed": "Advertenties konden niet worden geladen.",
+      "loadChatsFailed": "Chats konden niet worden geladen.",
+      "loadRequestsFailed": "Verzoeken konden niet worden geladen.",
+      "userNotFound": "Gebruiker niet gevonden.",
+      "unauthorized": "U bent niet gemachtigd om deze actie uit te voeren.",
+      "updateFailed": "Profiel kon niet worden bijgewerkt.",
+      "imageUpdateFailed": "Profielfoto kon niet worden bijgewerkt.",
+      "loadAdImagesFailed": "Advertentieafbeeldingen konden niet worden geladen.",
+      "userNotFoundMessage": "Het opgevraagde gebruikersprofiel kon niet worden gevonden."
+    },
+    "edit": {
+      "success": "Profiel succesvol bijgewerkt.",
+      "imageUpdateSuccess": "Profielfoto succesvol bijgewerkt.",
+      "editButtonLabel": "Profiel bewerken",
+      "dialogTitle": "Profiel bewerken",
+      "firstNameLabel": "Voornaam",
+      "lastNameLabel": "Achternaam",
+      "phoneLabel": "Telefoon",
+      "addressLabel": "Adres",
+      "postCodeLabel": "Postcode"
+    },
+    "tabs": {
+      "ads": "Mijn Advertenties",
+      "chats": "Chats",
+      "requests": "Verzoeken"
+    },
+    "ads": {
+      "title": "Mijn Advertenties",
+      "createNewButton": "Nieuwe advertentie maken",
+      "emptyState": {
+        "title": "Geen advertenties gevonden",
+        "message": "U heeft nog geen advertenties aangemaakt.",
+        "createFirstButton": "Maak uw eerste advertentie"
+      },
+      "editButtonLabel": "Advertentie bewerken",
+      "invalidAd": "Ongeldige advertentie geselecteerd."
+    },
+    "chats": {
+      "emptyState": {
+        "title": "Geen chats gevonden",
+        "message": "U heeft geen actieve chats."
+      },
+      "chatCardAriaLabel": "Chat over {{title}}",
+      "expertLabel": "Expert",
+      "lastActivityLabel": "Laatste activiteit",
+      "lastMessageLabel": "Laatste bericht",
+      "goToChatButton": "Ga naar chat"
+    },
+    "requests": {
+      "acceptSuccess": "Verzoek succesvol geaccepteerd.",
+      "errors": {
+        "acceptFailed": "Verzoek kon niet worden geaccepteerd.",
+        "rejectFailed": "Verzoek kon niet worden afgewezen."
+      },
+      "rejectSuccess": "Verzoek succesvol afgewezen.",
+      "emptyState": {
+        "title": "Geen verzoeken gevonden",
+        "message": "U heeft geen openstaande verzoeken."
+      },
+      "expertLabel": "Expert",
+      "goToChatButton": "Ga naar chat"
+    }
+  },
+  "ads": {
+    "createTitle": "Nieuwe Advertentie Maken",
+    "editTitle": "Advertentie Bewerken",
+    "myAdsTitle": "Mijn Advertenties",
+    "categories": "Categorieën",
+    "filters": "Filters",
+    "sort": "Sorteren",
+    "search": "Zoeken in Advertenties",
+    "form": {
+      "title": "Titel",
+      "category": "Categorie",
+      "description": "Beschrijving",
+      "price": "Prijs",
+      "location": "Locatie",
+      "images": "Afbeeldingen",
+      "phone": "Telefoon",
+      "contactInfo": "Contactinformatie",
+      "publish": "Publiceren",
+      "update": "Bijwerken"
+    },
+    "status": {
+      "active": "Actief",
+      "inactive": "Inactief",
+      "pending": "In behandeling",
+      "rejected": "Afgewezen"
+    },
+    "details": {
+      "contactSeller": "Contacteer Verkoper",
+      "postDate": "Plaatsingsdatum",
+      "views": "Weergaven",
+      "share": "Delen",
+      "report": "Rapporteren",
+      "similar": "Vergelijkbare Advertenties"
+    }
+  },
+  "chat": {
+    "title": "Berichten",
+    "send": "Verzenden",
+    "newMessage": "Nieuw Bericht",
+    "noMessages": "Nog geen berichten",
+    "startConversation": "Start een gesprek",
+    "typeMessage": "Typ uw bericht...",
+    "chatRooms": "Chatruimtes",
+    "noChats": "Nog geen chats",
+    "lastMessage": "Laatste bericht"
+  },
+  "auth": {
+    "expertRegister": "Registreren als Expert"
+  },
+  "company": {
+      "about": {
+        "title": "Over Built Better",
+        "description": "Bouwen aan vertrouwen met kwaliteit en innovatie sinds 2020",
+        "team": {
+          "title": "Ontmoet Ons Team",
+          "roles": {
+            "ceo": "CEO & Oprichter",
+            "architect": "Hoofd Architect",
+            "projectManager": "Projectmanager"
+          }
+        },
+        "features": {
+          "expertTeam": {
+            "title": "Expert Team",
+            "description": "Ons team bestaat uit hoogopgeleide professionals met jarenlange ervaring"
+          },
+          "quality": {
+            "title": "Kwaliteit Eerst",
+            "description": "We doen nooit concessies aan kwaliteit en leveren altijd de beste resultaten"
+          },
+          "innovative": {
+            "title": "Innovatieve Oplossingen",
+            "description": "We gebruiken de nieuwste technologie en innovatieve benaderingen om problemen op te lossen"
+          }
+        },
+        "stats": {
+          "completedProjects": "Voltooide Projecten",
+          "expertTeam": "Expert Teamleden",
+          "yearsExperience": "Jaren Ervaring",
+          "happyClients": "Tevreden Klanten"
+        },
+        "cta": {
+          "title": "Klaar om Uw Ruimte te Transformeren?",
+          "description": "Laten we samenwerken om uw visie tot leven te brengen",
+          "button": "Nu Beginnen"
+        }
+      },
+      "careers": {
+        "hero": {
+          "title": "Sluit U Aan Bij Ons Team",
+          "description": "Word Built Better en maak deel uit van ons succesverhaal",
+          "alt": "Carrièremogelijkheden bij Built Better"
+        },
+        "description": "We zijn op zoek naar getalenteerde professionals om ons groeiende team te versterken. Bekijk hieronder onze openstaande vacatures.",
+        "positions": {
+          "seniorInterior": {
+            "title": "Senior Interieurarchitect",
+            "description": "Leid en ontwerp innovatieve interieurprojecten",
+            "requirements": "5+ jaar ervaring in interieurarchitectuur, vaardigheid in ontwerpsoftware"
+          },
+          "projectManager": {
+            "title": "Projectmanager",
+            "description": "Beheer en coördineer renovatieprojecten",
+            "requirements": "3+ jaar ervaring in projectmanagement in bouw/renovatie"
+          },
+          "landscapeArchitect": {
+            "title": "Landschapsarchitect",
+            "description": "Ontwerp en beheer buitenruimtes",
+            "requirements": "3+ jaar ervaring in landschapsarchitectuur"
+          }
+        },
+        "locations": {
+          "istanbul": "Istanbul",
+          "ankara": "Ankara",
+          "izmir": "Izmir"
+        },
+        "types": {
+          "fullTime": "Voltijds"
+        },
+        "apply": "Nu Solliciteren",
+        "form": {
+          "title": "Sollicitatieformulier",
+          "firstName": "Voornaam",
+          "lastName": "Achternaam",
+          "email": "E-mail",
+          "phone": "Telefoon",
+          "experience": "Jaren Ervaring",
+          "message": "Motivatiebrief",
+          "submit": "Sollicitatie Verzenden"
+        }
+      },
+      "contact": {
+        "title": "Contact",
+        "description": "Heeft u vragen? Neem contact met ons op.",
+        "address": "Adres",
+        "address.line1": "Maslak, Grote Cad. Nr.:123",
+        "address.line2": "1012 AB Amsterdam",
+        "phone": "Telefoon",
+        "phone.number1": "+31 20 123 4567",
+        "phone.number2": "+31 6 1234 5678",
+        "email": "E-mail",
+        "email.address1": "info@builtbetter.nl",
+        "email.address2": "support@builtbetter.nl",
+        "form": {
+          "title": "Stuur ons een bericht",
+          "name": "Uw naam",
+          "email": "Uw e-mailadres",
+          "subject": "Onderwerp",
+          "message": "Uw bericht",
+          "send": "Bericht verzenden"
+        },
+        "map": {
+          "alt": "Contactkaart Locatie"
+        }
+      }
+    },
+    "support": {
+      "helpCenter": {
+        "title": "Helpcentrum",
+        "description": "Hoe kunnen we u vandaag helpen?",
+        "searchPlaceholder": "Zoek naar hulp...",
+        "categories": {
+          "general": "Algemene Vragen",
+          "services": "Onze Diensten",
+          "payment": "Betaling & Prijzen",
+          "security": "Beveiliging & Privacy"
+        },
+        "faqs": {
+          "title": "Veelgestelde Vragen",
+          "description": "Vind antwoorden op veelgestelde vragen.",
+          "general": {
+            "title": "Algemene Vragen",
+            "items": [
+              {
+                "question": "Hoe werkt Built Better?",
+                "answer": "Built Better verbindt u met gekwalificeerde professionals..."
+              },
+              {
+                "question": "Is Built Better beschikbaar in mijn regio?",
+                "answer": "We zijn momenteel actief in grote steden..."
+              }
+            ]
+          },
+          "services": {
+            "title": "Onze Diensten",
+            "items": [
+              {
+                "question": "Welke diensten biedt u aan?",
+                "answer": "We bieden een breed scala aan diensten voor woningverbetering..."
+              },
+              {
+                "question": "Hoe worden uw experts gescreend?",
+                "answer": "Alle experts ondergaan grondige achtergrondcontroles..."
+              }
+            ]
+          },
+          "payment": {
+            "title": "Betaling & Prijzen",
+            "items": [
+              {
+                "question": "Hoeveel kosten de diensten?",
+                "answer": "Prijzen variëren afhankelijk van de dienst..."
+              },
+              {
+                "question": "Welke betaalmethoden accepteert u?",
+                "answer": "We accepteren alle gangbare creditcards..."
+              }
+            ]
+          },
+          "security": {
+            "title": "Beveiliging & Privacy",
+            "items": [
+              {
+                "question": "Hoe worden mijn persoonlijke gegevens beschermd?",
+                "answer": "We gebruiken industriestandaard encryptie..."
+              },
+              {
+                "question": "Zijn uw diensten gegarandeerd?",
+                "answer": "Ja, alle diensten worden geleverd met een tevredenheidsgarantie."
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "toasts": {
+    "sessionExpired": "Uw sessie is verlopen. Log opnieuw in.",
+    "genericError": "Er is een onverwachte fout opgetreden. Probeer het later opnieuw."
+  },
+  "requestStatus": {
+    "pending": "In behandeling",
+    "accepted": "Geaccepteerd",
+    "rejected": "Afgewezen"
+  },
+  "footer": {
+    // ... existing code ...
+    "copyright": "© 2024 RenovatioPoint. Alle rechten voorbehouden."
+  }
+}
