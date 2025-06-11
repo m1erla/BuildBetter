@@ -19,7 +19,7 @@
 // * İlk kullanımdan sonra bu sınıfı devre dışı bırakabilir veya
 // * kaldırabilirsiniz.
 // */
-//@Configuration
+//@Configuration-
 //public class CreateAdminScript {
 //
 //    @Bean
