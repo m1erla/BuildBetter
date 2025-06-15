@@ -123,14 +123,11 @@ public class SecurityConfig implements WebMvcConfigurer {
 
                 // Allow your frontend origins
                 configuration.setAllowedOriginPatterns(Arrays.asList(
-                                "https://server.renovatipoint.com:32771",
-                                "http://server.renovatipoint.com:32771",
-                                "http://localhost:5173",
+                        "https://build-better-client.vercel.app",
                                 "http://localhost:3000",
                                 "http://localhost:8080",
-                                "https://localhost:8443",
-                                "https://renovatipoint.com",
-                                "https://werkspot-development.netlify.app"));
+                                "https://localhost:8443"
+                                ));
 
                 // Allow WebSocket specific headers and methods
                 configuration.setAllowedHeaders(Arrays.asList(
