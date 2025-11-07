@@ -62,3 +62,98 @@ file:
 
 #  http:
 #    port: 8080
+
+# SaaS-specific configurations
+app:
+  name: BuildBetter
+  url: ${APP_URL:https://buildbetter.com}
+  support-email: ${SUPPORT_EMAIL:support@buildbetter.com}
+
+saas:
+  # Multi-tenancy settings
+  multitenancy:
+    enabled: true
+    default-max-users: 10
+    default-max-ads: 50
+    default-max-storage-mb: 5000
+
+  # Rate limiting (requests per hour per organization)
+  rate-limit:
+    enabled: true
+    default-limit: 1000
+    free-tier-limit: 100
+    starter-tier-limit: 1000
+    pro-tier-limit: 5000
+    enterprise-tier-limit: 50000
+
+  # Subscription settings
+  subscription:
+    trial-days: 14
+    grace-period-days: 7
+    payment-retry-attempts: 3
+    payment-retry-interval-hours: 24
+
+  # Email settings
+  email:
+    enabled: ${EMAIL_ENABLED:true}
+    from: ${EMAIL_FROM:noreply@buildbetter.com}
+    from-name: ${EMAIL_FROM_NAME:BuildBetter}
+
+  # Security settings
+  security:
+    two-factor-enabled: true
+    password-min-length: 8
+    password-require-special-char: true
+    password-require-number: true
+    session-timeout-minutes: 60
+
+  # Monitoring and health
+  monitoring:
+    health-check-enabled: true
+    metrics-enabled: true
+    audit-log-retention-days: 90
+
+# Spring Mail Configuration
+spring:
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+
+# Management endpoints for monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: when-authorized
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+# Logging configuration
+logging:
+  level:
+    com.buildbetter: ${LOG_LEVEL:INFO}
+    org.springframework.web: INFO
+    org.hibernate: WARN
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: logs/buildbetter-saas.log
+    max-size: 10MB
+    max-history: 30
