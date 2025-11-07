@@ -1,0 +1,61 @@
+package com.buildbetter.enums;
+
+public enum AuditAction {
+    // User actions
+    USER_LOGIN,
+    USER_LOGOUT,
+    USER_REGISTER,
+    USER_UPDATE,
+    USER_DELETE,
+    PASSWORD_CHANGE,
+    PASSWORD_RESET,
+    EMAIL_VERIFY,
+
+    // Organization actions
+    ORGANIZATION_CREATE,
+    ORGANIZATION_UPDATE,
+    ORGANIZATION_DELETE,
+    MEMBER_INVITE,
+    MEMBER_REMOVE,
+    MEMBER_ROLE_CHANGE,
+
+    // Subscription actions
+    SUBSCRIPTION_CREATE,
+    SUBSCRIPTION_UPDATE,
+    SUBSCRIPTION_CANCEL,
+    SUBSCRIPTION_RENEW,
+    PLAN_UPGRADE,
+    PLAN_DOWNGRADE,
+
+    // Payment actions
+    PAYMENT_SUCCESS,
+    PAYMENT_FAILED,
+    REFUND_ISSUED,
+    INVOICE_GENERATED,
+
+    // Resource actions
+    AD_CREATE,
+    AD_UPDATE,
+    AD_DELETE,
+    REQUEST_CREATE,
+    REQUEST_ACCEPT,
+    REQUEST_REJECT,
+
+    // Security actions
+    TWO_FACTOR_ENABLE,
+    TWO_FACTOR_DISABLE,
+    API_KEY_CREATE,
+    API_KEY_REVOKE,
+    SUSPICIOUS_ACTIVITY,
+
+    // Admin actions
+    ADMIN_ACCESS,
+    SETTINGS_CHANGE,
+    FEATURE_FLAG_TOGGLE,
+
+    // Data compliance
+    DATA_EXPORT,
+    DATA_DELETE,
+    CONSENT_GIVEN,
+    CONSENT_REVOKED
+}
