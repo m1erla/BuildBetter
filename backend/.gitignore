@@ -53,6 +53,7 @@ application.properties
 # Environment variables
 *.env
 .env.*
+!.env.example
 
 # IDE specific
 .idea/
