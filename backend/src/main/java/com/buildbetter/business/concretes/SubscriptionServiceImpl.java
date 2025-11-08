@@ -58,8 +58,20 @@ public class SubscriptionServiceImpl implements SubscriptionService {
         existingPlan.setTier(plan.getTier());
         existingPlan.setPriceMonthly(plan.getPriceMonthly());
         existingPlan.setPriceYearly(plan.getPriceYearly());
-        existingPlan.setFeatures(plan.getFeatures());
-        existingPlan.setQuotas(plan.getQuotas());
+
+        // Update individual feature flags
+        existingPlan.setCustomBranding(plan.isCustomBranding());
+        existingPlan.setPrioritySupport(plan.isPrioritySupport());
+        existingPlan.setApiAccess(plan.isApiAccess());
+        existingPlan.setAdvancedAnalytics(plan.isAdvancedAnalytics());
+        existingPlan.setWhiteLabel(plan.isWhiteLabel());
+
+        // Update individual quota fields
+        existingPlan.setMaxUsers(plan.getMaxUsers());
+        existingPlan.setMaxAds(plan.getMaxAds());
+        existingPlan.setMaxStorageMb(plan.getMaxStorageMb());
+        existingPlan.setMaxApiCallsPerHour(plan.getMaxApiCallsPerHour());
+
         existingPlan.setUpdatedAt(LocalDateTime.now());
 
         return subscriptionPlanRepository.save(existingPlan);
@@ -138,7 +150,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
             subscription.setCanceledAt(LocalDateTime.now());
         } else {
             subscription.setStatus(SubscriptionStatus.PENDING_CANCELLATION);
-            subscription.setCancelAt(subscription.getCurrentPeriodEnd());
+            subscription.setCancelAtPeriodEnd(true);
         }
 
         subscription.setUpdatedAt(LocalDateTime.now());
@@ -158,7 +170,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
 
         subscription.setStatus(SubscriptionStatus.ACTIVE);
         subscription.setCanceledAt(null);
-        subscription.setCancelAt(null);
+        subscription.setCancelAtPeriodEnd(false);
         subscription.setUpdatedAt(LocalDateTime.now());
 
         subscriptionRepository.save(subscription);
